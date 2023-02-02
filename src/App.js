@@ -6,9 +6,9 @@ import InfoPage from "../src/pages/InfoPage/InfoPage";
 import BrainTeaser from "../src/pages/BrainTeaser/BrainTeaser";
 import BrainTeaserInfo from "../src/pages/BrainTeaserInfo/BrainTeaserInfo";
 import CleaningPage from "../src/pages/CleaningPage/CleaningPage";
-import CleanupPageInfo from "../src/pages/CleanupPageInfo/CleanupPageinfo";
+import CleanupPageInfo from "./pages/CleanupPageInfo/CleanupPageInfo";
 import Callbacks from "../src/pages/CallBacks/CallBacks";
-import CallbacksInfo from "../src/pages/CallbacksInfo/Callbacks";
+import CallbacksInfo from "./pages/CallbacksInfo/CallbacksInfo";
 import NotFound from "../src/pages/NotFound/NotFound";
 import Points from "../src/pages/Points/Points";
 
