@@ -1,4 +1,4 @@
-import "./CleanupPageInfo.scss"
+import "./CleanupPage.scss";
 
 function CleanupPageInfo() {
     return

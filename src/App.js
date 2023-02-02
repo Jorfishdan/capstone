@@ -12,8 +12,6 @@ import CallbacksInfo from "./pages/CallbacksInfo/CallbacksInfo";
 import NotFound from "../src/pages/NotFound/NotFound";
 import Points from "../src/pages/Points/Points";
 
-
-
 function App() {
   return (
     <>
