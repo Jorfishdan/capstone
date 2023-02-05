@@ -22,7 +22,7 @@ function App() {
 
       <Route path="brainTeaser" element={<BrainTeaser />} />
       <Route path="brainTeaser/info" element={<BrainTeaserInfo />}/>
-      <Route path="brainTeaser/pooints" element={<Points />} />
+      <Route path="brainTeaser/points" element={<Points />} />
 
       <Route path="cleanup" element={<CleaningPage />} />
       {/* <Route path="cleanup/info" element={<CleanupPageInfo />} /> */}
