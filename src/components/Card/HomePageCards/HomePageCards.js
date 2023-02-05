@@ -5,9 +5,9 @@ function HomePageCards() {
     <>
     <section className="homepage">
     <article className="homepage__wrapper">
-      <div className="homepage__card--1">Brain Teaser</div>
-      <div className="homepage__card--2">Clean Up</div>
-      <div className="homepage__card--3">Call Backs</div>
+      <h1 className="homepage__card--1">Brain Teaser</h1>
+      <h1 className="homepage__card--2">Clean Up</h1>
+      <h1 className="homepage__card--3">Call Backs</h1>
     </article>
     </section>
     </>

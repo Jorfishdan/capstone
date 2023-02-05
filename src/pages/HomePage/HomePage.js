@@ -11,7 +11,6 @@ function HomePage() {
         <Header />
         <img src={logo} alt="logo of cat" />
         <HomePageCards />
-        
         <Footer />
         </>
     )
