@@ -6,7 +6,7 @@ import InfoPage from "../src/pages/InfoPage/InfoPage";
 import BrainTeaser from "../src/pages/BrainTeaser/BrainTeaser";
 import BrainTeaserInfo from "../src/pages/BrainTeaserInfo/BrainTeaserInfo";
 import CleaningPage from "../src/pages/CleaningPage/CleaningPage";
-import CleanupPageInfo from "./pages/CleanupPageInfo/CleanupPageInfo";
+// import CleanupPageInfo from "./pages/CleanupPageInfo/CleanupPageInfo";
 import Callbacks from "../src/pages/CallBacks/CallBacks";
 import CallbacksInfo from "./pages/CallbacksInfo/CallbacksInfo";
 import NotFound from "../src/pages/NotFound/NotFound";
@@ -25,7 +25,7 @@ function App() {
       <Route path="brainTeaser/pooints" element={<Points />} />
 
       <Route path="cleanup" element={<CleaningPage />} />
-      <Route path="cleanup/info" element={<CleanupPageInfo />} />
+      {/* <Route path="cleanup/info" element={<CleanupPageInfo />} /> */}
       <Route path="cleanup/points" element={<Points />} />
 
       <Route path="callbacks" element={<Callbacks />} />
