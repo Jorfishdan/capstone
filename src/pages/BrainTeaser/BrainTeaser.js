@@ -1,7 +1,10 @@
 import "./BrainTeaser.scss"
+import BrainTeaserCard from "../../components/BrainTeaserCard/BrainTeaserCard";
 
 function BrainTeaser() {
-    return
+    return(
+        <BrainTeaserCard />
+    )
 }
 
 export default BrainTeaser;
