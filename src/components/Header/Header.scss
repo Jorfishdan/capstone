@@ -4,10 +4,35 @@
 @use "../../styles/partials/variables" as *;
 
 .header{
-    background-color: #FEFAFA;
+    @include tablet {
+    margin:1.6rem;
+    }
+
     &__wrapper {
         display:flex;
         justify-content: space-between;
+        margin:1.6rem;
+    }
+
+    &__list {
+        width:5rem;
+        height:5rem;
+        @include tablet {
+            height: 5rem;
+        }
+        @include desktop {
+            width: 5rem;
+            height:7rem;
+        }
+    }
+
+    &__info {
+        width:5rem;
+        height:5rem;
+        @include tablet {
+            height: 5rem; 
+            width: 5rem;
+        }
     }
 
 }

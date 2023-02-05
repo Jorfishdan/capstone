@@ -1,17 +1,17 @@
 import "./HomePage.scss"
 import logo from "../../assets/images/teachers-pet.png";
-import spinCat from "../../assets/images/spinning-cat.gif";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import HomePageCards from "../../components/Card/HomePageCards/HomePageCards";
+import HomePageCards from "../../components/HomePageCards/HomePageCards";
 
 function HomePage() {
     return (
         <>
+        <section className="homepage">
         <Header />
-        <img src={logo} alt="logo of cat" />
         <HomePageCards />
         <Footer />
+        </section>
         </>
     )
 }
