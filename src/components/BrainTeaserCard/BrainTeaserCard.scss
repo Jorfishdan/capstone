@@ -5,7 +5,12 @@
 
 .brainteaser{
 
-    &____cardtrue{
+    &__wrapper {
+        display:flex;
+        flex-direction: row;
+    }
+
+    &__cardtrue{
     height: 32rem;
     width: 25rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
@@ -13,6 +18,8 @@
     box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
     margin: 1rem;
     transition: 0.5s;
+    background-color: #1987ED;
+   
   
     display: flex;
     flex-direction: column;
@@ -22,5 +29,31 @@
       margin-top: -0.2px;
       box-shadow: 0px 0px 5px 5px rgba(11, 11, 11, 0.4);
     }
+}
+
+&__cardfalse{
+    height: 32rem;
+    width: 25rem;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 1.2rem;
+    box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+    margin: 1rem;
+    transition: 0.5s;
+    background-color: #22CA5B;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      margin-top: -0.2px;
+      box-shadow: 0px 0px 5px 5px rgba(11, 11, 11, 0.4);
+    }
+}
+
+&__true--text, &__false--text{
+    color:white;
+    font-size:4rem;
+    font-family: 'WorkSans';
 }
 }
