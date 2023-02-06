@@ -8,8 +8,8 @@ function BrainTeaserCard() {
    
     const [answer, setAnswer] = useState([]);
     const [question, setQuestion] = useState([]);
-    const [showQuestion, setShowQuestion] = useState({})
-    const [index, setIndex] = useState(0)
+    const [showQuestion, setShowQuestion] = useState({});
+    const [index, setIndex] = useState(0);
 
 
 
@@ -28,7 +28,7 @@ function BrainTeaserCard() {
           }
         };
         triviaAnswer();
-      }, [answer]);
+      }, []);
 
     const revealHandler = ()=> {
     setAnswer(showQuestion.correct_answer)
@@ -38,6 +38,7 @@ function BrainTeaserCard() {
         console.log("hello")
        setIndex(index +1);
         setShowQuestion(question[index +1])
+        setAnswer(null)
     }
    
         
