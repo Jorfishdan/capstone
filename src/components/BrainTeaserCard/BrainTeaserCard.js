@@ -1,7 +1,7 @@
 import "./BrainTeaserCard.scss"
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 function BrainTeaserCard() {
 
@@ -9,6 +9,7 @@ function BrainTeaserCard() {
     const [answer, setAnswer] = useState([]);
     const [question, setQuestion] = useState([]);
     const [showQuestion, setShowQuestion] = useState({})
+    const [index, setIndex] = useState(0)
 
 
 
@@ -31,8 +32,14 @@ function BrainTeaserCard() {
 
     const revealHandler = ()=> {
     setAnswer(showQuestion.correct_answer)
-    
     };
+
+    const nextHandler = () => {
+        console.log("hello")
+       setIndex(index +1);
+        setShowQuestion(question[index +1])
+    }
+   
         
     return(
         <div>
@@ -50,7 +57,7 @@ function BrainTeaserCard() {
                 </div>
                 <article className="brainteaser__answer">{answer}
                 </article>
-                <article className="brainteaser__next">Next</article>
+                <button className="brainteaser__next" onClick={nextHandler}>Next</button>
                
             </div>
         </section>
