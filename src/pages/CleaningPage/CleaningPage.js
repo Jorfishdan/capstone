@@ -1,33 +1,14 @@
-import { useStopwatch, useTimer } from "react-timer-hook";
 import "./CleaningPage.scss";
+import Timer from "../../components/Timer/Timer";
+import Music from "../../components/Music/Music";
 
-function CleaningPage({expiryTimestamp}) {
-  const { seconds, minutes, isRunning, start, pause, reset, restart } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
-
-  return (
+function CleaningPage() {
+return (
     <>
-      <div style={{ textAlign: "center" }}>
-        <h1>Lightning Speed Clean</h1>
-        <p>Can you beat the clock?</p>
-        <div style={{ fontSize: "100px" }}>
-          <span>{minutes}</span>:<span>{seconds}</span>
-        </div>
-        <p>{isRunning ? "Running" : "Not running"}</p>
-        <button onClick={start}>Start</button>
-        <button onClick={pause}>Pause</button>
-        <button onClick={reset}>Reset</button>
-        <button
-          onClick={() => {
-            const time = new Date();
-            time.setSeconds(time.getSeconds() + 300);
-            restart(time);
-          }}
-        >
-          Restart
-        </button>
-      </div>
+    <Timer />
+    <Music />
     </>
-  );
+)
 }
 
 export default CleaningPage;
