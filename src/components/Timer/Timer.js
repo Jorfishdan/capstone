@@ -1,25 +1,34 @@
 import "./Timer.scss"
 import { useTimer } from "react-timer-hook";
-function Timer ({ expiryTimestamp }) {
+import CleaningModal from "../CleaningModal/CleaningModal";
+import { useState } from "react";
+
+function Timer ({ expiryTimestamp, setPage }) {
+    
+    const [openModal, setOpenModal] = useState(false);
     const { seconds, minutes, isRunning, start, pause, reset, restart } =
     useTimer({
       expiryTimestamp,
       onExpire: () => console.warn("onExpire called"),
     });
+   
+    function startScan() {
+        setOpenModal(true);
+    }
 
   return (
     <>
       <div style={{ textAlign: "center" }}>
-        <h1>Lightning Speed Clean</h1>
-        <p>Can you beat the clock?</p>
+        <h1 className="timer__title">Lightning Speed Clean</h1>
+        <p className="timer__cta">Can you beat the clock?</p>
         <div style={{ fontSize: "100px" }}>
-          <span>{minutes}</span>:<span>{seconds}</span>
+          <span className="timer__minutes">{minutes}</span>:<span className="timer__seconds">{seconds}</span>
         </div>
-        <p>{isRunning ? "Running" : "Not running"}</p>
-        <button onClick={start}>Start</button>
-        <button onClick={pause}>Pause</button>
-        <button onClick={reset}>Reset</button>
-        <button
+        <p className="timer__running">{isRunning ? "Running" : "Not running"}</p>
+        <button className="timer__start" onClick={start}>Start</button>
+        <button className="timer__pause"onClick={pause}>Pause</button>
+        <button className="timer__reset"onClick={reset}>Reset</button>
+        <button className="timer__countdown"
           onClick={() => {
             const time = new Date();
             time.setSeconds(time.getSeconds() + 300);
@@ -28,7 +37,9 @@ function Timer ({ expiryTimestamp }) {
         >
           Restart
         </button>
+        <button onClick={() => startScan()} className="timer__scan">Scan</button>
         </div>
+        <CleaningModal openModal={openModal} onClose={() => setOpenModal(false)} setPage={setPage} />
     </>
   );
 }
