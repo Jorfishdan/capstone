@@ -6,34 +6,34 @@ import { useParams } from "react-router-dom";
 function BrainTeaserCard() {
 
    
-    const [answer, setAnswer] = useState("");
+    const [answer, setAnswer] = useState([]);
+    const [question, setQuestion] = useState([]);
+    const [currentQuestion, setCurrentQuestion] = useState({})
+
+
 
     useEffect(() => {
-        axios
-        .get(`https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`)
-        .then(res => {
-            setAnswer(res.data.results.map((questionItem, index) => {
-                const correctAnswer = questionItem.correct_answer
-                const options = [...questionItem.incorrect_answers, correctAnswer]
-                return{
-                    id: `${index}- ${Date.now()}`,
-                    question:questionItem.question,
-                    answer: questionItem.correct_answer,
-                    options:options.sort(() => Math.random() - .5)
-                }
-            }))
-          
-            console.log(res.data)
-        })
-    }, [])
-       
-        
+        const triviaAnswer = async () => {
+          try {
+            const response = await axios.get(
+              `https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
+            );
+            setQuestion(response.data.results);
+          } catch (error) {
+            console.log(error);
+          }
+        };
+        triviaAnswer(question[0]);
+      }, []);
         
 
+
     return(
+        <div>
+        {question.map(q => (
         <section className="brainteaser">
             <div className="brainteaser__wrapper">
-                <h1 className="brainteaser__question">{answer.question}</h1>
+                <h1 className="brainteaser__question">{q.question}</h1>
                 <article className="brainteaser__cardtrue">
                     <h1 className="brainteaser__true--text">True</h1>
                 </article>
@@ -42,10 +42,15 @@ function BrainTeaserCard() {
                 </article>
             </div>
         </section>
+    
+    ))}
+    </div>
     )
-}
+        }
 
 export default BrainTeaserCard;
+
+/////////////useEffect usng the animal API //////////////
 
 // const BASE_API_URL = "https://api.api-ninjas.com/v1/animals";
 // const API_KEY = "bfJDGdZyYpx28nqXY08M9Q==i2uIUSUFWBIh32dM";
@@ -69,3 +74,25 @@ export default BrainTeaserCard;
 //     };
 //     mainAnswer();
 //   }, [query]);
+
+
+
+////////// useEffect using the trivia API //////////// 
+// useEffect(() => {
+//     axios
+//     .get(`https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`)
+//     .then(res => {
+//         setAnswer(res.data.results.map((questionItem, index) => {
+//             const correctAnswer = questionItem.correct_answer
+//             const options = [...questionItem.incorrect_answers, correctAnswer]
+//             return{
+//                 id: `${index}-${Date.now()}`,
+//                 question:questionItem.question,
+//                 answer: questionItem.correct_answer,
+//                 options:options.sort(() => Math.random() - .5)
+//             }
+//         }))
+      
+//        setQuestion(question[0]);
+//     })
+// }, [])
