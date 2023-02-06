@@ -7,20 +7,21 @@ function BrainTeaserCard() {
 
     
 
-    // const BASE_API_URL = "https://api.api-ninjas.com/v1/animals";
-    // const API_KEY = "bfJDGdZyYpx28nqXY08M9Q==i2uIUSUFWBIh32dM";
-    // let query = "cheetah"
-    // const url = `${BASE_API_URL}?name=${query}&api_key=${API_KEY}`;
-
-    // https://api.api-ninjas.com/v1/animals?name=elephant
-   
+    const BASE_API_URL = "https://api.api-ninjas.com/v1/animals";
+    const API_KEY = "bfJDGdZyYpx28nqXY08M9Q==i2uIUSUFWBIh32dM";
+    let query = "cheetah"
+    const url = `${BASE_API_URL}?name=${query}`;
    
     const [answer, setAnswer] = useState("")
 
     useEffect(() => {
         const mainAnswer = async () => {
           try {
-            const response = await axios.get(`https://api.api-ninjas.com/v1/animals?name=elephant?X-API-KEY=bfJDGdZyYpx28nqXY08M9Q==i2uIUSUFWBIh32dM`);
+            const response = await axios.get(url, {
+                headers: {
+                    "X-Api-Key": API_KEY 
+                }
+            });
             console.log(response.data);
           } catch (error) {
             console.log(error);
