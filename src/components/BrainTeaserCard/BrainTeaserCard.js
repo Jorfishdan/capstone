@@ -8,7 +8,7 @@ function BrainTeaserCard() {
    
     const [answer, setAnswer] = useState([]);
     const [question, setQuestion] = useState([]);
-    const [currentQuestion, setCurrentQuestion] = useState({})
+    const [showQuestion, setShowQuestion] = useState({})
 
 
 
@@ -18,34 +18,45 @@ function BrainTeaserCard() {
             const response = await axios.get(
               `https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
             );
+            console.log(response.data.results)
             setQuestion(response.data.results);
+            setShowQuestion(response.data.results[0])
+        
           } catch (error) {
             console.log(error);
           }
         };
-        triviaAnswer(question[0]);
-      }, []);
+        triviaAnswer();
+      }, [answer]);
+
+    const revealHandler = ()=> {
+    setAnswer(showQuestion.correct_answer)
+    
+    };
         
-
-
     return(
         <div>
-        {question.map(q => (
+            {showQuestion && (
         <section className="brainteaser">
             <div className="brainteaser__wrapper">
-                <h1 className="brainteaser__question">{q.question}</h1>
-                <article className="brainteaser__cardtrue">
+                <h1 className="brainteaser__question">{showQuestion.question}</h1>
+                <div className="brainteaser__cards-wrapper">
+                <article className="brainteaser__cardtrue" onClick={revealHandler}>
                     <h1 className="brainteaser__true--text">True</h1>
                 </article>
-                <article className="brainteaser__cardfalse">
+                <article className="brainteaser__cardfalse" onClick={revealHandler}>
                     <h1 className="brainteaser__false--text">False</h1>
                 </article>
+                </div>
+                <article className="brainteaser__answer">{answer}
+                </article>
+               
             </div>
         </section>
     
-    ))}
+    )}
     </div>
-    )
+    );
         }
 
 export default BrainTeaserCard;
@@ -96,3 +107,25 @@ export default BrainTeaserCard;
 //        setQuestion(question[0]);
 //     })
 // }, [])
+
+////////////////tried to decode the string//////////
+ //   function decodeString(str) {
+    //     const textArea = document.createElement('textarea')
+    //     textArea.innerHTML = str
+    //     return textArea.value
+    //   }
+
+    ////////////tried doing a 2nd axios call to put into the revealhandler///////
+       //   useEffect(() => {
+    //     const answer = async () => {
+    //         try {
+    //             const response = await axios.get(`https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
+    //             );
+    //             setAnswer(response.data.results[0].correct_answer)
+
+    //         } catch (error) {
+    //             console.log(error);
+    //         }
+    //     };
+    //     answer();
+    // }, [])
