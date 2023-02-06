@@ -50,6 +50,7 @@ function BrainTeaserCard() {
                 </div>
                 <article className="brainteaser__answer">{answer}
                 </article>
+                <article className="brainteaser__next">Next</article>
                
             </div>
         </section>
