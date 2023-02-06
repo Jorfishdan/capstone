@@ -7,9 +7,10 @@ function BrainTeaserCard() {
 
    
     const [answer, setAnswer] = useState([]);
-    const [question, setQuestion] = useState([]);
+    const [questionList, setQuestionList] = useState({});
     const [showQuestion, setShowQuestion] = useState({});
     const [index, setIndex] = useState(0);
+    const [score, setScore] = useState(0);
 
 
 
@@ -20,7 +21,7 @@ function BrainTeaserCard() {
               `https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
             );
             console.log(response.data.results)
-            setQuestion(response.data.results);
+            setQuestionList(response.data.results);
             setShowQuestion(response.data.results[0])
         
           } catch (error) {
@@ -32,16 +33,19 @@ function BrainTeaserCard() {
 
     const revealHandler = ()=> {
     setAnswer(showQuestion.correct_answer)
+    if(showQuestion.correct_answer === "True")
+    setScore(score +1)
     };
 
     const nextHandler = () => {
         console.log("hello")
        setIndex(index +1);
-        setShowQuestion(question[index +1])
+        setShowQuestion(questionList[index +1])
         setAnswer(null)
+       
     }
-   
-        
+
+
     return(
         <div>
             {showQuestion && (
@@ -59,6 +63,7 @@ function BrainTeaserCard() {
                 <article className="brainteaser__answer">{answer}
                 </article>
                 <button className="brainteaser__next" onClick={nextHandler}>Next</button>
+                <div className="brainteaser__score">Score {score}</div>
                
             </div>
         </section>
