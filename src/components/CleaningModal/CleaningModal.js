@@ -1,5 +1,6 @@
 import "./CleaningModal.scss";
 import closeBtn from "../../assets/images/close.png"
+import spin from "../../assets/images/spinning-cat.gif"
 
 function CleaningModal({
     openModal,
@@ -18,6 +19,7 @@ function CleaningModal({
           <p className="modal__content-description">
            Scanning the room
           </p>
+            <img className="modal__gif"src={spin} />
           <div className="modal__buttons">
             <button onClick={onClose} className="modal__buttons-cancel">
               Cancel
