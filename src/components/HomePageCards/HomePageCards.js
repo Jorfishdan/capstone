@@ -1,6 +1,7 @@
 import "./HomePageCards.scss";
 import logo from "../../assets/images/teachers-pet.png"
 import spin from "../../assets/images/spinning-cat.gif";
+import { Link } from "react-router-dom";
 
 function HomePageCards() {
   return (
@@ -9,9 +10,9 @@ function HomePageCards() {
       <div className="homepagecard__mega-wrapper">
       <img src={logo} alt="logo" className="homepagecard__logo" />
     <article className="homepagecard__wrapper">
-      <h1 className="homepagecard__card--1">Brain Teaser</h1>
-      <h1 className="homepagecard__card--2">Clean Up</h1>
-      <h1 className="homepagecard__card--3">Call Backs</h1>
+     <Link to="/brainTeaser"><h1 className="homepagecard__card--1">Brain Teaser</h1></Link> 
+      <Link to="/cleanup"><h1 className="homepagecard__card--2">Clean Up</h1></Link>
+      <Link to="/callbacks"><h1 className="homepagecard__card--3">Call Backs</h1></Link>
     </article>
     </div>
     </section>
