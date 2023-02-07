@@ -8,11 +8,24 @@ import dog from "../../assets/audio/dog.mp3";
 import owl from "../../assets/audio/owl.mp3";
 import sheep from "../../assets/audio/sheep.mp3";
 import cow from "../../assets/audio/cow.mp3";
+import count from "../../assets/audio/countdown.mp3";
+import { useState } from 'react';
 
 function AnimalNoises() {
+   const [isCountPlaying, setIsCountPlaying] = useState(false)
+
+    function countDown() {
+        setIsCountPlaying(true)
+    }
    
     return (
         <>
+        <h1 className="animalnoises__title">Click below to start the countdown to the game!</h1>
+        <button className="animalnoises__countdown" onClick={countDown}> 
+       <audio controls>
+            <source className="animalnoises__audio"src={count} type="audio/mp3" />
+        </audio>  
+        </button>
         <section className="animalnoises__wrapper">
       <div className="animalnoises__card horse">
         <audio controls>
