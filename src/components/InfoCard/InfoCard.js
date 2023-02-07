@@ -7,7 +7,7 @@ function InfoCard() {
   return (
     <section className="infocard">
       <div className="infocard__main-wrapper">
-      <img src={backArrow} alt="go back to main menu" className="infocard__back-button"></img>
+      <Link to="/"><img src={backArrow} alt="go back to main menu" className="infocard__back-button"></img></Link>
       <h1 className="infocard__title">Game Instructions</h1>
     <div className="infocard__wrapper">
       <Link to="brainTeaser"><div className="infocard__card--1">Brain Teaser 

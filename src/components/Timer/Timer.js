@@ -6,6 +6,7 @@ import { useState } from "react";
 function Timer ({ expiryTimestamp, setPage }) {
     
     const [openModal, setOpenModal] = useState(false);
+    const [inputTime, setInputTime] = useState("")
     const { seconds, minutes, isRunning, start, pause, reset, restart } =
     useTimer({
       expiryTimestamp,
@@ -25,6 +26,9 @@ function Timer ({ expiryTimestamp, setPage }) {
           <span className="timer__minutes">{minutes}</span>:<span className="timer__seconds">{seconds}</span>
         </div>
         <p className="timer__running">{isRunning ? "Running" : "Not running"}</p>
+        <form className="timer__form">
+            {/* <input type="number" value={inputTime} onChange= {e => setInputTime(e.target.value)} /> */}
+        </form>
         <button className="timer__start" onClick={start}>Start</button>
         <button className="timer__pause"onClick={pause}>Pause</button>
         <button className="timer__reset"onClick={reset}>Reset</button>
