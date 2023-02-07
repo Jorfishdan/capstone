@@ -28,15 +28,22 @@ function AnimalNoises() {
             <source className="animalnoises__audio"src={count} type="audio/mp3" />
         </audio>  
         </button>
+
         <section className="animalnoises__wrapper">
-      <div onClick = {() => setFlip(!flip)}className="animalnoises__card horse">
-        <img className="animalnoises__horse-gif" src="https://bestanimations.com/media/horse-art/570970473animated-horse-gif-105.gif#.Y-JymKMBO5k.link" alt="horse gif" />
+      <div onClick = {() => setFlip(!flip)} className="animalnoises__card horse">
+        <div className={`animalnoises__front ${flip ? 'animalnoises__hidden': ''}`}>
         <audio controls>
-            <source className="animalnoises__audio"src={horse} type="audio/mp3" />
+            <source className="animalnoises__audio" src={horse} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
-            {/* {flip ? audio : img} */}
         </audio>
       </div>
+    <div onClick = {() =>setFlip(!flip)}>
+      <div className={`animalnoises__back ${flip ? '' : 'animalnoises__hidden'}`}>
+         <img className="animalnoises__horse-gif" src="https://bestanimations.com/media/horse-art/570970473animated-horse-gif-105.gif#.Y-JymKMBO5k.link" alt="horse gif" />
+        </div>
+        </div>
+        </div>
+
       <div className="animalnoises__card frog">
       <img className="animalnoises__frog-gif" src="https://i.pinimg.com/originals/2c/80/d2/2c80d2ced9451189047bc6f0c8a54852.gif" alt="cartoon frog gif" />
       <audio controls>
