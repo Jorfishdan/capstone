@@ -22,6 +22,10 @@ function AnimalNoises() {
     const [flipCat, setFlipCat] = useState(false);
     const [flipDuck, setFlipDuck] = useState(false);
     const [flipPig, setFlipPig] = useState(false);
+    const [flipDog, setFlipDog] = useState(false);
+    const [flipOwl, setFlipOwl] = useState(false);
+    const [flipChicken, setFlipChicken] = useState(false);
+    const [flipCow, setFlipCow] = useState(false);
    
     return (
         <>
@@ -109,34 +113,64 @@ function AnimalNoises() {
       </div>
 
 
-
-
-      <div className="animalnoises__card dog"> 
-      <img className="animalnoises__dog-gif" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/74731f76965389.5c7945b0cfcc3.gif" alt="dog gif" />
+      <div onClick={() => setFlipDog(!flipDog)} className="animalnoises__card dog"> 
+      <div className={`animalnoises__front ${flipDog ? 'animalnoises__dog-front': ''}`}>
         <audio controls>
             <source className="animalnoises__audio"src={dog} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
-        </audio></div>
-      <div className="animalnoises__card owl">
-        <img className="animalnoises__owl-gif" src="https://i.pinimg.com/originals/b8/1d/57/b81d57eef7c9a758a3982d5e5182e042.gif" alt="cartoon owl gif" />
+        </audio>
+        </div>
+        <div onClick = {() => setFlipDog(!flipDog)}>
+        <div className={`animalnoises__back ${flipDog ? '' : 'animalnoises__dog-back'}`}>  
+        <img className="animalnoises__dog-gif" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/74731f76965389.5c7945b0cfcc3.gif" alt="dog gif" />
+        </div>
+        </div>
+      </div>
+
+
+
+      <div onClick={() => setFlipOwl(!flipOwl)} className="animalnoises__card owl">
+      <div className={`animalnoises__front ${flipOwl ? 'animalnoises__owl-front': ''}`}>
       <audio controls>
             <source className="animalnoises__audio"src={owl} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
       </div>
-      <div className="animalnoises__card chicken">
-        <img className="animalnoises__chicken-gif" src="https://i.pinimg.com/originals/86/4d/db/864ddbd1733fae90c62cf71199bb7b9c.gif" alt="cartoon chicken gif" />
+      <div onClick = {() => setFlipOwl(!flipOwl)}>
+      <div className={`animalnoises__back ${flipOwl ? '' : 'animalnoises__owl-back'}`}>  
+      <img className="animalnoises__owl-gif" src="https://i.pinimg.com/originals/b8/1d/57/b81d57eef7c9a758a3982d5e5182e042.gif" alt="cartoon owl gif" />
+      </div>
+      </div>
+      </div>
+
+
+      <div onClick={() => setFlipChicken(!flipChicken)} className="animalnoises__card chicken">
+      <div className={`animalnoises__front ${flipChicken ? 'animalnoises__chicken-front': ''}`}>
       <audio controls>
             <source className="animalnoises__audio"src={chicken} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
       </div>
-      <div className="animalnoises__card cow">
-        <img className="animalnoises__cow-gif" src="https://i.pinimg.com/originals/8d/3a/90/8d3a907be5f70768cb79dc0809bfa3ae.gif" alt="cartoon cow gif" />
+      <div onClick = {() => setFlipChicken(!flipChicken)}>
+      <div className={`animalnoises__back ${flipChicken ? '' : 'animalnoises__chicken-back'}`}> 
+      <img className="animalnoises__chicken-gif" src="https://i.pinimg.com/originals/86/4d/db/864ddbd1733fae90c62cf71199bb7b9c.gif" alt="cartoon chicken gif" /> 
+      </div>
+      </div>
+      </div>
+
+
+      <div onClick={() => setFlipCow(!flipCow)} className="animalnoises__card cow">
+      <div className={`animalnoises__front ${flipCow ? 'animalnoises__cow-front': ''}`}>
       <audio controls>
             <source className="animalnoises__audio"src={cow} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
+      </div>
+      <div onClick = {() => setFlipCow(!flipCow)}>
+      <div className={`animalnoises__back ${flipCow ? '' : 'animalnoises__cow-back'}`}> 
+       <img className="animalnoises__cow-gif" src="https://i.pinimg.com/originals/8d/3a/90/8d3a907be5f70768cb79dc0809bfa3ae.gif" alt="cartoon cow gif" />
+      </div>
+      </div>
       </div>
     </section>
  </>

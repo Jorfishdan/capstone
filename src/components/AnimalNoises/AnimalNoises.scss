@@ -59,23 +59,23 @@
   }
 
   &__dog-gif {
-    height:10rem;
-    width: 19rem;
+    height:25rem;
+    width: 39rem;
   }
 
   &__owl-gif {
-    height:15rem;
-    width: 10rem;
+    height:28rem;
+    width: 25rem;
   }
 
   &__chicken-gif {
-    height:10rem;
-    width: 15rem;
+    height:30rem;
+    width: 30rem;
   }
   
   &__cow-gif {
-    height:10rem;
-    width: 10rem;
+    height:30rem;
+    width: 30rem;
   }
 
 
@@ -108,6 +108,47 @@
   }
 
   &__duck-back {
+    display:none;
+  }
+
+  &__pig-front{
+    display:none;
+  }
+
+  &__pig-back {
+    display:none;
+  }
+
+  &__dog-front{
+    display:none;
+  }
+
+  &__dog-back {
+    display:none;
+  }
+
+  &__owl-front{
+    display:none;
+  }
+
+  &__owl-back {
+    display:none;
+  }
+
+  &__chicken-front{
+    display:none;
+  }
+
+  &__chicken-back {
+    display:none;
+  }
+
+
+  &__cow-front{
+    display:none;
+  }
+
+  &__cow-back {
     display:none;
   }
 }
