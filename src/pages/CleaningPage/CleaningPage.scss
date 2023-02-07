@@ -2,3 +2,18 @@
 @use "../../styles/partials/resets" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
+
+.cleaningpage__cat {
+height:20rem;  
+animation: spin 3s linear 0s 1; 
+}
+@keyframes spin{
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg)
+    }
+}
+
+
