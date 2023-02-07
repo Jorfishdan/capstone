@@ -39,18 +39,18 @@
   }
 
   &__frog-gif{
-    height:24rem;
-    width: 27rem;
+    height:29rem;
+    width: 29.5rem;
   }
 
   &__cat-gif {
-    height:10rem;
-    width: 14rem;
+    height:20rem;
+    width: 30rem;
   }
 
   &__duck-gif {
-    height:14rem;
-    width: 16rem;
+    height:30rem;
+    width: 30rem;
   }
 
   &__pig-gif {
@@ -95,6 +95,21 @@
     display:none;
   }
 
+  &__cat-front{
+    display:none;
+  }
+
+  &__cat-back {
+    display:none;
+  }
+
+  &__duck-front{
+    display:none;
+  }
+
+  &__duck-back {
+    display:none;
+  }
 }
 
 

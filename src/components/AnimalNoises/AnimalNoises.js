@@ -18,7 +18,10 @@ import { Link } from 'react-router-dom';
 function AnimalNoises() {
     
     const [flipHorse, setFlipHorse] = useState(false);
-    const [flipFrog, setFlipFrog] = useState(false)
+    const [flipFrog, setFlipFrog] = useState(false);
+    const [flipCat, setFlipCat] = useState(false);
+    const [flipDuck, setFlipDuck] = useState(false);
+    const [flipPig, setFlipPig] = useState(false);
    
     return (
         <>
@@ -61,30 +64,53 @@ function AnimalNoises() {
             </div>
         </div>
 
-
-
-      <div className="animalnoises__card cat">
-        <img className="animalnoises__cat-gif" src="https://d.furaffinity.net/art/margoevergarden/1642552507/1642552431.margoevergarden_na-belom.gif" alt="spinnin cat gif" />
+      <div onClick={() => setFlipCat(!flipCat)} className="animalnoises__card cat">
+      <div className={`animalnoises__front ${flipCat ? 'animalnoises__cat-front': ''}`}>
       <audio controls>
             <source className="animalnoises__audio"src={cat} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
       </div>
-      <div className="animalnoises__card duck"> 
-        <img className="animalnoises__duck-gif" src="https://media.giphy.com/media/hC2mA1FWFs2OowO60p/giphy.gif" alt="cartoon duck gif" />
+      <div onClick = {() => setFlipCat(!flipCat)}>
+      <div className={`animalnoises__back ${flipCat ? '' : 'animalnoises__cat-back'}`}>
+         <img className="animalnoises__cat-gif" src="https://d.furaffinity.net/art/margoevergarden/1642552507/1642552431.margoevergarden_na-belom.gif" alt="spinnin cat gif" />
+      </div>
+      </div>
+      </div>
+
+
+      <div onClick={() => setFlipDuck(!flipDuck)} className="animalnoises__card duck"> 
+      <div className={`animalnoises__front ${flipDuck ? 'animalnoises__duck-front': ''}`}>
       <audio controls>
             <source className="animalnoises__audio"src={duck} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
-
       </div>
-      <div className="animalnoises__card pig">
-        <img className="animalnoises__pig-gif" src="https://wallpaperaccess.com/full/4105045.gif" alt="cartoon pig gif" />
+      <div onClick = {() => setFlipDuck(!flipDuck)}>
+      <div className={`animalnoises__back ${flipDuck ? '' : 'animalnoises__duck-back'}`}>
+        <img className="animalnoises__duck-gif" src="https://media.giphy.com/media/hC2mA1FWFs2OowO60p/giphy.gif" alt="cartoon duck gif" />
+      </div>
+      </div>
+      </div>
+
+
+      <div onClick={() => setFlipPig(!flipPig)} className="animalnoises__card pig">
+      <div className={`animalnoises__front ${flipPig ? 'animalnoises__pig-front': ''}`}>
       <audio controls>
             <source className="animalnoises__audio"src={pig} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
         </div>
+        <div onClick = {() => setFlipPig(!flipPig)}>
+        <div className={`animalnoises__back ${flipPig ? '' : 'animalnoises__pig-back'}`}>
+            <img className="animalnoises__pig-gif" src="https://wallpaperaccess.com/full/4105045.gif" alt="cartoon pig gif" />
+            </div>
+      </div>
+      </div>
+
+
+
+
       <div className="animalnoises__card dog"> 
       <img className="animalnoises__dog-gif" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/74731f76965389.5c7945b0cfcc3.gif" alt="dog gif" />
         <audio controls>
