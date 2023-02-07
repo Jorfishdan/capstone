@@ -34,13 +34,13 @@
   }
 
   &__horse-gif{
-    height:10rem;
-    width: 10rem;
+    height:20rem;
+    width: 20rem;
   }
 
   &__frog-gif{
-    height:10rem;
-    width: 14rem;
+    height:24rem;
+    width: 27rem;
   }
 
   &__cat-gif {
@@ -78,10 +78,17 @@
     width: 10rem;
   }
 
-  &__hidden{
+//   &__hidden{
+//     display:none;
+//   }
+
+  &__hidden-horse-front{
     display:none;
   }
 
+  &__hidden-horse-back{
+    display:none;
+  }
 
 }
 

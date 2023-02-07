@@ -30,28 +30,38 @@ function AnimalNoises() {
         </button>
 
         <section className="animalnoises__wrapper">
+
       <div onClick = {() => setFlip(!flip)} className="animalnoises__card horse">
-        <div className={`animalnoises__front ${flip ? 'animalnoises__hidden': ''}`}>
+        <div className={`animalnoises__front ${flip ? 'animalnoises__hidden-horse-front': ''}`}>
         <audio controls>
             <source className="animalnoises__audio" src={horse} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
       </div>
     <div onClick = {() =>setFlip(!flip)}>
-      <div className={`animalnoises__back ${flip ? '' : 'animalnoises__hidden'}`}>
+      <div className={`animalnoises__back ${flip ? '' : 'animalnoises__hidden-horse-back'}`}>
          <img className="animalnoises__horse-gif" src="https://bestanimations.com/media/horse-art/570970473animated-horse-gif-105.gif#.Y-JymKMBO5k.link" alt="horse gif" />
         </div>
         </div>
         </div>
 
-      <div className="animalnoises__card frog">
-      <img className="animalnoises__frog-gif" src="https://i.pinimg.com/originals/2c/80/d2/2c80d2ced9451189047bc6f0c8a54852.gif" alt="cartoon frog gif" />
+      <div onClick = {() => setFlip(!flip)} className="animalnoises__card frog">
+      <div className={`animalnoises__front ${flip ? 'animalnoises__hidden-frog': ''}`}>
       <audio controls>
-
             <source className="animalnoises__audio"src={frog} type="audio/mp3" />
             <p>Your browser does not support this audio</p>
         </audio>
       </div>
+        <div onClick = {() => setFlip(!flip)}>
+        <div className={`animalnoises__back ${flip ? '' : 'animalnoises__hidden'}`}>
+            <img className="animalnoises__frog-gif" src="https://i.pinimg.com/originals/2c/80/d2/2c80d2ced9451189047bc6f0c8a54852.gif" alt="cartoon frog gif" />
+
+            </div>
+            </div>
+        </div>
+
+
+
       <div className="animalnoises__card cat">
         <img className="animalnoises__cat-gif" src="https://d.furaffinity.net/art/margoevergarden/1642552507/1642552431.margoevergarden_na-belom.gif" alt="spinnin cat gif" />
       <audio controls>
