@@ -21,8 +21,8 @@ function BrainTeaserCard() {
             const response = await axios.get(
               ` http://localhost:8080/facts`
             );
-            console.log(response.data[0])
-            setQuestionList(response.data[0]);
+            // console.log(response.data[0])
+            setQuestionList(response.data);
             setShowQuestion(response.data[0])
         
           } catch (error) {
