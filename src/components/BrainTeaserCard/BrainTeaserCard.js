@@ -34,7 +34,7 @@ function BrainTeaserCard() {
 
     const revealHandler = ()=> {
     setAnswer(showQuestion.correct_answer)
-    if(showQuestion.correct_answer === "True")
+    if(showQuestion.correct_answer === "True" || "False")
     setScore(score +1)
     };
 
