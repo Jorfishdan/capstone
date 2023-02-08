@@ -10,10 +10,7 @@ function BrainTeaserCard() {
     const [showQuestion, setShowQuestion] = useState({});
     const [index, setIndex] = useState(0);
     const [score, setScore] = useState(0);
-    const [explain, setExplain] = useState(null)
-
-    // `https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
-
+    const [explain, setExplain] = useState(null);
 
 
     useEffect(() => {
