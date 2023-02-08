@@ -6,15 +6,26 @@ import { useState } from "react";
 function Timer ({ expiryTimestamp, setPage }) {
     
     const [openModal, setOpenModal] = useState(false);
-    const [inputTime, setInputTime] = useState("")
+    const [inputTime, setInputTime] = useState("");
+    // const [seconds1, setSeconds1] = useSate(0);
+    // const [minutes1, setMinutes1] = useState(0);
+
+    // setSeconds1(Math.floor((time/1000)%60));
+    // setMinutes1(Math.floor((time/1000/60) %60))
     const { seconds, minutes, isRunning, start, pause, reset, restart } =
     useTimer({
       expiryTimestamp,
-      onExpire: () => console.warn("onExpire called"),
+      inputTime,
+      onExpire: () => console.warn("Time's up!"),
     });
+
    
     function startScan() {
         setOpenModal(true);
+    }
+
+    function minutesClock(event) {
+      setInputTime(event.target.value);
     }
 
   return (
@@ -27,14 +38,17 @@ function Timer ({ expiryTimestamp, setPage }) {
         </div>
         <p className="timer__running">{isRunning ? "Running" : "Not running"}</p>
         <form className="timer__form">
-            {/* <input type="number" value={inputTime} onChange= {e => setInputTime(e.target.value)} /> */}
+            <input type="number" />
+            <button onClick={minutesClock}className="timer__minutes">Set Timer</button>
         </form>
         <button className="timer__start" onClick={start}>Start</button>
         <button className="timer__pause"onClick={pause}>Pause</button>
-        <button className="timer__reset"onClick={reset}>Reset</button>
+        {/* <button className="timer__reset"onClick={reset}>Reset</button> */}
         <button className="timer__countdown"
           onClick={() => {
             const time = new Date();
+            // time.setSeconds(time.getSeconds() + 300);
+            // time.setMinutes(time.getMinutes() + inputTime);
             time.setSeconds(time.getSeconds() + 300);
             restart(time);
           }}

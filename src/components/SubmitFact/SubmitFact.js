@@ -31,8 +31,7 @@ function SumbitFact() {
         incorrect_answer: incorrect,
         explanation: explain,
     })
-    alert("It's been added to the game!")
-    
+    alert("It's been added to the game!")  
 
 };
 
