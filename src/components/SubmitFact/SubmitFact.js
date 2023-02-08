@@ -6,11 +6,11 @@ import './SubmitFact.scss';
 
 function SumbitFact() { 
 
-    const formRef = useRef();
-    const [clearSubQuestion, setClearSubQuestion] = useState(null)
+    const formRef = useRef(null);
 
     function handleSubmit(event) {
         event.preventDefault()
+        formRef.current.reset();
         const form = formRef.current;
         const question = form.question.value;
         const answer = form.answer.value;
