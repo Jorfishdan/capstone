@@ -8,15 +8,21 @@ import { Link } from "react-router-dom";
 
 function CleaningPage() {
     const [page, setPage] = useState(null)
+    const [inputTime, setInputTime] = useState(0)
+
+    const time = new Date ();
+    // time.setSeconds(time.getSeconds() + setInputTime)
+
 return (
     <>
     <Link to="/"><img src={home} alt="home icon to press to return to the home page" className="cleaningpage__home" /></Link>
-    <Timer setPage={setPage}/>
+    <Timer setPage={setPage}  setInputTime={setInputTime}/>
     <Music />
     <img src={pet} alt="cat cartoon" className="cleaningpage__cat"/>
-
     </>
 )
 }
 
 export default CleaningPage;
+
+// expiryTimestamp={time}

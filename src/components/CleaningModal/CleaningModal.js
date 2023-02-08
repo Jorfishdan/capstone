@@ -2,12 +2,9 @@ import "./CleaningModal.scss";
 import closeBtn from "../../assets/images/close.png";
 import spin from "../../assets/images/spinning-cat.gif";
 import { useState } from "react";
-// import {AES, enc} from "crypto-js"
 
 function CleaningModal({ openModal, onClose, setWarehouse }) {
   const [revealScore, setRevealScore] = useState(false)
-  // const [encryted, setEncrypted] = useState("");
-  // const [decrypt, setDecrypt] = useState("");
   if (!openModal) return null;
 
 
@@ -24,11 +21,11 @@ function CleaningModal({ openModal, onClose, setWarehouse }) {
             <button onClick={onClose} className="modal__buttons-cancel">
               Cancel
             </button>
-            <textarea className="modal__input" style={{display: revealScore ? "block" : "none"}}>
-              <input type="text" placeholder="Let me calculate">
+            <textarea className="modal__input" >
+              <input type="password" placeholder="Let me calculate">
               </input>
             </textarea>
-            <button className="modal__score" onClick={() => setRevealScore(true)}>Show Score!</button>
+            <button className="modal__score">Show Score!</button>
           </div>
         </div>
       </div>
@@ -36,3 +33,7 @@ function CleaningModal({ openModal, onClose, setWarehouse }) {
   );
 }
 export default CleaningModal;
+
+// style={{display: revealScore ? "block" : "none"}
+
+// onClick={() => setRevealScore(true)
