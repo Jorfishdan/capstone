@@ -32,6 +32,7 @@ function SumbitFact() {
         explanation: explain,
     })
     alert("It's been added to the game!")
+    
 
 };
 
