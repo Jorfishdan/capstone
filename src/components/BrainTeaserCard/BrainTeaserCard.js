@@ -11,17 +11,19 @@ function BrainTeaserCard() {
     const [index, setIndex] = useState(0);
     const [score, setScore] = useState(0);
 
+    // `https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
+
 
 
     useEffect(() => {
         const triviaAnswer = async () => {
           try {
             const response = await axios.get(
-              `https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean`
+              ` http://localhost:8080/facts`
             );
-            console.log(response.data.results)
-            setQuestionList(response.data.results);
-            setShowQuestion(response.data.results[0])
+            console.log(response.data[0])
+            setQuestionList(response.data[0]);
+            setShowQuestion(response.data[0])
         
           } catch (error) {
             console.log(error);
