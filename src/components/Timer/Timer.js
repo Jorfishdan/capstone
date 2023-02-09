@@ -8,7 +8,6 @@ function Timer ({  setPage, inputTime }) {
   
     const [openModal, setOpenModal] = useState(false);
     const [input, setInput] = useState(0);
-    // const [pause, setPause] = useState(false);
     const [start, setStart] = useState(false);
     const renderTime = ({ remainingTime }) => {
       if (remainingTime <= 0) {
