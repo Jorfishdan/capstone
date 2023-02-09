@@ -8,6 +8,8 @@ function Timer ({  setPage, inputTime }) {
   
     const [openModal, setOpenModal] = useState(false);
     const [input, setInput] = useState(0);
+    // const [pause, setPause] = useState(false);
+    const [start, setStart] = useState(false);
     const renderTime = ({ remainingTime }) => {
       if (remainingTime <= 0) {
         return <div className="timer">Too late...</div>;
@@ -28,27 +30,35 @@ function Timer ({  setPage, inputTime }) {
       );
 
     }
+
+    function handleStart(){
+      setStart(true)
+
+    }
+
+    function handlePause(){
+      setStart(false)
+
+    }
     function handleChange(event) {
             event.preventDefault();
             setInput(event.target.value * 60)
-          }
-        // function startScan() {
-        //             setOpenModal(true);
-        //         }
 
-              const { seconds, minutes, isRunning, start, pause, restart } =
-              CountdownCircleTimer
+          }
+        function startScan() {
+                    setOpenModal(true);
+                }
 
       return (
         <div className="timer">
         
         <div className="timer-wrapper">
           <CountdownCircleTimer
-            isPlaying
+            isPlaying={start}
             duration={input}
             colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
             colorsTime={[10, 6, 3, 0]}
-            onComplete={() => ({ shouldRepeat: true, delay: 1 })}
+            onComplete={() => ({ shouldRepeat: false, delay: 1 })}
           >
             {renderTime}
           </CountdownCircleTimer>
@@ -59,18 +69,9 @@ function Timer ({  setPage, inputTime }) {
             <span>minutes</span>
        </form>
 
-       <button className="timer__start" onClick={start}>Start</button>
-        <button className="timer__pause"onClick={pause}>Pause</button>
-         {/* <button className="timer__countdown"
-          onClick={() => {
-            const time = new Date();
-            time.setMinutes(time.getMinutes()+ parseInt(input)/60);
-            restart(time.getTime());
-          }}
-        >
-          Restart
-        </button> */}
-        {/* <button onClick={() => startScan()} className="timer__scan">Scan</button> */}
+       <button className="timer__start" onClick={handleStart}>Start</button>
+        <button className="timer__pause"onClick={handlePause}>Pause</button>
+        <button onClick={() => startScan()} className="timer__scan">Scan</button>
         <CleaningModal openModal={openModal} onClose={() => setOpenModal(false)} setPage={setPage} />
       </div>
       )
