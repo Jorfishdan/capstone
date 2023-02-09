@@ -11,7 +11,7 @@ function Timer ({  setPage, inputTime }) {
     const [start, setStart] = useState(false);
     const renderTime = ({ remainingTime }) => {
       if (remainingTime <= 0) {
-        return <div className="timer">Too late...</div>;
+        return <div className="timer">Time to play</div>;
        
       }
       const remainingMinutes = Math.ceil(remainingTime / 60);
@@ -28,6 +28,10 @@ function Timer ({  setPage, inputTime }) {
         </>
       );
 
+    }
+
+    function handleReset() {
+      setInput(0)
     }
 
     function handleStart(){
@@ -70,6 +74,7 @@ function Timer ({  setPage, inputTime }) {
 
        <button className="timer__start" onClick={handleStart}>Start</button>
         <button className="timer__pause"onClick={handlePause}>Pause</button>
+        <button className="timer__pause"onClick={handleReset}>Reset</button>
         <button onClick={() => startScan()} className="timer__scan">Scan</button>
         <CleaningModal openModal={openModal} onClose={() => setOpenModal(false)} setPage={setPage} />
       </div>
