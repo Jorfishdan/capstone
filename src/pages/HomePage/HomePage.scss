@@ -13,8 +13,29 @@ height:100vh;
   }
 }
 &__dog{
+  // trying to prevent gif from running all the time
   width:5rem;
   height:5rem;
+  animation-name: Dog;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+
+}
+&__dog:hover {
+  animation-play-state:running;
+}
+
+@keyframes Dog {
+  0% {
+    transform:translate(0,0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
 }
 
 }
+
+
+

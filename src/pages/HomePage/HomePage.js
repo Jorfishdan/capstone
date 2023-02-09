@@ -12,7 +12,7 @@ function HomePage() {
         <Header />
         <HomePageCards />
         <Footer />
-        </section>
+        </section>        
         <img className="homepage__dog" src={dog} alt="dog" />
         </>
     )
