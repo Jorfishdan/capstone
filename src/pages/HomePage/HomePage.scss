@@ -6,6 +6,17 @@
 .homepage {
 width:100vw;
 height:100vh;
+// background-color:#23F3DA;
+
+// #22CAB6;
+
+&__circle {
+  background-color:#23F3DA;
+  width:5rem;
+  height:5rem;
+  border-radius: 50%;
+  
+}
 
 &__wrapper {
   @include desktop {
@@ -16,15 +27,15 @@ height:100vh;
   // trying to prevent gif from running all the time
   width:5rem;
   height:5rem;
-  animation-name: Dog;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
+//   animation-name: Dog;
+//   animation-duration: 4s;
+//   animation-iteration-count: infinite;
+//   animation-play-state: paused;
 
-}
-&__dog:hover {
-  animation-play-state:running;
-}
+// }
+// &__dog:hover {
+//   animation-play-state:running;
+// }
 
 @keyframes Dog {
   0% {
@@ -37,5 +48,7 @@ height:100vh;
 
 }
 
+
+}
 
 
