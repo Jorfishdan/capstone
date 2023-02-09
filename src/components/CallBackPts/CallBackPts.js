@@ -14,7 +14,7 @@ function CallBackPts() {
         <>
         <button className="pts__add" onClick={AddPointsHandler}>+</button>
         <div className="pts__sum">{points}</div>
-        <button className="pts__add" onClick={MinusPointsHandler}>-</button>
+        <button className="pts__minus" onClick={MinusPointsHandler}>-</button>
         </>
     )
 }

@@ -1,0 +1,12 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.pts {
+    &__add, &__sum, &__minus {
+        width:5rem;
+        height:5rem;
+        font-size:3rem;
+    }
+}

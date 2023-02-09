@@ -12,7 +12,7 @@ import count from "../../assets/audio/countdown.mp3";
 import home from "../../assets/images/home.png";
 import chicken from "../../assets/audio/chicken.mp3";
 import frog from "../../assets/audio/frog.mp3";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 
 function AnimalNoises() {
@@ -26,6 +26,7 @@ function AnimalNoises() {
   const [flipChicken, setFlipChicken] = useState(false);
   const [flipCow, setFlipCow] = useState(false);
 
+  
   return (
     <>
       <Link to="/">
