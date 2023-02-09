@@ -1,6 +1,7 @@
 import "./BrainTeaserCard.scss"
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion"
 
 function BrainTeaserCard() {
 
@@ -55,8 +56,9 @@ function BrainTeaserCard() {
                 <h1 className="brainteaser__question">{showQuestion.question}</h1>
                 <div className="brainteaser__cards-wrapper">
                 <article className="brainteaser__cardtrue" onClick={revealHandler}>
-                    <h1 className="brainteaser__true--text">True</h1>
+                <h1 className="brainteaser__true--text">True</h1>
                 </article>
+          
                 <article className="brainteaser__cardfalse" onClick={revealHandler}>
                     <h1 className="brainteaser__false--text">False</h1>
                 </article>
@@ -69,6 +71,7 @@ function BrainTeaserCard() {
                
             </div>
         </section>
+        
     
     )}
     </div>
