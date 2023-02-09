@@ -24,7 +24,7 @@ function Timer ({  setPage, inputTime }) {
           <div className="value">{remainingMinutes}</div>
           <div className="text">minutes</div>
         </div>
-        <CleaningModal openModal={openModal} onClose={() => setOpenModal(false)} setPage={setPage} />
+        {/* <CleaningModal openModal={openModal} onClose={() => setOpenModal(false)} setPage={setPage} /> */}
         </>
       );
 
