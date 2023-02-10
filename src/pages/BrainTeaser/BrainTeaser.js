@@ -21,8 +21,10 @@ function BrainTeaser() {
             <div className="brainteaser__cardE"></div>
             <div className="brainteaser__cardF"></div>
             <div className="brainteaser__cardG"></div>
+            <div className="brainteaser__wrapper">
         <BrainTeaserCard />
         <SubmitFact />
+        </div>
         </section>
         </>
 

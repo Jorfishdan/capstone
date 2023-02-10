@@ -106,7 +106,12 @@
 &__explain {
     font-family:'WorkSans';
     font-size: 2rem;
-    color: #313131;
+    color: white;
+    font-weight: 600;
+    margin:1.6rem;
+    background-color: #23F3DA;
+    padding:1rem;
+    border-radius: 1rem;
 }
 
 &__next {
@@ -116,6 +121,20 @@
     background-color: #23F3DA;
     border-radius: 1rem;
     padding:1rem;
-    border:#23F3DA;;
+    border:#23F3DA;
+    
 }
+&__score {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: #23F3DA;
+    border-radius: 1rem;
+    font-weight:600;
+    
+}
+// &__mini-wrapper {
+//     border: 1px solid #23F3DA;
+//     display:flex;
+//     justify-content: center;
+// }
 }

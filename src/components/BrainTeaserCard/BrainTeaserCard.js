@@ -63,12 +63,13 @@ function BrainTeaserCard() {
                     <h1 className="brainteaser__false--text">False</h1>
                 </article>
                 </div>
+                {/* <div classname="brainteaser__mini-wrapper"> */}
                 <article className="brainteaser__answer">{answer}
                 </article>
                 <p className="brainteaser__explain">{explain}</p>
                 <button className="brainteaser__next" onClick={nextHandler}>Next</button>
                 <div className="brainteaser__score">Score {score}</div>
-               
+                {/* </div> */}
             </div>
         </section>
         

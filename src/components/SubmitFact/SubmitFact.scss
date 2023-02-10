@@ -4,10 +4,35 @@
 @use "../../styles/partials/variables" as *;
 
 .form {
+    
     &__submit {
         display:flex;
         flex-direction: column;
         align-items: center;
-        margin:1.6rem;
+        margin:1.6rem 0;
+        border: 2px solid #23F3DA;
+        width: 50rem;
+        border-radius: 1rem;
+        color: #313131;
+    }
+    &__add-question {
+        font-family: 'WorkSans';
+        font-size: 2rem;
+        color: #313131;
+    }
+    &__input, &__answer, &__incorrect,&__explain {
+        border-radius: 0.5rem;
+        border: 2px solid #23F3DA;
+    }
+
+    &__button {
+        background-color:#23F3DA;
+        border: 2px solid #23F3DA;
+        border-radius: 0.5rem;
+        color:white;
+        font-weight: 600;
+        font-family: 'WorkSans';
+        padding:1rem;
+
     }
 }
