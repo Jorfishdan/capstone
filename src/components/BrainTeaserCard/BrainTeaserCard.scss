@@ -85,4 +85,37 @@
         font-size: 6rem;
     }
 }
+
+&__question {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: #313131;
+    border: 2px solid #23F3DA;
+    border-radius: 0.8rem;
+    padding:1rem;
+}
+
+&__answer {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: #313131;
+    border: 2px solid #23F3DA;
+    border-radius: 1rem;
+    padding:1rem;
+}
+&__explain {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: #313131;
+}
+
+&__next {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: white;
+    background-color: #23F3DA;
+    border-radius: 1rem;
+    padding:1rem;
+    border:#23F3DA;;
+}
 }
