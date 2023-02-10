@@ -10,7 +10,6 @@ function SumbitFact() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        formRef.current.reset();
         const form = formRef.current;
         const question = form.question.value;
         const answer = form.answer.value;
@@ -23,20 +22,22 @@ function SumbitFact() {
         }
 
     axios.post(`http://localhost:8080/facts`, {
-        category: "Misc",
-        type: Boolean,
-        difficulty: "easy",
+        // category: "Misc",
+        // type: Boolean,
+        // difficulty: "easy",
+        id: uuidv4(),
         question: question,
         correct_answer: answer,
         incorrect_answer: incorrect,
         explanation: explain,
     })
     alert("It's been added to the game!")  
+    formRef.current.reset();
 
 };
 
     return (
-        <form onSumbit={handleSubmit} ref={formRef} className="form__submit">
+        <form onSubmit={handleSubmit} ref={formRef} className="form__submit">
             <h2 className="form__add-question">Add a question to the game!</h2>
             <input type="text" className="form__input" name="question" placeholder="Add a question..."></input>
 
