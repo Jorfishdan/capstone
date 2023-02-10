@@ -11,7 +11,7 @@ function BrainTeaser() {
     return(
         <>
         <Link to="/">
-            <motion.div className="text"  whileHover={{ scale: 1.1}} transition={{type: "spring", stiffness: 200, damping:15}} > 
+            <motion.div className="text"  whileHover={{ scale: 1.1}} transition={{type: "bounce", stiffness: 100, damping:5}} > 
             <img src={house} alt="home icon to return to main menu" className="brainteaser__home" />
             </motion.div>
             </Link>
