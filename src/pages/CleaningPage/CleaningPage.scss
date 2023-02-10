@@ -3,17 +3,24 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.cleaningpage__cat {
-height:20rem;  
-animation: spin 3s linear 0s 2; 
-}
-@keyframes spin{
-    0% {
-        transform:rotate(0deg);
+.cleaningpage {
+    &__header {
+        display: flex;
+        justify-content: space-around;
     }
-    100% {
-        transform:rotate(360deg)
-    }
+  &__home {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  &__brainteaser-link{
+    width: 3rem;
+    height: 3rem;
+    margin-right:1rem;
+  }
+
+  &__callbacks-link{
+    width: 3rem;
+    height: 3rem;
+  }
 }
-
-
