@@ -8,7 +8,8 @@ function HomePageCards() {
     <section className="homepagecard">
     
       <div className="homepagecard__mega-wrapper">
-      <img className="homepage__dog" src={dog} alt="dog" />
+      <h1 className="homepagecard__title">Teacher's Pet</h1>
+      <img className="homepagecard__dog" src={dog} alt="dog" />
      
     <article className="homepagecard__wrapper">
      <Link to="/brainTeaser"><h1 className="homepagecard__card--1">Head Scatchers</h1></Link> 

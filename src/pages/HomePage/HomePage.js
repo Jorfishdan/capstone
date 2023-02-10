@@ -11,13 +11,16 @@ function HomePage() {
         <>
         <section className="homepage">
         <Header />
-            <h1 className="homepage__title">Teacher's Pet</h1>
        
         <div className="homepage__circle"></div>
         
         <div className="homepage__circle2"></div>
+        
         <HomePageCards />
         <div className="homepage__circle3"></div>
+        <div className="homepage__circle4"></div>
+        <div className="homepage__circle5"></div>
+        <div className="homepage__circle6"></div>
         {/* <Footer /> */}
         
         </section>        

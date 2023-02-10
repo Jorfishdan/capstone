@@ -12,11 +12,19 @@ height:100vh;
 
 &__circle {
   background-color:#23F3DA;
-  width:30rem;
-  height:30rem;
+  width:25rem;
+  height:25rem;
   border-radius: 50%;
   position: absolute;
+  left: -25px;
+  top:5px;
+  // animation: float 2s ease-in-out infinite;
   z-index: -1;
+
+  @include tablet {
+    width:30rem;
+    height:30rem;
+  }
 
   // border-top-left-radius: 3rem;
   // border-top-right-radius: 3rem;
@@ -26,51 +34,109 @@ height:100vh;
 
 &__circle2 {
   background-color:#23F3DA;
-  width:10rem;
-  height:10rem;
+  width:15rem;
+  height:15rem;
   border-radius: 50%;
   position: absolute;
   right:40px;
   bottom:40px;
+  // animation: float 2s ease-in-out infinite;
   z-index: -1;
 }
 
-&__title {
-  font-family: 'WorkSans';
-  z-index: 1;
+
+&__circle3 {
+  background-color:#23F3DA;
+  width:15rem;
+  height:15rem;
+  border-radius: 50%;
+  position: absolute;
+  // top:90px;
+  // left:5px;
+  z-index: -1;
+  // animation: float 2s ease-in-out infinite;
+
+  @include tablet {
+    width:20rem;
+  height:20rem;
+  }
+}
+
+&__circle4 {
+  background-color:#23F3DA;
+  width:20rem;
+  height:20rem;
+  border-radius: 50%;
+  position: absolute;
+  top:90px;
+  right:5px;
+  z-index: -1;
+  // animation: float 2s ease-in-out infinite;
+
+  @include tablet {
+    width:20rem;
+  height:20rem;
+  }
+}
+
+&__circle5 {
+  background-color: transparent;
+  width: 27rem;
+  height: 27rem;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #23F3DA;
+  top: -3px;
+  left: -27px;
+  z-index: -1;
+  
+  // animation: float 2s ease-in-out infinite;
+
+  @include tablet {
+    width:20rem;
+  height:20rem;
+  }
+
+ 
+}
+
+&__circle6 {
+  background-color: transparent;
+  width: 27rem;
+  height: 27rem;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #23F3DA;
+  bottom: 3px;
+  right: 27px;
+  z-index: -1;
 }
 
 &__wrapper {
+  position:relative;
+  width:50%;
+  height:50%;
   @include desktop {
     flex-direction:row;
   }
 }
-&__dog{
-  // trying to prevent gif from running all the time
-  width:5rem;
-  height:5rem;
-//   animation-name: Dog;
-//   animation-duration: 4s;
-//   animation-iteration-count: infinite;
-//   animation-play-state: paused;
 
+// @keyframes float {
+//   0% {
+//     transform: translateY(0);
+//   }
+//   50% {
+//     transform: translateY(-10);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
 // }
-// &__dog:hover {
-//   animation-play-state:running;
-// }
-
-@keyframes Dog {
-  0% {
-    transform:translate(0,0);
-  }
-  100% {
-    transform: translate(100px, 100px);
-  }
-}
-
-}
 
 
 }
+
+
+
 
 

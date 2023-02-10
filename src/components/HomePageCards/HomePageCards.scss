@@ -32,6 +32,8 @@
       justify-content: space-around;
     }
   }
+
+
 &__card--1 {
     height: 12rem;
     width: 25rem;
@@ -155,6 +157,17 @@
   @include desktop {
     width: 50vw;
   }
+}
+
+&__title {
+  font-family: 'WorkSans';
+  font-size: 3rem;
+  z-index: 1;
+}
+
+&__dog {
+  width:10rem;
+  height: 10rem;
 }
 }
 
