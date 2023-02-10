@@ -24,7 +24,7 @@ return (
     </div>
     </div>
     <Timer setPage={setPage} expiryTimestamp={time} setInputTime={setInputTime}/>
-    <Music />
+    {/* <Music /> */}
     </>
 )
 }

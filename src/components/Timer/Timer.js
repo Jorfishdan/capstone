@@ -1,16 +1,15 @@
 import "./Timer.scss"
 import {  CountdownCircleTimer } from "react-countdown-circle-timer";
 import CleaningModal from "../CleaningModal/CleaningModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Timer ({  setPage, inputTime }) {
-
-  
     const [openModal, setOpenModal] = useState(false);
     const [input, setInput] = useState(0);
     const [start, setStart] = useState(false);
     const renderTime = ({ remainingTime }) => {
-      if (remainingTime <= 0) {
+      if (remainingTime === 0) {
+        handleReset();
         return <div className="timer">Time to play</div>;
        
       }
@@ -42,8 +41,10 @@ function Timer ({  setPage, inputTime }) {
       setStart(false)
 
     }
+   
     function handleChange(event) {
             event.preventDefault();
+            if(!start)
             setInput(event.target.value * 60)
 
           }
@@ -58,11 +59,12 @@ function Timer ({  setPage, inputTime }) {
           <CountdownCircleTimer
             isPlaying={start}
             duration={input}
-            colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
-            colorsTime={[10, 6, 3, 0]}
+            colors={["#23F3DA", "#36F460", "#A335FA", "#35FA78", "#FA7035","#F6FA35"]}
+            colorsTime={[10, 9, 8, 5, 2, 0]}
             onComplete={() => ({ shouldRepeat: false, delay: 1 })}
           >
             {renderTime}
+            {/* handleReset(); */}
           </CountdownCircleTimer>
         </div>
         
