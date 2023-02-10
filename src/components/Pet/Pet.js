@@ -6,6 +6,7 @@ import axios from "axios";
 function Pet() {
     const [isPetShown, setIsPetShown] = useState(false);
     const [dogBubble, setDogBubble] = useState([])
+    const [sayIndex, setSayIndex] = useState(0)
 
     useEffect(() => {
         setTimeout(() => {
@@ -27,9 +28,8 @@ function Pet() {
             const response = await axios.get(
               ` http://localhost:8080/dog`
             );
-            console.log(response.data[0])
-            // setDogBubble(response.data);
-            setDogBubble(response.data[0])
+            console.log(response.data)
+            setDogBubble(response.data)
         
           } catch (error) {
             console.log(error);
@@ -38,6 +38,14 @@ function Pet() {
         dogSays();
       }, []);
 
+      useEffect(() => {
+        if(isPetShown) {
+            setTimeout(() => {
+                setSayIndex(sayIndex === dogBubble.length -1 ? 0 : sayIndex +1)
+            }, 10000)
+        }
+      }, [isPetShown, sayIndex, sayIndex.length])
+
     return (
         <div className="pet">
             {isPetShown && ( 
@@ -45,7 +53,7 @@ function Pet() {
             <img src={cheering} alt="speech bubble" className="pet__cheering" />
             <div className="pet__bubble-wrap">
             <img src={chat} alt="speech bubble" className="pet__chat" />
-            <span className="pet__bubble-text">{dogBubble.say}</span>
+            <span className="pet__bubble-text">{dogBubble[sayIndex].say}</span>
             </div>
             
         </div>

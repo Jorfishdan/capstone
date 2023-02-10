@@ -2,3 +2,34 @@
 @use "../../styles/partials/resets" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
+
+.timer {
+    &__start, &__pause, &__reset, &__scan {
+        font-family: 'WorkSans';
+        background-color: #23F3DA;
+        border: #23F3DA;
+        border-radius: 0.5rem;
+        color:white;
+        padding:1rem;
+        margin:1.6rem;
+    }
+
+    &__minutes {
+        font-family: 'WorkSans';
+        font-weight: 600;
+        margin-left: 1rem;
+    }
+
+    &__input {
+        margin-top:1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #23F3DA;
+    }
+
+    &__wrapper {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

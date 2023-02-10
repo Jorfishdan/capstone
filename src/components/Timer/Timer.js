@@ -55,7 +55,7 @@ function Timer ({  setPage, inputTime }) {
       return (
         <div className="timer">
         
-        <div className="timer-wrapper">
+        <div className="timer__wrapper">
           <CountdownCircleTimer
             isPlaying={start}
             duration={input}
@@ -64,20 +64,20 @@ function Timer ({  setPage, inputTime }) {
             onComplete={() => ({ shouldRepeat: false, delay: 1 })}
           >
             {renderTime}
-            {/* handleReset(); */}
           </CountdownCircleTimer>
-        </div>
         
         <form className="timer__form">
-            <input type="number" step="1" onChange={handleChange}/>
-            <span>minutes</span>
+            <input className="timer__input" type="number" step="1" onChange={handleChange}/>
+            <span className="timer__minutes">minutes</span>
        </form>
-
+        <div className="timer__btn-wrapper">
        <button className="timer__start" onClick={handleStart}>Start</button>
         <button className="timer__pause"onClick={handlePause}>Pause</button>
-        <button className="timer__pause"onClick={handleReset}>Reset</button>
+        <button className="timer__reset"onClick={handleReset}>Reset</button>
         <button onClick={() => startScan()} className="timer__scan">Scan</button>
         <CleaningModal openModal={openModal} onClose={() => setOpenModal(false)} setPage={setPage} />
+      </div>
+      </div>
       </div>
       )
     };
