@@ -19,10 +19,10 @@ function BrainTeaser() {
             </Link>
             <div className="brainteaser__icon-wrapper">
             <Link to="/cleanup">
-            <img src={dogfood} alt="home icon to return to main menu" className="brainteaser__home" />
+            <img src={dogfood} alt="home icon to return to main menu" className="brainteaser__cleanup-link" />
             </Link>
             <Link to="/callbacks">
-            <img src={paw} alt="home icon to return to main menu" className="brainteaser__home" />
+            <img src={paw} alt="home icon to return to main menu" className="brainteaser__callbacks-link" />
             </Link>
             </div>
             </div>
