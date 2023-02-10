@@ -10,14 +10,20 @@ function BrainTeaser() {
     
     return(
         <>
+        <section className="brainteaser">
         <Link to="/">
-            <motion.div className="text"  whileHover={{ scale: 1.1}} transition={{type: "bounce", stiffness: 100, damping:5}} > 
             <img src={house} alt="home icon to return to main menu" className="brainteaser__home" />
-            </motion.div>
             </Link>
+            <div className="brainteaser__cardA"></div>
+            <div className="brainteaser__cardB"></div>
+            <div className="brainteaser__cardC"></div>
+            <div className="brainteaser__cardD"></div>
+            <div className="brainteaser__cardE"></div>
+            <div className="brainteaser__cardF"></div>
+            <div className="brainteaser__cardG"></div>
         <BrainTeaserCard />
         <SubmitFact />
-    
+        </section>
         </>
 
     )
