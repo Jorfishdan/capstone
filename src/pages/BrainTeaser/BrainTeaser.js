@@ -5,6 +5,7 @@ import house from "../../assets/images/house-static.png";
 import SubmitFact from "../../components/SubmitFact/SubmitFact";
 import dogfood from "../../assets/images/dog-food.png";
 import paw from "../../assets/images/pawprint.png";
+import Pet from "../../components/Pet/Pet";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -36,6 +37,7 @@ function BrainTeaser() {
             <div className="brainteaser__wrapper">
         <BrainTeaserCard />
         <SubmitFact />
+        <Pet />
         </div>
         </section>
         </>
