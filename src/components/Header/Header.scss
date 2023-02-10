@@ -14,7 +14,7 @@
         margin:1.6rem;
     }
 
-    &__list {
+    &__logout {
         width:5rem;
         height:5rem;
         @include tablet {
@@ -24,14 +24,23 @@
             width: 5rem;
             height:7rem;
         }
+
+        &:hover {
+            fill: #23F3DA;
+        }
     }
 
     &__info {
         width:5rem;
         height:5rem;
+        background-image: url("../../assets/images/info-static.png");
         @include tablet {
             height: 5rem; 
             width: 5rem;
+        }
+
+        &:hover {
+            background-image: url("../../assets/images/information.gif");
         }
     }
 

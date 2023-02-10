@@ -10,10 +10,14 @@ function HomePage() {
     return (
         <>
         <section className="homepage">
-        {/* <Header /> */}
+        <Header />
+            <h1 className="homepage__title">Teacher's Pet</h1>
+       
         <div className="homepage__circle"></div>
-        <img className="homepage__dog" src={dog} alt="dog" />
+        
+        <div className="homepage__circle2"></div>
         <HomePageCards />
+        <div className="homepage__circle3"></div>
         {/* <Footer /> */}
         
         </section>        
