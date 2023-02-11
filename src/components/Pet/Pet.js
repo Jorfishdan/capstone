@@ -5,19 +5,27 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 function Pet() {
     const [isPetShown, setIsPetShown] = useState(false);
-    const [dogBubble, setDogBubble] = useState([])
-    const [sayIndex, setSayIndex] = useState(0)
+    const [dogBubble, setDogBubble] = useState([]);
+    const [sayIndex, setSayIndex] = useState(0);
+    const [isRolledOut, SetIsRolledOut] = useState(false);
+
+    // function rollOut() {
+    //   SetIsRolledOut(true)
+    // }
 
     useEffect(() => {
         setTimeout(() => {
             setIsPetShown(true)
+            SetIsRolledOut(true)
+            
         }, 3000)
     }, [isPetShown])
 
     useEffect(() => {
         if(isPetShown) {
         setTimeout(() => {
-            setIsPetShown(false)
+          setIsPetShown(false)
+           
         }, 10000)
     }
     }, [isPetShown])
@@ -50,6 +58,7 @@ function Pet() {
         <div className="pet">
             {isPetShown && ( 
             <div className="pet__wrapper">
+            {/* <div className={`pet__wrapper ${isRolledOut ? "rollout" : ""}`}> */}
             <img src={cheering} alt="speech bubble" className="pet__cheering" />
             <div className="pet__bubble-wrap">
             <img src={chat} alt="speech bubble" className="pet__chat" />

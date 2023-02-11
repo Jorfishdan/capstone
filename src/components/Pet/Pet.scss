@@ -37,13 +37,35 @@
         overflow: hidden;
         animation: type 2s ease-in-out forwards;
     }
-
-
+&__wrapper.rollout {
+    animation: rollOut 1s ease-in-out;
+}
+@keyframes rollIn {
+    from {
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        opacity:0;
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity:1;
+    }
+}
 
     &__bubble-wrap {
         display: flex;
         flex-wrap: wrap;
         animation: rollIn 1s ease-in-out;
+    }
+
+    @keyframes rollOut {
+        from {
+            transform: translate3d(0,0,0);
+            opacity:1;
+        }
+        to {
+            transform: translate3d(100%, 0, 0) rotate3d(0,0,1, 120deg);
+            opacity:0;
+        }
     }
 
 
