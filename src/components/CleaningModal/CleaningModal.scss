@@ -37,6 +37,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       box-shadow: 0 0 18px 0 rgba($color: black, $alpha: 0.75);
+
+      &:hover {
+        border: 3px solid #23f3da;
+      }
   
       @include desktop{
         max-width: 805px;
@@ -59,8 +63,8 @@
      }
 
      &__chatBubble {
-      width:8rem;
-      height:8rem;
+      width:13rem;
+      height:13rem;
      }
 
      &__dog-wrapper {
@@ -75,5 +79,7 @@
 
      &__input-text {
       width:40rem;
+      padding:1rem;
+      // margin-bottom:4rem;
      }
     }

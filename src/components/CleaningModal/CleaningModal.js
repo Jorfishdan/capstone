@@ -28,7 +28,7 @@ function revealPassword() {
               Cancel
             </button> */}
             <form className="modal__form" onSubmit={(e) => e.preventDefault()}>
-              <input type={isShown ? "text" : "password"} placeholder="Let's see how you did..." className="modal__input-text"></input>
+              <input type={isShown ? "text" : "password"} placeholder="Let me scan the room.." className="modal__input-text"></input>
               <input id="checkbox" type="checkbox" checked={isShown} onChange={revealPassword} />
             </form>
           </div>

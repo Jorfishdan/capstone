@@ -22,9 +22,6 @@ function SumbitFact() {
         }
 
     axios.post(`http://localhost:8080/facts`, {
-        // category: "Misc",
-        // type: Boolean,
-        // difficulty: "easy",
         id: uuidv4(),
         question: question,
         correct_answer: answer,
