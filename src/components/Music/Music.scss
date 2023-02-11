@@ -3,6 +3,119 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.cleanup__music {
+.music {
+  background-color: #23F3DA;
+&__song {
     margin:1.6rem;
+    z-index:2;
+
+}
+&__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+&__mega-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:2rem;
+}
+
+&__title {
+    font-family: 'WorkSans';
+    font-size: 2rem;
+    font-weight: 600;
+    background-color:#23F3DA;
+    color:white;
+    padding:1rem;
+    border-radius:1rem;
+
+}
+
+&__circle1{
+     
+    background-color: white;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 132px;
+    right: 27px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+&__circle2{
+     
+    background-color: transparent;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    left: 27px;
+    z-index: 1;
+    border: 2px solid white;
+      
+}
+&__circle3{
+     
+    background-color: white;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    left: 27px;
+    z-index: 1;
+      
+}
+&__circle4{
+     
+    background-color: white;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -53px;
+    right: 306px;
+    z-index: 1;
+      
+}
+
+&__circle5{
+     
+    background-color: transparent;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -285px;
+    left: 306px;
+    z-index: 1;
+    border: 2px solid white;
+      
+}
+&__circle6{
+     
+    background-color: white;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -439px;
+    right: 377px;
+    z-index: 1;
+    border: 2px solid white;
+      
+}
+
+&__dancing-note {
+    width:5rem;
+    height:5rem;
+}
 }
