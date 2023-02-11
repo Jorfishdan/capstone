@@ -64,9 +64,10 @@ function Timer ({  setPage, inputTime }) {
           <CountdownCircleTimer
             isPlaying={start}
             duration={input}
-            colors={["#23F3DA", "#36F460", "#A335FA", "#35FA78", "#FA7035","#F6FA35"]}
-            colorsTime={[10, 9, 8, 5, 2, 0]}
+            colors={["#FA7035", "#23F3DA", "#36F460", "#A335FA", "#35FA78", "#FA7035"]}
+            colorsTime={[5, 10, 9, 8, 5, 2]}
             onComplete={() => ({ shouldRepeat: false, delay: 1 })}
+            // colorsTime={[10, 9, 8, 5, 2, 0]}
           >
             {renderTime}
           </CountdownCircleTimer>
