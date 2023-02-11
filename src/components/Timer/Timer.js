@@ -54,6 +54,11 @@ function Timer ({  setPage, inputTime }) {
 
       return (
         <div className="timer">
+          <div className="timer__circleA"></div>
+          <div className="timer__circleB"></div>
+          <div className="timer__circleC"></div>
+          <div className="timer__circleD"></div>
+          <div className="timer__circleE"></div>
         
         <div className="timer__wrapper">
           <CountdownCircleTimer

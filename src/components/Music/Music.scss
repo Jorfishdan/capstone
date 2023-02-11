@@ -8,6 +8,10 @@
 &__song {
     margin:1.6rem;
     z-index:2;
+    border-radius: 1rem;
+    &:hover {
+        border:3px solid white;
+    }
 
 }
 &__wrapper {
