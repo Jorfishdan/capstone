@@ -6,8 +6,8 @@
 .brainteaser {
   // background-color: #23F3DA;
     &__home {
-        width: 3rem;
-        height: 3rem;
+        width: 5rem;
+        height: 5rem;
         
       }
 
@@ -152,6 +152,7 @@
         display:flex;
         flex-direction: row;
         justify-content:space-around;
+        margin:1.6rem;
         
       }
 
@@ -160,14 +161,14 @@
       }
 
       &__cleanup-link {
-        width: 3rem;
-        height: 3rem;
+        width: 5rem;
+        height: 5rem;
         margin-right:1rem;
       }
 
       &__callbacks-link {
-        width: 3rem;
-        height: 3rem;
+        width: 5rem;
+        height: 5rem;
       }
 }
 
