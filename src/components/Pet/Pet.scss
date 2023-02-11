@@ -19,47 +19,34 @@
     &__wrapper {
         // at 767
         position: absolute;
-        left: -29px;
-        bottom: -10px;
+        left: -10px;
+        bottom: 200px;
         z-index: -1;
         display:flex;
     }
 
     &__bubble-text {
-        // border:1px solid purple;
-        // z-index: 1;
         position: relative;
         left: -75px;
-    bottom: -18px;
+        bottom: -25px;
         z-index: -1;
         width:6rem;
         display: flex;
         font-family: 'WorkSans';
         font-size: 1rem;
+        overflow: hidden;
+        animation: type 2s ease-in-out forwards;
     }
 
+
+
     &__bubble-wrap {
-        // border: 1px solid green;
         display: flex;
         flex-wrap: wrap;
         animation: rollIn 1s ease-in-out;
-
     }
 
 
     }
 
-    // &__bubble {
-    //     background-color: white;
-    //     border-radius: 50%;
-    //     box-shadow: 0px 0px 10px rgba (0,0,0, 0.15);
-    //     padding:15px;
-    //     border: 2px solid red;
 
-    // }
-
-    // &__bubble:after {
-    //     border: 10px solid transparent;
-    //     border-top-color:white;
-        
-    // }
