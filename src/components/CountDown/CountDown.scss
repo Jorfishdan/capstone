@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as*;
+
+.countdown {
+    &__static {
+        width:5rem;
+        height:5rem;
+    }
+
+    &__gif {
+        width:6rem;
+        height:6rem;
+    }
+}

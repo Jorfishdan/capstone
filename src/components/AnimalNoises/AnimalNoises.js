@@ -31,7 +31,7 @@ function AnimalNoises() {
   
   return (
     <>
-<div className="animalnoises__title-wrapper">
+{/* <div className="animalnoises__title-wrapper">
       <h1 className="animalnoises__title">
         Click below to start the countdown to the game!
       </h1>
@@ -44,7 +44,7 @@ function AnimalNoises() {
           />
         </audio>
       </button>
-      </div>
+      </div> */}
 
       <section className="animalnoises__wrapper">
         <div
@@ -65,7 +65,7 @@ function AnimalNoises() {
               <p>Your browser does not support this audio</p>
             </audio>
           </div>
-          <div onClick={() => setFlipHorse(!flipHorse)}>
+          <div onClick={() => setFlipHorse(!flipHorse)} >
             <div
               className={`animalnoises__back ${
                 flipHorse ? "" : "animalnoises__horse-back"

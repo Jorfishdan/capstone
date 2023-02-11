@@ -5,6 +5,7 @@ import house from "../../assets/images/house-static.png";
 import { Link } from "react-router-dom";
 import vetPic from "../../assets/images/veterinary.png";
 import dogFood from "../../assets/images/dog-food.png";
+import CountDown from "../../components/CountDown/CountDown";
 
 function Callbacks() {
     return (
@@ -34,6 +35,7 @@ function Callbacks() {
       </Link>
       </div>
       </div>
+        <CountDown />
         <CallBackPts />
         <AnimalNoises />
         </>

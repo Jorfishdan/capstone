@@ -39,6 +39,12 @@
     align-items: center;
   }
 
+  &__title {
+    margin-bottom: 1rem;
+    font-weight:600;
+    font-family: 'WorkSans';
+  }
+
   &__countdown {
     background-color: #23F3DA;
     border-radius:1rem;
