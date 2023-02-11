@@ -44,8 +44,7 @@
     transition: 0.5s;
     background-color: white;
     color: #595959;
-    // border: 1px solid #23F3DA;
-   
+   font-size:2rem;
   
     display: flex;
     flex-direction: column;
@@ -86,6 +85,7 @@
   transition: 0.5s;
   background-color: white;
   color: #595959;
+  font-size:2rem;
 
   display: flex;
   flex-direction: column;
@@ -124,6 +124,7 @@
   transition: 0.5s;
   background-color: white;
   color: #595959;
+  font-size:2rem;
 
   display: flex;
   flex-direction: column;
@@ -161,13 +162,13 @@
 
 &__title {
   font-family: 'WorkSans';
-  font-size: 3rem;
+  font-size: 4rem;
   z-index: 1;
 }
 
 &__dog {
-  width:10rem;
-  height: 10rem;
+  width:15rem;
+  height: 15rem;
 }
 }
 

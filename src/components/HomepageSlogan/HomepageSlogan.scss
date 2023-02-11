@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.slogan {
+    display: flex;
+    flex-wrap: wrap;
+    width: 67%;
+    align-items: center;
+
+    &__text, &__pet {
+        font-weight: 400;
+        font-family: 'WorkSans';
+        margin-top:1rem;
+    }
+
+   
+}
