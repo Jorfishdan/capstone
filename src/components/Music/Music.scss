@@ -118,4 +118,24 @@
     width:5rem;
     height:5rem;
 }
+&__note {
+    width:5rem;
+    height:5rem;
+}
+
+&__circle7{
+    background-color: white;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -275px;
+    left: -24px;
+    z-index: 1;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
 }

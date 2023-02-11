@@ -1,5 +1,6 @@
 import "./Music.scss";
 import dancingNote from "../../assets/images/dancingnotes.gif";
+import note from "../../assets/images/note.gif";
 function Music() {
   return (
     <>
@@ -13,6 +14,7 @@ function Music() {
     <div className="music__circle4"></div>
     <div className="music__circle5"></div>
     <div className="music__circle6"></div>
+    <div className="music__circle7"><img src={note} alt="music note gif" className="music__note" /></div>
       <div className="music__wrapper">
       <iframe
         className="music__song"
