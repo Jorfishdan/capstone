@@ -1,7 +1,8 @@
 import "./CleaningModal.scss";
 import closeBtn from "../../assets/images/close.png";
-import spin from "../../assets/images/spinning-cat.gif";
+import sniffing from "../../assets/images/sniffing.gif";
 import { useState } from "react";
+import chat from "../../assets/images/chat.png";
 
 function CleaningModal({ openModal, onClose}) {
   const [isShown, setIsShown] = useState(false);
@@ -14,18 +15,20 @@ function revealPassword() {
   return (
     <div className="overlay">
       <div className="modal">
-        <p onClick={onClose} className="modal__closeButton">
+        <div onClick={onClose} className="modal__closeButton">
           <img className="modal__closeX" src={closeBtn} alt="exit button" />
-        </p>
+        </div>
         <div className="modal__content">
-          <p className="modal__content-description">Scanning the room</p>
-          <img className="modal__gif" src={spin} />
+          <div className="modal__dog-wrapper">
+          <img className="modal__gif" src={sniffing} />
+          <img src={chat} alt="speech bubble" className="modal__chatBubble" />
+          </div>
           <div className="modal__buttons">
-            <button onClick={onClose} className="modal__buttons-cancel">
+            {/* <button onClick={onClose} className="modal__buttons-cancel">
               Cancel
-            </button>
+            </button> */}
             <form className="modal__form" onSubmit={(e) => e.preventDefault()}>
-              <input type={isShown ? "text" : "password"} placeholder="type here" className="modal__input-text"></input>
+              <input type={isShown ? "text" : "password"} placeholder="Let's see how you did..." className="modal__input-text"></input>
               <input id="checkbox" type="checkbox" checked={isShown} onChange={revealPassword} />
             </form>
           </div>
@@ -36,10 +39,4 @@ function revealPassword() {
 }
 export default CleaningModal;
 
-// style={{display: revealScore ? "block" : "none"}
 
-// onClick={() => setRevealScore(true)
-
-// {isShown ? "text" : "password"} onChange={revealPassword}
-
-// onClick={()=> setIsShown(true)} 
