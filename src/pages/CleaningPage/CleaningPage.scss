@@ -7,20 +7,21 @@
     &__header {
         display: flex;
         justify-content: space-around;
+        margin:1.6rem;
     }
   &__home {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
   }
   
   &__brainteaser-link{
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     margin-right:1rem;
   }
 
   &__callbacks-link{
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
