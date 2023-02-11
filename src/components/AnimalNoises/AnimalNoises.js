@@ -31,7 +31,7 @@ function AnimalNoises() {
   
   return (
     <>
-
+<div className="animalnoises__title-wrapper">
       <h1 className="animalnoises__title">
         Click below to start the countdown to the game!
       </h1>
@@ -44,6 +44,7 @@ function AnimalNoises() {
           />
         </audio>
       </button>
+      </div>
 
       <section className="animalnoises__wrapper">
         <div
