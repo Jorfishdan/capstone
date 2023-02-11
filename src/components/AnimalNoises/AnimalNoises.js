@@ -1,17 +1,16 @@
 import "./AnimalNoises.scss";
 import horse from "../../assets/audio/horse.mp3";
-import whale from "../../assets/audio/whale.mp3";
 import cat from "../../assets/audio/cat.mp3";
 import duck from "../../assets/audio/duck.mp3";
 import pig from "../../assets/audio/pig.mp3";
 import dog from "../../assets/audio/dog.mp3";
 import owl from "../../assets/audio/owl.mp3";
-import sheep from "../../assets/audio/sheep.mp3";
 import cow from "../../assets/audio/cow.mp3";
 import count from "../../assets/audio/countdown.mp3";
 import home from "../../assets/images/home.png";
 import chicken from "../../assets/audio/chicken.mp3";
 import frog from "../../assets/audio/frog.mp3";
+import house from "../../assets/images/house-static.png";
 import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { Reorder } from "framer-motion";
@@ -32,13 +31,7 @@ function AnimalNoises() {
   
   return (
     <>
-      <Link to="/">
-        <img
-          src={home}
-          alt="home icon to return to main menu"
-          className="animalnoises__home"
-        />
-      </Link>
+
       <h1 className="animalnoises__title">
         Click below to start the countdown to the game!
       </h1>

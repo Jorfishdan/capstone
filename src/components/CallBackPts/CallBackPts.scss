@@ -9,4 +9,21 @@
         height:5rem;
         font-size:3rem;
     }
+
+    &__add, &__minus {
+        background-color: #23F3DA;
+        border-radius: 1rem;
+        border:1px solid #23F3DA;
+        color: white;
+    }
+
+    &__sum {
+        color: #23F3DA;
+        font-weight: 600;
+        padding-left:1.5rem;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
 }
