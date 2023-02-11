@@ -22,7 +22,8 @@ function HomePage() {
         <div className="homepage__circle5"></div>
         <div className="homepage__circle6"></div>
         <div className="homepage__circle7"></div>
-        {/* <Footer /> */}
+        <div className="homepage__circle8"></div>
+        <Footer />
         
         </section>        
         

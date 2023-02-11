@@ -130,6 +130,24 @@
           height:10rem;
         }
       }
+
+      &__cardH {
+        background-color:#23F3DA;
+        width:12rem;
+        height:12rem;
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+       bottom:60px;
+        // animation: float 2s ease-in-out infinite;
+        z-index: -1;
+      
+        @include tablet {
+          width:10rem;
+          height:10rem;
+        }
+      }
+
       &__header {
         display:flex;
         flex-direction: row;
