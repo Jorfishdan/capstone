@@ -1,15 +1,20 @@
 import "./MainCircle.scss";
+import HomepageSlogan from "../HomepageSlogan/HomepageSlogan";
 import dogPic from "../../assets/images/boxer2.png";
 import dogGif from "../../assets/images/boxer.gif";
 import mojo from "../../assets/images/mojo.png";
 import { useState } from "react";
+import HomePageCards from "../HomePageCards/HomePageCards";
 function MainCircle() {
     // const [isAnimated, setIsAnimated] = useState(false);
   return (
     <>
       <div className="maincircle">
         <div className="maincircle__wrapper">
-        <div className="maincircle__block"></div>
+        <div className="maincircle__block">
+          <HomepageSlogan />
+          <HomePageCards />
+        </div>
         <div className="maincircle__profile">
         {/* // onMouseEnter={() => setIsAnimated(true)}
         // onMouseLeave={() => setIsAnimated(false)}> */}

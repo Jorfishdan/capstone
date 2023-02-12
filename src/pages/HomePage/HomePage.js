@@ -14,6 +14,7 @@ function HomePage() {
       <section className="homepage">
         <Header />
         <MainCircle />
+        {/* <HomepageSlogan /> */}
         {/* <div className="homepage__main-circle"></div> */}
         {/* <div className="homepage__feature-circle"></div>
 
@@ -22,7 +23,6 @@ function HomePage() {
         {/* <div className="homepage__circle2"></div> */}
         <div className="homepage__main-wrapper">
           {/* <HomePageCards /> */}
-          {/* <HomepageSlogan /> */}
         </div>
         <div className="homepage__circle3"></div>
         <div className="homepage__circle4"></div>

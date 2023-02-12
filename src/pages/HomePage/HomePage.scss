@@ -124,26 +124,26 @@
   }
 }
 
-&__circle5 {
-  background-color: transparent;
-  width: 27rem;
-  height: 27rem;
-  border-radius: 50%;
-  position: absolute;
-  border: 2px solid white;
-  top: 10px;
-  left: 35px;
-  z-index: 1;
+// &__circle5 {
+//   background-color: transparent;
+//   width: 27rem;
+//   height: 27rem;
+//   border-radius: 50%;
+//   position: absolute;
+//   border: 2px solid white;
+//   top: 10px;
+//   left: 35px;
+//   z-index: 1;
   
-  // animation: float 2s ease-in-out infinite;
+//   animation: float 2s ease-in-out infinite;
 
-  @include tablet {
-    width:20rem;
-  height:20rem;
-  }
+//   @include tablet {
+//     width:20rem;
+//   height:20rem;
+//   }
 
  
-}
+// }
 
 &__circle6 {
   background-color: transparent;

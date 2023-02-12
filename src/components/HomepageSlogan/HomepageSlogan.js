@@ -3,8 +3,9 @@ function HomepageSlogan() {
     return(
         <>
         <div className="slogan">
+            <h1 className="slogan__title"> Welcome to Teacher's Pet</h1>
         <h2 className="slogan__text">
-        Enjoy this classroom app that includes educational brain break games, clean up games, and call back games, all designed to keep your little ones engaged and on task. 
+        Enjoy cleanup games and brain breaks to elevate any classroom experience through learning through fun
         </h2>
         <h2 className="slogan__pet">And the best part? You get a virtual pet cheering you on!</h2>
         </div>
