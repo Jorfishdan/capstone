@@ -15,6 +15,7 @@
     color: white;
     padding: 1rem;
     margin: 1.6rem;
+    font-size:2rem;
 
     &:hover {
       box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
@@ -23,6 +24,66 @@
     }
   }
 
+  &__tagline {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+  }
+
+  &__minutes {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+
+  }
+
+  &__clock-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+
+  }
+
+  &__value {
+    font-family: 'WorkSans';
+    font-size:3rem;
+    font-weight: 600;
+    // background-color: #23f3da;
+    // color:white;
+    // padding:1rem;
+    // border-radius: 1rem;
+    // align-self: center;
+
+  }
+
+  &__remaining {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+
+  }
   &__minutes {
     font-family: "WorkSans";
     font-weight: 600;

@@ -10,7 +10,7 @@ function Timer ({  setPage, inputTime }) {
     const renderTime = ({ remainingTime }) => {
       if (remainingTime === 0) {
         handleReset();
-        return <div className="timer">Time to play</div>;
+        return <div className="timer__tagline">Beat the clock</div>;
        
       }
       const remainingMinutes = Math.ceil(remainingTime / 60);
@@ -19,9 +19,11 @@ function Timer ({  setPage, inputTime }) {
         <>
 
         <div className="timer">
-          <div className="text">Remaining</div>
-          <div className="value">{remainingMinutes}</div>
-          <div className="text">minutes</div>
+          <div className="timer__clock-wrapper">
+          <div className="timer__remaining">Remaining</div>
+          <div className="timer__value">{remainingMinutes}</div>
+          <div className="timer__text">minutes</div>
+          </div>
         </div>
         </>
       );

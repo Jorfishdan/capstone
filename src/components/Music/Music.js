@@ -6,7 +6,7 @@ function Music() {
     <>
     <div className="music">
       <div className="music__mega-wrapper">
-    <span className="music__title">Add some tunes to boost your energy</span>
+    <span className="music__title">Get lightning speed with these handpicked tunes!</span>
     
     <div className="music__circle1"><img src={dancingNote} alt="dancing cartoon notes gif" className="music__dancing-note"></img></div>
     <div className="music__circle2"></div>

@@ -19,7 +19,7 @@
     &__wrapper {
         // at 767
         position: absolute;
-        left: 960px;
+        left: 100px;
        top: 55px;
         z-index: 2;
         display:flex;
@@ -27,8 +27,8 @@
 
     &__bubble-text {
         position: relative;
-        left: 25px;
-        top: -78px;
+        right: 75px;
+     top: 20px;
         z-index: -1;
         width:6rem;
         display: flex;
