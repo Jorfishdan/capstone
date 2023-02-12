@@ -6,6 +6,8 @@ function Music() {
     <>
     <div className="music">
       <div className="music__mega-wrapper">
+      <span className="music__intro">Ramp up your cleaning speed and tidy up before the clock runs out</span>
+      <span className="music__rule">After the clock strikes zero, Mojo will rate how well you did</span>
     <span className="music__title">Get lightning speed with these handpicked tunes!</span>
     
     <div className="music__circle1"><img src={dancingNote} alt="dancing cartoon notes gif" className="music__dancing-note"></img></div>
