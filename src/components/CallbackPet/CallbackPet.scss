@@ -3,7 +3,7 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.pet {
+.callbackPets {
     &__cheering{
         width:14rem;
         height:14rem;
@@ -20,7 +20,7 @@
         // at 767
         position: absolute;
         left: 1000px;
-       top: 65px;
+       top: 55px;
         z-index: 2;
         // display:flex;
     }

@@ -56,15 +56,15 @@ function CallbackPet() {
       }, [isPetShown, sayIndex, sayIndex.length])
 
     return (
-        <div className="pet">
+        <div className="callbackPets">
             {isPetShown && ( 
-            <div className="pet__wrapper">
+            <div className="callbackPets__wrapper">
             {/* <div className={`pet__wrapper ${isRolledOut ? "rollout" : ""}`}> */}
-            <img src={dog3} alt="speech bubble" className="pet__cheering" />
-            <div className="pet__bubble-wrap">
+            <img src={dog3} alt="speech bubble" className="callbackPets__cheering" />
+            <div className="callbackPets__bubble-wrap">
               
-            <img src={chat} alt="speech bubble" className="pet__chat" />
-            <span className="pet__bubble-text">{dogBubble[sayIndex].say}</span>
+            <img src={chat} alt="speech bubble" className="callbackPets__chat" />
+            <span className="callbackPets__bubble-text">{dogBubble[sayIndex].say}</span>
             </div>
             
         </div>
