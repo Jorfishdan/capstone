@@ -31,10 +31,10 @@ function AnimalNoises() {
   
   return (
     <>
-
       <section className="animalnoises__wrapper">
         <div
           onClick={() => setFlipHorse(!flipHorse)}
+          // className={`animalnoises__card horse ${flipHorse ? "" : "hover-effect"}`}
           className="animalnoises__card horse"
         >
           <div
@@ -57,7 +57,7 @@ function AnimalNoises() {
                 flipHorse ? "" : "animalnoises__horse-back"
               }`}
             >
-              <h3 className="animalnoises__text">Horse</h3>
+              <h3 className="animalnoises__text-horse">Horse</h3>
               <img
                 className="animalnoises__horse-gif"
                 src="https://bestanimations.com/media/horse-art/570970473animated-horse-gif-105.gif#.Y-JymKMBO5k.link"
@@ -91,7 +91,7 @@ function AnimalNoises() {
                 flipFrog ? "" : "animalnoises__frog-back"
               }`}
             >
-              <h3 className="animalnoises__text">Frog</h3>
+              <h3 className="animalnoises__text-frog">Frog</h3>
               <img
                 className="animalnoises__frog-gif"
                 src="https://i.pinimg.com/originals/2c/80/d2/2c80d2ced9451189047bc6f0c8a54852.gif"
@@ -125,7 +125,7 @@ function AnimalNoises() {
                 flipCat ? "" : "animalnoises__cat-back"
               }`}
             >
-              <h3 className="animalnoises__text">Cat</h3>
+              <h3 className="animalnoises__text-cat">Cat</h3>
               <img
                 className="animalnoises__cat-gif"
                 src="https://d.furaffinity.net/art/margoevergarden/1642552507/1642552431.margoevergarden_na-belom.gif"
@@ -159,7 +159,7 @@ function AnimalNoises() {
                 flipDuck ? "" : "animalnoises__duck-back"
               }`}
             >
-              <h3 className="animalnoises__text">Duck</h3>
+              <h3 className="animalnoises__text-duck">Duck</h3>
               <img
                 className="animalnoises__duck-gif"
                 src="https://media.giphy.com/media/hC2mA1FWFs2OowO60p/giphy.gif"
@@ -193,7 +193,7 @@ function AnimalNoises() {
                 flipPig ? "" : "animalnoises__pig-back"
               }`}
             >
-              <h3 className="animalnoises__text">Pig</h3>
+              <h3 className="animalnoises__text-pig">Pig</h3>
               <img
                 className="animalnoises__pig-gif"
                 src="https://wallpaperaccess.com/full/4105045.gif"
@@ -227,7 +227,7 @@ function AnimalNoises() {
                 flipDog ? "" : "animalnoises__dog-back"
               }`}
             >
-              <h3 className="animalnoises__text">Dog</h3>
+              <h3 className="animalnoises__text-dog">Dog</h3>
               <img
                 className="animalnoises__dog-gif"
                 src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/74731f76965389.5c7945b0cfcc3.gif"
@@ -261,7 +261,7 @@ function AnimalNoises() {
                 flipOwl ? "" : "animalnoises__owl-back"
               }`}
             >
-              <h3 className="animalnoises__text">Owl</h3>
+              <h3 className="animalnoises__text-owl">Owl</h3>
               <img
                 className="animalnoises__owl-gif"
                 src="https://i.pinimg.com/originals/b8/1d/57/b81d57eef7c9a758a3982d5e5182e042.gif"
@@ -295,7 +295,7 @@ function AnimalNoises() {
                 flipChicken ? "" : "animalnoises__chicken-back"
               }`}
             >
-              <h3 className="animalnoises__text">Chicken</h3>
+              <h3 className="animalnoises__text-chicken">Chicken</h3>
               <img
                 className="animalnoises__chicken-gif"
                 src="https://i.pinimg.com/originals/86/4d/db/864ddbd1733fae90c62cf71199bb7b9c.gif"
@@ -329,7 +329,7 @@ function AnimalNoises() {
                 flipCow ? "" : "animalnoises__cow-back"
               }`}
             >
-              <h3 className="animalnoises__text">Cow</h3>
+              <h3 className="animalnoises__text-cow">Cow</h3>
               <img
                 className="animalnoises__cow-gif"
                 src="https://i.pinimg.com/originals/8d/3a/90/8d3a907be5f70768cb79dc0809bfa3ae.gif"
