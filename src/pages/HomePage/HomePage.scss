@@ -4,9 +4,8 @@
 @use "../../styles/partials/variables" as *;
 
 .homepage {
+border: 6rem solid #23F3DA;
 
-// width:100vw;
-// height:100vh;
 
 &__main-wrapper {
   display: flex;
