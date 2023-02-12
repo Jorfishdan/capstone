@@ -6,15 +6,11 @@ import pig from "../../assets/audio/pig.mp3";
 import dog from "../../assets/audio/dog.mp3";
 import owl from "../../assets/audio/owl.mp3";
 import cow from "../../assets/audio/cow.mp3";
-import count from "../../assets/audio/countdown.mp3";
-import home from "../../assets/images/home.png";
 import chicken from "../../assets/audio/chicken.mp3";
 import frog from "../../assets/audio/frog.mp3";
-import house from "../../assets/images/house-static.png";
 import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { Reorder } from "framer-motion";
-
 
 function AnimalNoises() {
   const [flipHorse, setFlipHorse] = useState(false);

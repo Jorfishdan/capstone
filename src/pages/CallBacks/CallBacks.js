@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import vetPic from "../../assets/images/veterinary.png";
 import dogFood from "../../assets/images/dog-food.png";
 import CountDown from "../../components/CountDown/CountDown";
+import CallBackPets from "../../components/CallbackPet/CallbackPet";
 
 function Callbacks() {
     return (
@@ -35,8 +36,10 @@ function Callbacks() {
       </Link>
       </div>
       </div>
+      
         <CountDown />
         <CallBackPts />
+        <CallBackPets />
         <AnimalNoises />
         </>
     )
