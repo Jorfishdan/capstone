@@ -5,13 +5,23 @@
 
 .infocard {
 
+  &__dog {
+    width:20rem;
+    height: 20rem;
+  }
+
   &__title {
     font-size: 3rem;
+    font-family: 'WorkSans';
+    background-color: #23F3DA;
+    color: white;
+    padding:1rem;
+    border-radius: 1rem;
   }
 
   &__wrapper {
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     margin:1.6rem;
   }
 
@@ -21,15 +31,21 @@
     align-items: center;
     margin: 1.6rem;
   }
+
+  &__back-button {
+    width:5rem;
+    height:5rem;
+    margin:1.6rem;
+  }
   &__card--1 {
-    height: 12rem;
-    width: 25rem;
+    height: 40rem;
+    width: 40rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
-    border-radius: 1.2rem;
+    border-radius: 50%;
     box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
-    margin: 1rem;
+    // margin: 1rem;
     transition: 0.5s;
-    background-color: #8C75EA;
+    background-color: #23F3DA;
     color:white;
     font-size: 2rem;
   
@@ -39,13 +55,13 @@
     justify-content: center;
     align-items: center;
 
-    @include tablet {
-      width: 65rem;
-    }
-    @include desktop {
-      width: 100rem;
-      font-size: 4rem;
-    }
+    // @include tablet {
+    //   width: 65rem;
+    // }
+    // @include desktop {
+    //   width: 100rem;
+    //   font-size: 4rem;
+    // }
     &:hover {
       margin-top: -0.2px;
       box-shadow: 0px 0px 5px 5px rgba(11, 11, 11, 0.4);
@@ -55,6 +71,8 @@
   &__card--1-info, &__card--2-info, &__card--3-info{
     font-size: 1rem;
     margin:1.6rem;
+    font-size: 2rem;
+    font-weight: 600;
 
     @include desktop {
       font-size: 2rem;
@@ -62,14 +80,14 @@
   }
 
   &__card--2 {
-    height: 12rem;
-    width: 25rem;
+    height: 40rem;
+    width: 40rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
-    border-radius: 1.2rem;
+    border-radius: 50%;
     box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
     margin: 1rem;
     transition: 0.5s;
-    background-color:#5274EB;
+    background-color:#23F3DA;
     color:white;
     font-size: 2rem;
   
@@ -78,14 +96,14 @@
     justify-content: center;
     align-items: center;
 
-    @include tablet {
-      width: 65rem;
-    }
+    // @include tablet {
+    //   width: 65rem;
+    // }
 
-    @include desktop {
-      width: 100rem;
-      font-size: 4rem;
-    }
+    // @include desktop {
+    //   width: 100rem;
+    //   font-size: 4rem;
+    // }
     &:hover {
       margin-top: -0.2px;
       box-shadow: 0px 0px 5px 5px rgba(11, 11, 11, 0.4);
@@ -93,14 +111,14 @@
   }
 
   &__card--3 {
-    height: 12rem;
-    width: 25rem;
+    height: 40rem;
+    width: 40rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
-    border-radius: 1.2rem;
+    border-radius: 50%;
     box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
     margin: 1rem;
     transition: 0.5s;
-    background-color: #ED1965;
+    background-color:#23F3DA;
     color:white;
     font-size: 2rem;
   
@@ -109,14 +127,14 @@
     justify-content: center;
     align-items: center;
 
-    @include tablet {
-      width: 65rem;
-    }
+    // @include tablet {
+    //   width: 65rem;
+    // }
 
-    @include desktop {
-      width: 100rem;
-      font-size: 4rem;
-    }
+    // @include desktop {
+    //   width: 100rem;
+    //   font-size: 4rem;
+    // }
     &:hover {
       margin-top: -0.2px;
       box-shadow: 0px 0px 5px 5px rgba(11, 11, 11, 0.4);
