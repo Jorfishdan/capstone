@@ -7,6 +7,7 @@ import './SubmitFact.scss';
 function SumbitFact() { 
 
     const formRef = useRef(null);
+    // const [isShown, setIsShown] = useState(false);
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -29,11 +30,14 @@ function SumbitFact() {
         explanation: explain,
     })
     alert("It's been added to the game!")  
-    formRef.current.reset();
+    // formRef.current.reset();
 
 };
 
     return (
+        <>
+        {/* {isShown && ( */}
+        {/* <div className="form__wrapper"> */}
         <form onSubmit={handleSubmit} ref={formRef} className="form__submit">
             <h2 className="form__add-question">Add a question to the game!</h2>
             <input type="text" className="form__input" name="question" placeholder="Add a question..."></input>
@@ -50,6 +54,9 @@ function SumbitFact() {
             <button className="form__button" onClick={handleSubmit} >Submit</button>
 
         </form>
+        {/* </div> */}
+        {/* )} */}
+        </>
     )
 }
 

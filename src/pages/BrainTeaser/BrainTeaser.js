@@ -15,8 +15,8 @@ function BrainTeaser() {
     const [isSubmitShown, setIsSubmitShown] = useState(false)
 
     function handleAddFact() {
-        setIsSubmitShown(true)
-        console.log("clicked")
+        setIsSubmitShown(prevValue => !prevValue)
+        // console.log("clicked")
     }
     
     return(
@@ -27,6 +27,7 @@ function BrainTeaser() {
             <img src={house} alt="home icon to return to main menu" className="brainteaser__home" />
             </Link>
             <p className="brainteaser__title">Teacher's Pet</p>
+            
             <div className="brainteaser__icon-wrapper">
               
             <Link to="/cleanup">
@@ -37,11 +38,16 @@ function BrainTeaser() {
             </Link>
             </div>
             </div>
+            <div className="brainteaser__instructions-wrapper">
+            <h3 className="brainteaser__instructions">Vote for the correct answer! Either raise your hand or vote by standing on designated sides of the room </h3>
+            <p className="brainteaser__hint">Psssst...explain <i>why</i> you picked your answer before the grand reveal</p>
+            </div>
             <div className="brainteaser__cardA">
             </div>
-            <div className="brainteaser__cardB">
-            </div>
-            <div className="brainteaser__cardC"></div>
+            {/* <div className="brainteaser__cardB">
+            </div> */}
+            {/* <div className="brainteaser__cardC"></div> */}
+            
             <div className="brainteaser__cardD" onClick={handleAddFact}>
             <p className="brainteaser__addFact">Add a fact here!</p>
             </div>
@@ -50,12 +56,15 @@ function BrainTeaser() {
             <div className="brainteaser__cardG"></div>
             {/* <div className="brainteaser__cardH"></div> */}
             <div className="brainteaser__wrapper">
+                <div className="brainteaser__comp-wrapper">
+                
         <BrainTeaserCard />
 
         {isSubmitShown === true && <SubmitFact />}
+        </div>
         <Pet />
         </div>
-        <HPBubbles />
+        {/* <HPBubbles /> */}
         </section>
         </>
 

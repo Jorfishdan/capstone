@@ -10,6 +10,41 @@
         
       }
 
+      &__instructions-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      &__instructions {
+        background-color: #23F3DA;
+        color:white;
+        padding:1rem;
+        border-radius: 1rem;
+        font-family: 'WorkSans';
+        font-size: 2rem;
+      }
+
+      &__hint {
+        background-color: #23F3DA;
+        color:white;
+        padding:1rem;
+        border-radius: 2rem;
+        font-family: 'WorkSans';
+        font-size: 1.5rem;
+        margin-top:1rem;
+        margin-bottom:2rem;
+        
+
+      }
+
+      &__comp-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
       &__title {
         font-family: 'Vazirmatn';
         font-size: 2rem;

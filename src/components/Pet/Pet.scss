@@ -11,29 +11,29 @@
     }
 
     &__chat {
-        width:10rem;
-        height:10rem;
+        width:15rem;
+        height:15rem;
         z-index: 1;
     }
 
     &__wrapper {
         // at 767
         position: absolute;
-        left: -10px;
-        bottom: 200px;
+        right: 200px;
+        bottom: 50px;
         z-index: -1;
         display:flex;
     }
 
     &__bubble-text {
         position: relative;
-        left: -75px;
-        bottom: -25px;
+        left: -115px;
+        bottom: -35px;
         z-index: -1;
-        width:6rem;
+        width:10rem;
         display: flex;
         font-family: 'WorkSans';
-        font-size: 1rem;
+        font-size: 1.5rem;
         overflow: hidden;
         animation: type 2s ease-in-out forwards;
     }

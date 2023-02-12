@@ -4,6 +4,9 @@
 @use "../../styles/partials/variables" as *;
 
 .form {
+    // &__wrapper {
+    //     display: flex;
+    // }
     
     &__submit {
         display:flex;
@@ -14,6 +17,9 @@
         width: 50rem;
         border-radius: 1rem;
         color: #313131;
+        background-color: white;
+        margin-left:2rem;
+        margin-top: 8rem;
     }
     &__add-question {
         font-family: 'WorkSans';
