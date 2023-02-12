@@ -8,6 +8,7 @@ import paw from "../../assets/images/pawprint.png";
 import Pet from "../../components/Pet/Pet";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import HPBubbles from "../../components/HPBubbles/HPBubbles";
 
 function BrainTeaser() {
     
@@ -42,6 +43,7 @@ function BrainTeaser() {
         <SubmitFact />
         <Pet />
         </div>
+        <HPBubbles />
         </section>
         </>
 

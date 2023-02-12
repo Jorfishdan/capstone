@@ -6,7 +6,7 @@ import house from "../../assets/images/house-static.png";
 import { Link } from "react-router-dom";
 import vet from "../../assets/images/veterinary.png";
 import paw from "../../assets/images/pawprint.png";
-
+import HPBubbles from "../../components/HPBubbles/HPBubbles";
 function CleaningPage() {
     const [page, setPage] = useState(null)
     const [inputTime, setInputTime] = useState(0)
@@ -21,10 +21,13 @@ return (
     <div className="cleaningpage__icon-wrapper">
     <Link to="/brainteaser"><img src={vet} alt="home icon to press to return to the home page" className="cleaningpage__brainteaser-link" /></Link>
     <Link to="/callbacks"><img src={paw} alt="home icon to press to return to the home page" className="cleaningpage__callbacks-link" /></Link>
+
     </div>
     </div>
+    <HPBubbles />
     <Timer setPage={setPage} expiryTimestamp={time} setInputTime={setInputTime}/>
     <Music />
+
     </>
 )
 }
