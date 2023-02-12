@@ -13,7 +13,7 @@ function Header() {
             <div className="header__wrapper">
                 {/* <img src={logout} alt="logout icon" className="header__logout" /> */}
                 {/* <img src={list} alt="list icon to edit profile" className="header__list"></img> */}
-               <Link to="/mainInfo"><img src={staticInfo}className="header__info"></img></Link>                
+               {/* <Link to="/mainInfo"><img src={staticInfo}className="header__info"></img></Link>                 */}
             </div>
         </section>
     )

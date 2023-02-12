@@ -6,15 +6,18 @@ import dog from "../../assets/images/dogMascot.gif";
 import dog2 from "../../assets/images/dog2.png";
 import HomepageSlogan from "../../components/HomepageSlogan/HomepageSlogan";
 import HPBubbles from "../../components/HPBubbles/HPBubbles";
+import MainCircle from "../../components/MainCircle/MainCircle";
 
 function HomePage() {
   return (
     <>
       <section className="homepage">
         <Header />
-        <div className="homepage__main-circle"></div>
+        <MainCircle />
+        {/* <div className="homepage__main-circle"></div> */}
+        {/* <div className="homepage__feature-circle"></div>
 
-        <div className="homepage__circle"></div>
+        <div className="homepage__circle"></div> */}
 
         {/* <div className="homepage__circle2"></div> */}
         <div className="homepage__main-wrapper">
