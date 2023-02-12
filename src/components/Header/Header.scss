@@ -14,25 +14,25 @@
     margin: 1.6rem;
     }
 
-    &__logout {
-        width:5rem;
-        height:5rem;
-        @include tablet {
-            height: 5rem;
-        }
-        @include desktop {
-            width: 5rem;
-            height:7rem;
-        }
+    // &__logout {
+    //     width:5rem;
+    //     height:5rem;
+    //     @include tablet {
+    //         height: 5rem;
+    //     }
+    //     @include desktop {
+    //         width: 5rem;
+    //         height:7rem;
+    //     }
 
-        &:hover {
-            fill: #23F3DA;
-        }
-    }
+    //     &:hover {
+    //         fill: #23F3DA;
+    //     }
+    // }
 
     &__info {
-        width:7rem;
-        height:7rem;
+        width:10rem;
+        height:10rem;
     
     }
 

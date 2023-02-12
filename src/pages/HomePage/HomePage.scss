@@ -97,7 +97,7 @@
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  top:90px;
+  bottom:90px;
   right:5px;
   // animation: float 2s ease-in-out infinite;
 
@@ -113,15 +113,15 @@
   height:20rem;
   border-radius: 50%;
   position: absolute;
-  top:90px;
+  bottom:90px;
   right:5px;
   z-index: -1;
   // animation: float 2s ease-in-out infinite;
 
-  @include tablet {
-    width:20rem;
-  height:20rem;
-  }
+  // @include tablet {
+  //   width:20rem;
+  // height:20rem;
+  // }
 }
 
 // &__circle5 {

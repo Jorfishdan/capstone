@@ -8,6 +8,7 @@ import HomepageSlogan from "../../components/HomepageSlogan/HomepageSlogan";
 import HPBubbles from "../../components/HPBubbles/HPBubbles";
 import MainCircle from "../../components/MainCircle/MainCircle";
 
+
 function HomePage() {
   return (
     <>
