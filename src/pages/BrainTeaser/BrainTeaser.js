@@ -18,7 +18,9 @@ function BrainTeaser() {
         <Link to="/">
             <img src={house} alt="home icon to return to main menu" className="brainteaser__home" />
             </Link>
+            <p className="brainteaser__title">Teacher's Pet</p>
             <div className="brainteaser__icon-wrapper">
+              
             <Link to="/cleanup">
             <img src={dogfood} alt="home icon to return to main menu" className="brainteaser__cleanup-link" />
             </Link>

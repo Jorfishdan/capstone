@@ -11,3 +11,24 @@
     font-weight: 600;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Tourney";
+    src: url("../../assets/fonts/Tourney-Light.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Vazirmatn";
+    src: url("../../assets/fonts/Vazirmatn-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Vazirmatn";
+    src: url("../../assets/fonts/Vazirmatn-SemiBold.ttf") format("truetype");
+    font-weight: 500;
+    font-style: semi-bold;
+  }

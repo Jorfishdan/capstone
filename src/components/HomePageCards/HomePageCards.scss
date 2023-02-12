@@ -17,7 +17,7 @@
 
     @include desktop {
       align-items: flex-end;
-      flex-direction: column;
+      flex-direction: row;
     }
   
   }
@@ -27,10 +27,10 @@
     flex-direction: column;
     align-items: center;
 
-    @include desktop {
-      flex-direction: row;
-      justify-content: space-around;
-    }
+    // @include desktop {
+    //   flex-direction: row;
+    //   justify-content: space-around;
+    // }
   }
 
 
@@ -164,9 +164,19 @@
 }
 
 &__title {
-  font-family: 'WorkSans';
+  font-family: 'Vazirmatn';
   font-size: 4rem;
   z-index: 1;
+  font-weight: 500;
+  background-color: #23F3DA;
+  padding:1rem;
+  border-radius: 1rem;
+  color:white;
+
+  &:hover {
+    box-shadow: inset 300px 0 0 0 white;
+    color: #23F3DA;
+  }
 }
 
 &__dog {

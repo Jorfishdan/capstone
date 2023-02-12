@@ -4,11 +4,27 @@
 @use "../../styles/partials/variables" as *;
 
 .brainteaser {
-  // background-color: #23F3DA;
     &__home {
         width: 5rem;
         height: 5rem;
         
+      }
+
+      &__title {
+        font-family: 'Vazirmatn';
+        font-size: 2rem;
+        z-index: 1;
+        font-weight: 500;
+        background-color: #23F3DA;
+        padding:1rem;
+        border-radius: 1rem;
+        color:white;
+        // margin-right:10rem;
+      
+        &:hover {
+          box-shadow: inset 300px 0 0 0 white;
+          color: #23F3DA;
+        }
       }
 
       &__cardA {
