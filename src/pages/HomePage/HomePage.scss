@@ -4,8 +4,6 @@
 @use "../../styles/partials/variables" as *;
 
 .homepage {
-// border: 6rem solid #23F3DA;
-
 
 &__main-wrapper {
   display: flex;
@@ -13,25 +11,17 @@
   align-items: center;
 }
 
-// &__main-circle {
-//   width:75vw;
-//   height:95vh;
-//   background-color: #23F3DA;
-//   border-top-right-radius: 40%;
-//   border-bottom-right-radius: 40%;
-//   margin-bottom:0;
-//   background: linear-gradient(to right,  rgba(35, 243, 218, 0.8), #23F3DA )
-  
-// }
+&__info {
+  width:8rem;
+  height:8rem;
 
-// &__feature-circle {
-//   background-color:red;
-//   width:40rem;
-//   height:40rem;
-//   z-index:2;
-//   position: relative;
+}
 
-// }
+&__info-wrapper {
+  display: flex;
+  justify-content: end;
+  margin:1.6rem;
+}
 
 &__circle {
   background-color:#23F3DA;
@@ -78,13 +68,10 @@
 &__circle2 {
   background-color:white;
   display: flex;
-  // display: inline-block;
   width:15rem;
   height:15rem;
   border-radius: 50%;
-  // position: absolute;
-  // right:40px;
-  // bottom:40px;
+
   animation: float 2s ease-in-out infinite;
   z-index: -1;
 }
@@ -99,12 +86,7 @@
   z-index: -1;
   bottom:90px;
   right:5px;
-  // animation: float 2s ease-in-out infinite;
 
-  // @include tablet {
-  //   width:20rem;
-  // height:20rem;
-  // }
 }
 
 &__circle4 {
@@ -116,34 +98,8 @@
   bottom:90px;
   right:5px;
   z-index: -1;
-  // animation: float 2s ease-in-out infinite;
 
-  // @include tablet {
-  //   width:20rem;
-  // height:20rem;
-  // }
 }
-
-// &__circle5 {
-//   background-color: transparent;
-//   width: 27rem;
-//   height: 27rem;
-//   border-radius: 50%;
-//   position: absolute;
-//   border: 2px solid white;
-//   top: 10px;
-//   left: 35px;
-//   z-index: 1;
-  
-//   animation: float 2s ease-in-out infinite;
-
-//   @include tablet {
-//     width:20rem;
-//   height:20rem;
-//   }
-
- 
-// }
 
 &__circle6 {
   background-color: transparent;
@@ -192,16 +148,9 @@
   top:50px;
   z-index: -1;
   opacity: 0.5;
-  // animation: float2 2s ease-in-out infinite;
 }
-// &__wrapper {
-//   position:relative;
-//   width:50%;
-//   height:50%;
-//   @include desktop {
-//     flex-direction:row;
-//   }
-// }
+
+
 
 
 

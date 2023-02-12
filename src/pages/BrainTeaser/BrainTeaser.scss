@@ -130,6 +130,7 @@
 
    &:hover {
     cursor: pointer;
+    background-color: white;
   }
      
         // animation: float 2s ease-in-out infinite;
@@ -240,6 +241,9 @@
         font-family: 'WorkSans';
         font-weight: 600;
         font-size:1.3rem;
+        &:hover {
+          color:#23F3DA;
+        }
        
       }
 }

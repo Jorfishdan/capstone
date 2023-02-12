@@ -42,7 +42,7 @@ function Callbacks() {
         <CallBackPts />
         <CallBackPets />
         <AnimalNoises />
-        {/* <HPBubbles /> */}
+        <HPBubbles />
         </>
     )
 }

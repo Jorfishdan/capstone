@@ -153,19 +153,19 @@
 @keyframes bubble {
     0% {
         transform:translateY(0);
-        opacity: 1.5;
+        opacity: 0.5;
     }
     10% {
         transform:translateY(-10px);
-        opacity: 1.5;
+        opacity: 0.5;
     }
     20% {
         transform:translateX(30px);
-        opacity: 1;
+        opacity: 0.8;
     }
     30% {
             transform:translateY(40px);
-            opacity: 1;
+            opacity: 0.8;
         
     }
     50% {
@@ -188,19 +188,19 @@
 @keyframes bubble2 {
     0% {
         transform:translateX(0);
-        opacity: 1.5;
+        opacity: 0.5;
     }
     10% {
         transform:translateX(-10px);
-        opacity: 1.5;
+        opacity: 0.5;
     }
     20% {
         transform:translateY(30px);
-        opacity: 1;
+        opacity: 0.8;
     }
     30% {
             transform:translateX(40px);
-            opacity: 1;
+            opacity: 0.8;
         
     }
     50% {
@@ -224,19 +224,19 @@
 @keyframes bubble3 {
     0% {
         transform:translateX(0);
-        opacity: 1.5;
+        opacity: 0.8;
     }
     10% {
         transform:translateX(-20px);
-        opacity: 1.5;
+        opacity: 0.8;
     }
     20% {
         transform:translateY(40px);
-        opacity: 1;
+        opacity: 0.5;
     }
     30% {
             transform:translateX(50px);
-            opacity: 1;
+            opacity:0.5;
         
     }
     50% {

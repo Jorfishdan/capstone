@@ -7,13 +7,18 @@ import dog2 from "../../assets/images/dog2.png";
 import HomepageSlogan from "../../components/HomepageSlogan/HomepageSlogan";
 import HPBubbles from "../../components/HPBubbles/HPBubbles";
 import MainCircle from "../../components/MainCircle/MainCircle";
+import info from "../../assets/images/info-static.png";
+import { Link } from "react-router-dom";
 
 
 function HomePage() {
   return (
     <>
       <section className="homepage">
-        <Header />
+        {/* <Header /> */}
+        <div className="homepage__info-wrapper">
+      <Link to="/mainInfo"><img src={info} alt="info icon to read game instructions" className="homepage__info" /></Link>
+      </div>
         <MainCircle />
         {/* <HomepageSlogan /> */}
         {/* <div className="homepage__main-circle"></div> */}

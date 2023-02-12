@@ -22,8 +22,9 @@ function CountDown() {
     />
     </div>
     <div className="countdown__instructions-wrapper">
-    <p className="countdown__instructions">There are sneaky animals hiding behind each card, listen carefully to be able to guess whose hiding where. With each correct answer, you get another bone for your class pet</p> 
-    <p className="countdown__rule">Here's the catch: with each card the animal will speak quieter to make it harder to guess who they are</p>
+    <p className="countdown__instructions">There are sneaky animals hiding behind each card, guess whose hiding where</p> 
+    <span className="countdown__bone">With each correct answer, you get another bone for your class pet</span>
+    <p className="countdown__rule">Listen carefully as the animals grow quieter and quieter</p>
     </div>
     </div>
     </>)

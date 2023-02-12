@@ -4,9 +4,7 @@
 @use "../../styles/partials/variables" as *;
 
 .form {
-    // &__wrapper {
-    //     display: flex;
-    // }
+   
     
     &__submit {
         display:flex;
@@ -26,6 +24,10 @@
         font-size: 2rem;
         color: #313131;
         margin-top:1rem;
+
+        &:hover {
+            color:#23F3DA
+        }
     }
     &__input, &__answer, &__incorrect,&__explain {
         border-radius: 1rem;

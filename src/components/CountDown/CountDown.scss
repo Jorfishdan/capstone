@@ -29,8 +29,22 @@
         background-color: #23F3DA;
         border-radius: 1rem;
         padding:1rem;
+        // display: flex;
+        // justify-content: center;
     }
     &__rule {
+        font-family: 'WorkSans';
+        font-weight: 600;
+        color: white; 
+        font-size: 2rem;
+        margin-top: 1rem;
+        background-color: #23F3DA;
+        border-radius: 1rem;
+        padding:1rem;
+        // width:60%;
+    }
+
+    &__bone{
         font-family: 'WorkSans';
         font-weight: 600;
         color: white; 
@@ -46,5 +60,7 @@
         display: flex;
     flex-direction: column;
     margin-top:1.5rem;
+    // justify-content: center;
+    align-items: center;
     }
 }
