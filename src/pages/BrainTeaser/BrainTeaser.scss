@@ -55,11 +55,14 @@
         bottom:5px;
         // animation: float 2s ease-in-out infinite;
         z-index: -1;
+    //     display: flex;
+    //     align-items: center;
+    // justify-content: center;
       
-        @include tablet {
-          width:30rem;
-          height:30rem;
-        }
+        // @include tablet {
+        //   width:30rem;
+        //   height:30rem;
+        // }
       }
 
       &__cardC {
@@ -73,10 +76,10 @@
         // animation: float 2s ease-in-out infinite;
         z-index: -1;
       
-        @include tablet {
-          width:10rem;
-          height:10rem;
-        }
+        // @include tablet {
+        //   width:10rem;
+        //   height:10rem;
+        // }
       }
       &__cardD {
         background-color:#23F3DA;
@@ -86,13 +89,17 @@
         position: absolute;
         right: 10px;
        top:60px;
+       display: flex;
+       align-items: center;
+   justify-content: center;
+     
         // animation: float 2s ease-in-out infinite;
-        z-index: -1;
+        // z-index: -1;
       
-        @include tablet {
-          width:10rem;
-          height:10rem;
-        }
+        // @include tablet {
+        //   width:10rem;
+        //   height:10rem;
+        // }
       }
 
       &__cardE {
@@ -107,10 +114,10 @@
         // animation: float 2s ease-in-out infinite;
         z-index: -1;
       
-        @include tablet {
-          width:10rem;
-          height:10rem;
-        }
+        // @include tablet {
+        //   width:10rem;
+        //   height:10rem;
+        // }
       }
 
       &__cardF {
@@ -125,10 +132,10 @@
         // animation: float 2s ease-in-out infinite;
         z-index: -1;
       
-        @include tablet {
-          width:10rem;
-          height:10rem;
-        }
+        // @include tablet {
+        //   width:10rem;
+        //   height:10rem;
+        // }
       }
       &__cardG {
         background-color:#23F3DA;
@@ -158,10 +165,10 @@
         // animation: float 2s ease-in-out infinite;
         z-index: -1;
       
-        @include tablet {
-          width:10rem;
-          height:10rem;
-        }
+        // @include tablet {
+        //   width:10rem;
+        //   height:10rem;
+        // }
       }
 
       &__header {
@@ -185,6 +192,14 @@
       &__callbacks-link {
         width: 5rem;
         height: 5rem;
+      }
+
+      &__addFact {
+        color:white;
+        font-family: 'WorkSans';
+        font-weight: 600;
+        font-size:1.3rem;
+       
       }
 }
 

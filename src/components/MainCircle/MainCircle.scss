@@ -37,6 +37,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    &:hover {
+      border: 8px solid #23F3DA;
+    }
   
   }
 

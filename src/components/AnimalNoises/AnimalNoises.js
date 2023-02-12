@@ -206,7 +206,7 @@ function AnimalNoises() {
           </div>
         </div>
 
-        <div
+        {/* <div
           onClick={() => setFlipDog(!flipDog)}
           className="animalnoises__card dog"
         >
@@ -238,7 +238,7 @@ function AnimalNoises() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div
           onClick={() => setFlipOwl(!flipOwl)}

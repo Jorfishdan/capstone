@@ -9,8 +9,15 @@ import Pet from "../../components/Pet/Pet";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HPBubbles from "../../components/HPBubbles/HPBubbles";
+import { useState } from "react";
 
 function BrainTeaser() {
+    const [isSubmitShown, setIsSubmitShown] = useState(false)
+
+    function handleAddFact() {
+        setIsSubmitShown(true)
+        console.log("clicked")
+    }
     
     return(
         <>
@@ -30,17 +37,22 @@ function BrainTeaser() {
             </Link>
             </div>
             </div>
-            <div className="brainteaser__cardA"></div>
-            <div className="brainteaser__cardB"></div>
+            <div className="brainteaser__cardA">
+            </div>
+            <div className="brainteaser__cardB">
+            </div>
             <div className="brainteaser__cardC"></div>
-            <div className="brainteaser__cardD"></div>
+            <div className="brainteaser__cardD" onClick={handleAddFact}>
+            <p className="brainteaser__addFact">Add a fact here!</p>
+            </div>
             <div className="brainteaser__cardE"></div>
-            <div className="brainteaser__cardF"></div>
+            {/* <div className="brainteaser__cardF"></div> */}
             <div className="brainteaser__cardG"></div>
-            <div className="brainteaser__cardH"></div>
+            {/* <div className="brainteaser__cardH"></div> */}
             <div className="brainteaser__wrapper">
         <BrainTeaserCard />
-        <SubmitFact />
+
+        {isSubmitShown === true && <SubmitFact />}
         <Pet />
         </div>
         <HPBubbles />
