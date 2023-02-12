@@ -12,13 +12,14 @@ function HomePage() {
     <>
       <section className="homepage">
         <Header />
+        <div className="homepage__main-circle"></div>
 
         <div className="homepage__circle"></div>
 
-        <div className="homepage__circle2"></div>
+        {/* <div className="homepage__circle2"></div> */}
         <div className="homepage__main-wrapper">
-          <HomePageCards />
-          <HomepageSlogan />
+          {/* <HomePageCards /> */}
+          {/* <HomepageSlogan /> */}
         </div>
         <div className="homepage__circle3"></div>
         <div className="homepage__circle4"></div>
@@ -27,7 +28,7 @@ function HomePage() {
         <div className="homepage__circle7"></div>
         <div className="homepage__circle8"></div>
         <div className="homepage__circle9"></div>
-        <div className="homepage__circle10"></div>
+        {/* <div className="homepage__circle10"></div> */}
         <HPBubbles />
         <Footer />
       </section>
