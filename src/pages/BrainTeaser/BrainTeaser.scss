@@ -127,6 +127,10 @@
        display: flex;
        align-items: center;
    justify-content: center;
+
+   &:hover {
+    cursor: pointer;
+  }
      
         // animation: float 2s ease-in-out infinite;
         // z-index: -1;
@@ -153,6 +157,8 @@
         //   width:10rem;
         //   height:10rem;
         // }
+
+      
       }
 
       &__cardF {

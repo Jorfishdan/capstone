@@ -64,7 +64,7 @@ function BrainTeaser() {
         </div>
         <Pet />
         </div>
-        {/* <HPBubbles /> */}
+        <HPBubbles />
         </section>
         </>
 

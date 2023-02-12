@@ -104,6 +104,7 @@
     border: 2px solid #23F3DA;
     border-radius: 1rem;
     padding:1rem;
+    
 }
 &__explain {
     font-family:'WorkSans';
@@ -114,6 +115,10 @@
     background-color: #23F3DA;
     padding:1rem;
     border-radius: 1rem;
+    width:40rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 &__next {
