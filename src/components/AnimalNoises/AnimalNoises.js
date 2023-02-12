@@ -31,20 +31,6 @@ function AnimalNoises() {
   
   return (
     <>
-{/* <div className="animalnoises__title-wrapper">
-      <h1 className="animalnoises__title">
-        Click below to start the countdown to the game!
-      </h1>
-      <button className="animalnoises__countdown">
-        <audio controls>
-          <source
-            className="animalnoises__audio"
-            src={count}
-            type="audio/mp3"
-          />
-        </audio>
-      </button>
-      </div> */}
 
       <section className="animalnoises__wrapper">
         <div

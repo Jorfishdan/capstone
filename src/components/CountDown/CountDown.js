@@ -21,6 +21,10 @@ function CountDown() {
             className={countDown ? "countdown__gif" : "countdown__static"}
     />
     </div>
+    <div className="countdown__instructions-wrapper">
+    <p className="countdown__instructions">There are sneaky animals hiding behind each card, listen carefully to be able to guess whose hiding where. With each correct answer, you get another bone for your class pet</p> 
+    <p className="countdown__rule">Here's the catch: with each card the animal will speak quieter to make it harder to guess who they are</p>
+    </div>
     </div>
     </>)
     
