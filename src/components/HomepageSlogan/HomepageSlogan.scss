@@ -7,12 +7,18 @@
     display: flex;
     flex-wrap: wrap;
     width: 67%;
-    align-items: center;
+    justify-content: center;
 
     &__text, &__pet {
-        font-weight: 400;
         font-family: 'WorkSans';
         margin-top:1rem;
+        background-color: #23F3DA;
+        padding: 1rem;
+        border-radius: 1rem;
+        color:white;
+        font-weight:600;
+
+
     }
 
    

@@ -4,10 +4,9 @@
 @use "../../styles/partials/variables" as *;
 
 .homepage {
-  // display: flex;
-  // flex-direction: column;
-width:100vw;
-height:100vh;
+
+// width:100vw;
+// height:100vh;
 
 &__main-wrapper {
   display: flex;
@@ -31,21 +30,43 @@ height:100vh;
     height:30rem;
   }
 
-  // border-top-left-radius: 3rem;
-  // border-top-right-radius: 3rem;
-  // border-bottom-left-radius:0;
-  // border-bottom-right-radius:0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 &__circle2 {
-  background-color:#23F3DA;
+  background-color:white;
+  display: flex;
+  // display: inline-block;
   width:15rem;
   height:15rem;
   border-radius: 50%;
-  position: absolute;
-  right:40px;
-  bottom:40px;
-  // animation: float 2s ease-in-out infinite;
+  // position: absolute;
+  // right:40px;
+  // bottom:40px;
+  animation: float 2s ease-in-out infinite;
   z-index: -1;
 }
 
@@ -56,8 +77,6 @@ height:100vh;
   height:15rem;
   border-radius: 50%;
   position: absolute;
-  // top:90px;
-  // left:5px;
   z-index: -1;
   // animation: float 2s ease-in-out infinite;
 
@@ -123,22 +142,11 @@ height:100vh;
   height: 10rem;
   border-radius: 50%;
   position: absolute;
-  // border: 2px solid red;
   top: 132px;
   right: 27px;
   z-index: -1;
 }
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+
 
 &__circle8 {
   background-color:#23F3DA ;
@@ -150,16 +158,16 @@ height:100vh;
   right: 27px;
   z-index: -1;
   opacity: 0.5;
-  animation: float 2s ease-in-out infinite;
+  animation: float2 2s ease-in-out infinite;
 }
-&__wrapper {
-  position:relative;
-  width:50%;
-  height:50%;
-  @include desktop {
-    flex-direction:row;
-  }
-}
+// &__wrapper {
+//   position:relative;
+//   width:50%;
+//   height:50%;
+//   @include desktop {
+//     flex-direction:row;
+//   }
+// }
 
 
 
