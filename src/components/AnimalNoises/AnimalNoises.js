@@ -32,6 +32,13 @@ function AnimalNoises() {
   return (
     <>
       <section className="animalnoises__wrapper">
+        <div className="animalnoises__circle1"></div>
+        <div className="animalnoises__circle2"></div>
+        <div className="animalnoises__circle3"></div>
+        <div className="animalnoises__circle4"></div>
+        <div className="animalnoises__circle5"></div>
+        <div className="animalnoises__circle6"></div>
+        <div className="animalnoises__circle7"></div>
         <div
           onClick={() => setFlipHorse(!flipHorse)}
           // className={`animalnoises__card horse ${flipHorse ? "" : "hover-effect"}`}
