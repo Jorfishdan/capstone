@@ -1,9 +1,10 @@
-import "./AnimalNoiseCircle.scss"
+import "./AnimalNoiseCircle.scss";
 
 function AnimalNoiseCircle() {
-    return (<>
-    <section className="animalnoisecircle">
-     <div className="animalnoisecircle__circle1"></div>
+  return (
+    <>
+      <section className="animalnoisecircle">
+        <div className="animalnoisecircle__circle1"></div>
         <div className="animalnoisecircle__circle2"></div>
         <div className="animalnoisecircle__circle3"></div>
         <div className="animalnoisecircle__circle4"></div>
@@ -14,8 +15,9 @@ function AnimalNoiseCircle() {
         <div className="animalnoisecircle__circle9"></div>
         <div className="animalnoisecircle__circle10"></div>
         <div className="animalnoisecircle__circle11"></div>
-        </section>
-    </>)
+      </section>
+    </>
+  );
 }
 
 export default AnimalNoiseCircle;

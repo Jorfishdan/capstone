@@ -8,8 +8,7 @@ import cow from "../../assets/audio/cow.mp3";
 import chicken from "../../assets/audio/chicken.mp3";
 import frog from "../../assets/audio/frog.mp3";
 import AnimalNoiseCircle from "../AnimalNoiseCircle/AnimalNoiseCircle";
-import {  useState } from "react";
-
+import { useState } from "react";
 
 function AnimalNoises() {
   const [flipHorse, setFlipHorse] = useState(false);
@@ -21,7 +20,6 @@ function AnimalNoises() {
   const [flipChicken, setFlipChicken] = useState(false);
   const [flipCow, setFlipCow] = useState(false);
 
-  
   return (
     <>
       <section className="animalnoises__wrapper">
@@ -32,7 +30,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipHorse ? "animalnoises__horse-front" : ""
+              flipHorse ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -44,10 +42,10 @@ function AnimalNoises() {
               <p>Your browser does not support this audio</p>
             </audio>
           </div>
-          <div onClick={() => setFlipHorse(!flipHorse)} >
+          <div onClick={() => setFlipHorse(!flipHorse)}>
             <div
               className={`animalnoises__back ${
-                flipHorse ? "" : "animalnoises__horse-back"
+                flipHorse ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-horse">Horse</h3>
@@ -66,7 +64,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipFrog ? "animalnoises__frog-front" : ""
+              flipFrog ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -81,7 +79,7 @@ function AnimalNoises() {
           <div onClick={() => setFlipFrog(!flipFrog)}>
             <div
               className={`animalnoises__back ${
-                flipFrog ? "" : "animalnoises__frog-back"
+                flipFrog ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-frog">Frog</h3>
@@ -100,7 +98,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipCat ? "animalnoises__cat-front" : ""
+              flipCat ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -115,7 +113,7 @@ function AnimalNoises() {
           <div onClick={() => setFlipCat(!flipCat)}>
             <div
               className={`animalnoises__back ${
-                flipCat ? "" : "animalnoises__cat-back"
+                flipCat ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-cat">Cat</h3>
@@ -134,7 +132,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipDuck ? "animalnoises__duck-front" : ""
+              flipDuck ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -149,7 +147,7 @@ function AnimalNoises() {
           <div onClick={() => setFlipDuck(!flipDuck)}>
             <div
               className={`animalnoises__back ${
-                flipDuck ? "" : "animalnoises__duck-back"
+                flipDuck ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-duck">Duck</h3>
@@ -168,7 +166,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipPig ? "animalnoises__pig-front" : ""
+              flipPig ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -183,7 +181,7 @@ function AnimalNoises() {
           <div onClick={() => setFlipPig(!flipPig)}>
             <div
               className={`animalnoises__back ${
-                flipPig ? "" : "animalnoises__pig-back"
+                flipPig ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-pig">Pig</h3>
@@ -202,7 +200,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipOwl ? "animalnoises__owl-front" : ""
+              flipOwl ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -217,7 +215,7 @@ function AnimalNoises() {
           <div onClick={() => setFlipOwl(!flipOwl)}>
             <div
               className={`animalnoises__back ${
-                flipOwl ? "" : "animalnoises__owl-back"
+                flipOwl ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-owl">Owl</h3>
@@ -236,7 +234,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipChicken ? "animalnoises__chicken-front" : ""
+              flipChicken ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -251,7 +249,7 @@ function AnimalNoises() {
           <div onClick={() => setFlipChicken(!flipChicken)}>
             <div
               className={`animalnoises__back ${
-                flipChicken ? "" : "animalnoises__chicken-back"
+                flipChicken ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-chicken">Chicken</h3>
@@ -270,7 +268,7 @@ function AnimalNoises() {
         >
           <div
             className={`animalnoises__front ${
-              flipCow ? "animalnoises__cow-front" : ""
+              flipCow ? "animalnoises__animal-front" : ""
             }`}
           >
             <audio controls>
@@ -285,7 +283,7 @@ function AnimalNoises() {
           <div onClick={() => setFlipCow(!flipCow)}>
             <div
               className={`animalnoises__back ${
-                flipCow ? "" : "animalnoises__cow-back"
+                flipCow ? "" : "animalnoises__animal-back"
               }`}
             >
               <h3 className="animalnoises__text-cow">Cow</h3>
@@ -303,5 +301,3 @@ function AnimalNoises() {
 }
 
 export default AnimalNoises;
-
-

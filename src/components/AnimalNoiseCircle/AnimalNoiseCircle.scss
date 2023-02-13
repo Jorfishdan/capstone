@@ -4,25 +4,25 @@
 @use "../../styles/partials/variables" as *;
 
 .animalnoisecircle {
-&__circle1 {
-    display:none;
+  &__circle1 {
+    display: none;
 
     @include desktop {
-    background-color: transparent;
-    width: 27rem;
-    height: 27rem;
-    border-radius: 50%;
-    position: absolute;
-    border: 3px solid white;
-    bottom: 96px;
-    right: 27px;
-    z-index: 1;
+      background-color: transparent;
+      width: 27rem;
+      height: 27rem;
+      border-radius: 50%;
+      position: absolute;
+      border: 3px solid white;
+      bottom: 96px;
+      right: 27px;
+      z-index: 1;
     }
   }
 
   &__circle3 {
-    background-color:#23F3DA;
-    opacity:0.5;
+    background-color: #23f3da;
+    opacity: 0.5;
     width: 9rem;
     height: 9rem;
     border-radius: 50%;
@@ -53,32 +53,32 @@
     bottom: 10px;
     right: 1px;
     z-index: 1;
-}
-
-  &__circle7{
-    background-color: white;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  position: absolute;
-  border: 3px solid white;
-  bottom: 20px;
-  left: 58px;
-  z-index: 1;
-  }
-  &__circle8{
-    background-color: white;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  position: absolute;
-  border: 3px solid white;
-  bottom: 20px;
-  right: 58px;
-  z-index: 1;
   }
 
-  &__circle9{
+  &__circle7 {
+    background-color: white;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 20px;
+    left: 58px;
+    z-index: 1;
+  }
+  &__circle8 {
+    background-color: white;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 20px;
+    right: 58px;
+    z-index: 1;
+  }
+
+  &__circle9 {
     background-color: white;
     width: 18rem;
     height: 18rem;
@@ -90,7 +90,7 @@
     z-index: 1;
   }
 
-  &__circle10{
+  &__circle10 {
     background-color: white;
     width: 18rem;
     height: 18rem;
@@ -100,10 +100,9 @@
     bottom: 4px;
     right: 15px;
     z-index: 1;
-
   }
 
-  &__circle11{
+  &__circle11 {
     background-color: white;
     width: 3rem;
     height: 3rem;
@@ -113,6 +112,5 @@
     bottom: 220px;
     right: 15px;
     z-index: 1;
-
   }
 }
