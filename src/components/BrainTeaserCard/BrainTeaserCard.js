@@ -47,7 +47,7 @@ function BrainTeaserCard() {
     };
 
     const nextHandler = () => {
-        // console.log("hello")
+        console.log("hello")
        setIndex(index +1);
         setShowQuestion(questionList[index +1])
         setAnswer(null)
@@ -75,7 +75,9 @@ function BrainTeaserCard() {
                 <article className="brainteaser__answer">{answer}
                 </article>
                 <p className="brainteaser__explain">{explain}</p>
+                <div className="brainteaser__next-wrapper" onClick={nextHandler}>
                 <button className="brainteaser__next" onClick={nextHandler}>Next</button>
+                </div>
                 <div className="brainteaser__score">Score {score}</div>
                 {/* </div> */}
             </div>
