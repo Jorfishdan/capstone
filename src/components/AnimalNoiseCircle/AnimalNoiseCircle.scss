@@ -1,0 +1,118 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.animalnoisecircle {
+&__circle1 {
+    display:none;
+
+    @include desktop {
+    background-color: transparent;
+    width: 27rem;
+    height: 27rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 96px;
+    right: 27px;
+    z-index: 1;
+    }
+  }
+
+  &__circle3 {
+    background-color:#23F3DA;
+    opacity:0.5;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 500px;
+    left: 34px;
+    z-index: 1;
+  }
+  &__circle4 {
+    background-color: transparent;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 5px solid white;
+    top: 900px;
+    left: 34px;
+    z-index: 1;
+  }
+  &__circle5 {
+    background-color: transparent;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 10px;
+    right: 1px;
+    z-index: 1;
+}
+
+  &__circle7{
+    background-color: white;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid white;
+  bottom: 20px;
+  left: 58px;
+  z-index: 1;
+  }
+  &__circle8{
+    background-color: white;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid white;
+  bottom: 20px;
+  right: 58px;
+  z-index: 1;
+  }
+
+  &__circle9{
+    background-color: white;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 20px;
+    left: 242px;
+    z-index: 1;
+  }
+
+  &__circle10{
+    background-color: white;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 4px;
+    right: 15px;
+    z-index: 1;
+
+  }
+
+  &__circle11{
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    bottom: 220px;
+    right: 15px;
+    z-index: 1;
+
+  }
+}
