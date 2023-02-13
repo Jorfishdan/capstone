@@ -1,4 +1,5 @@
 import "./CallBacks.scss"
+// import AnimalNoises from "../../components/AnimalNoises/AnimalNoises";
 import AnimalNoises from "../../components/AnimalNoises/AnimalNoises";
 import CallBackPts from "../../components/CallBackPts/CallBackPts";
 import house from "../../assets/images/house-static.png";
