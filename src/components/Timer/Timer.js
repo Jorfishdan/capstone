@@ -63,6 +63,7 @@ function Timer ({  setPage, inputTime }) {
           <div className="timer__circleE"></div>
         
         <div className="timer__wrapper">
+           {/* <p className="timer__title">Teacher's Pet</p> */}
           <CountdownCircleTimer
             isPlaying={start}
             duration={input}

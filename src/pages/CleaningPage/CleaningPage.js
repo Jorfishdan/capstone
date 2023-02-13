@@ -18,7 +18,8 @@ return (
     <>
     <div className="cleaningpage__header">
     <Link to="/"><img src={house} alt="home icon to press to return to the home page" className="cleaningpage__home" /></Link>
-    <div className="cleaningpage__icon-wrapper">
+    <p className="cleaningpage__title">Teacher's Pet</p>
+      <div className="cleaningpage__icon-wrapper">
     <Link to="/brainteaser"><img src={vet} alt="home icon to press to return to the home page" className="cleaningpage__brainteaser-link" /></Link>
     <Link to="/callbacks"><img src={paw} alt="home icon to press to return to the home page" className="cleaningpage__callbacks-link" /></Link>
 

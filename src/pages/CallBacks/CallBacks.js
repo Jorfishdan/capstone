@@ -20,6 +20,7 @@ function Callbacks() {
           className="callbacks__home"
         />
       </Link>
+      <span className="callbacks__title">Teacher's Pet</span>
       <div className="callbacks__icon-wrapper">
       <Link to="/brainteaser">
         <img

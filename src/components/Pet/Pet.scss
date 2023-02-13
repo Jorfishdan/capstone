@@ -9,6 +9,7 @@
         height:10rem;
         z-index: -1;
         border-radius:50%;
+        border:2px solid #23F3DA; 
 
         @include desktop {
         width:20rem;
