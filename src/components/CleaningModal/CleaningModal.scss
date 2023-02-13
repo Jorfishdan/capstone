@@ -4,6 +4,15 @@
 @use "../../styles/partials/variables" as *;
 
 .overlay {
+ 
+    background-color: rgba($color:#23f3da, $alpha: 0.5);
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top:0;
+      left:0;
+      z-index:3;
+
     @include tablet{
     background-color: rgba($color:#23f3da, $alpha: 0.5);
       position: fixed;
@@ -80,6 +89,18 @@
 
      &__bubble-text {
       position: relative;
+    left: -91px;
+    bottom: -25px;
+    z-index: -1;
+    width: 7rem;
+    display: flex;
+    font-family: "WorkSans";
+    font-size: 1.5rem;
+    overflow: hidden;
+    animation: type 2s ease-in-out forwards;
+    
+      @include desktop {
+      position: relative;
       left: -108px;
       bottom: -25px;
       z-index: -1;
@@ -89,6 +110,7 @@
       font-size: 1.5rem;
       overflow: hidden;
       animation: type 2s ease-in-out forwards;
+      }
      }
     }
 

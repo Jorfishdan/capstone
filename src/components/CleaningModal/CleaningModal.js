@@ -43,7 +43,7 @@ function revealPassword() {
           <div className="modal__dog-wrapper">
           <img className="modal__gif" src={sniffing} />
           <img src={chat} alt="speech bubble" className="modal__chatBubble" />
-          <span className="pet__bubble-text">Let me scan the room to evaluate points</span>
+          <span className="modal__bubble-text">Let me scan the room to evaluate points</span>
           </div>
           <div className="modal__buttons">
             <form className="modal__form" onSubmit={(e) => e.preventDefault()}>

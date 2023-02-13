@@ -78,7 +78,17 @@
     align-items: center;
 }
 &__circle2{
+    background-color: transparent;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 27px;
+    z-index: -1;
+    border: 2px solid white;
      
+    @include desktop {
     background-color: transparent;
     width: 25rem;
     height: 25rem;
@@ -88,6 +98,7 @@
     left: 27px;
     z-index: 1;
     border: 2px solid white;
+    }
       
 }
 &__circle3{
@@ -158,6 +169,20 @@
     height: 10rem;
     border-radius: 50%;
     position: absolute;
+    bottom: 171px;
+    left: 24px;
+    z-index: 1;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+    background-color: white;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
     bottom: 275px;
     left: 24px;
     z-index: 1;
@@ -165,6 +190,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    }
       
 }
 }
