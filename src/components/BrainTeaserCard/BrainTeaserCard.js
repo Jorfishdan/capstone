@@ -31,15 +31,23 @@ function BrainTeaserCard() {
         triviaAnswer();
       }, []);
 
-    const revealHandler = ()=> {
-    setAnswer(showQuestion.correct_answer)
-    if(showQuestion.correct_answer === "True" || "False")
-    setScore(score +1)
+    const revealHandler = (event)=> {
+    setAnswer(showQuestion[event === "True" ? "correct_answer" : "incorrect_answer"])
+    setAnswer(showQuestion[event === "False" ? "correct_answer" : "incorrect_answer"])
+    if (event === "True" && showQuestion.correct_answer === "True" || event === "False" && showQuestion.correct_answer === "False") {
+      setScore(score +1);
+    }
+    // if(answer === showQuestion.correct_answer) {
+    // setScore(score +1)} else {
+    //   if (answer === showQuestion.incorrect_answer) {
+    //     setScore(score+0)
+    //   }
+    // }
     setExplain(showQuestion.explanation)
     };
 
     const nextHandler = () => {
-        console.log("hello")
+        // console.log("hello")
        setIndex(index +1);
         setShowQuestion(questionList[index +1])
         setAnswer(null)
@@ -55,11 +63,11 @@ function BrainTeaserCard() {
             <div className="brainteaser__wrapper">
                 <h1 className="brainteaser__question">{showQuestion.question}</h1>
                 <div className="brainteaser__cards-wrapper">
-                <article className="brainteaser__cardtrue" onClick={revealHandler}>
+                <article className="brainteaser__cardtrue" onClick={() => revealHandler("True")}>
                 <h1 className="brainteaser__true--text">True</h1>
                 </article>
           
-                <article className="brainteaser__cardfalse" onClick={revealHandler}>
+                <article className="brainteaser__cardfalse" onClick={() => revealHandler("False")}>
                     <h1 className="brainteaser__false--text">False</h1>
                 </article>
                 </div>
