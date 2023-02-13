@@ -39,6 +39,9 @@
     }
 
     &__circle1 {
+      display:none;
+
+      @include desktop {
       background-color: transparent;
       width: 27rem;
       height: 27rem;
@@ -48,9 +51,14 @@
       bottom: 96px;
       right: 27px;
       z-index: 1;
+      }
     }
 
     &__circle2 {
+      display:none;
+
+      @include desktop {
+        display:block;
       background-color: white;
       width: 17rem;
       height: 17rem;
@@ -60,6 +68,7 @@
       bottom: 200px;
       left: 27px;
       z-index: 1;
+      }
     }
 
     &__circle3 {
