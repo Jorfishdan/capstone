@@ -87,6 +87,7 @@
     left: 27px;
     z-index: -1;
     border: 2px solid white;
+    pointer-events: none;
      
     @include desktop {
     background-color: transparent;
@@ -126,19 +127,19 @@
       
 }
 
-&__circle5{
+// &__circle5{
      
-    background-color: transparent;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 285px;
-    right: 23px;
-    z-index: 1;
-    border: 2px solid white;
+//     background-color: transparent;
+//     width: 15rem;
+//     height: 15rem;
+//     border-radius: 50%;
+//     position: absolute;
+//   top: 25px;
+//     right: 23px;
+//     z-index: 1;
+//     border: 2px solid white;
       
-}
+// }
 &__circle6{
      
     background-color: #23F3DA;

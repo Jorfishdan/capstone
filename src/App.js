@@ -5,7 +5,7 @@ import HomePage from "../src/pages/HomePage/HomePage";
 import InfoPage from "../src/pages/InfoPage/InfoPage";
 import BrainTeaser from "../src/pages/BrainTeaser/BrainTeaser";
 import CleaningPage from "../src/pages/CleaningPage/CleaningPage";
-import Callbacks from "../src/pages/CallBacks/CallBacks";
+import CallBacks from "../src/pages/CallBacks/CallBacks";
 import NotFound from "../src/pages/NotFound/NotFound";
 import Points from "../src/pages/Points/Points";
 
@@ -22,12 +22,12 @@ function App() {
 
           <Route path="mainInfo/brainTeaser" element={<BrainTeaser />} />
           <Route path="mainInfo/cleanup" element={<CleaningPage />} />
-          <Route path="mainInfo/callbacks" elements={<Callbacks />} />
+          <Route path="mainInfo/callbacks" elements={<CallBacks />} />
 
           <Route path="cleanup" element={<CleaningPage />} />
           <Route path="cleanup/points" element={<Points />} />
 
-          <Route path="callbacks" element={<Callbacks />} />
+          <Route path="callbacks" element={<CallBacks />} />
           <Route path="callbacks/points" element={<Points />} />
 
           <Route path="*" element={<NotFound />} />

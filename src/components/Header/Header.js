@@ -1,7 +1,5 @@
 import "./Header.scss";
 import info from "../../assets/images/info.png";
-import list from "../../assets/images/list.png";
-import logout from "../../assets/images/logout.png";
 import information from "../../assets/images/information.gif"
 import staticInfo from "../../assets/images/info-static.png";
 import { Link } from "react-router-dom";

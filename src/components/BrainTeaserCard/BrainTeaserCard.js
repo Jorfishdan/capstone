@@ -32,8 +32,9 @@ function BrainTeaserCard() {
       }, []);
 
     const revealHandler = (event)=> {
-    setAnswer(showQuestion[event === "True" ? "correct_answer" : "incorrect_answer"])
-    setAnswer(showQuestion[event === "False" ? "correct_answer" : "incorrect_answer"])
+      setAnswer(showQuestion.correct_answer)
+    // setAnswer(showQuestion[event === "True" ? "correct_answer" : "incorrect_answer"])
+    // setAnswer(showQuestion[event === "False" ? "correct_answer" : "incorrect_answer"])
     if (event === "True" && showQuestion.correct_answer === "True" || event === "False" && showQuestion.correct_answer === "False") {
       setScore(score +1);
     }

@@ -54,11 +54,12 @@ function Pet() {
         }
       }, [isPetShown, sayIndex, sayIndex.length])
 
+
+
     return (
         <div className="pet">
             {isPetShown && ( 
             <div className="pet__wrapper">
-            {/* <div className={`pet__wrapper ${isRolledOut ? "rollout" : ""}`}> */}
             <img src={cheering} alt="speech bubble" className="pet__cheering" />
             <div className="pet__bubble-wrap">
             <img src={chat} alt="speech bubble" className="pet__chat" />

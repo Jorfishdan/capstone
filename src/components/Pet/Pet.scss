@@ -37,6 +37,7 @@
         bottom: 50px;
         z-index: 1;
         display:flex;
+        pointer-events: none;
 
         @include desktop {
             position: absolute;
@@ -98,16 +99,16 @@
         }
     }
 
-    @keyframes rollOut {
-        from {
-            transform: translate3d(0,0,0);
-            opacity:1;
-        }
-        to {
-            transform: translate3d(100%, 0, 0) rotate3d(0,0,1, 120deg);
-            opacity:0;
-        }
-    }
+    // @keyframes rollOut {
+    //     from {
+    //         transform: translate3d(0,0,0);
+    //         opacity:1;
+    //     }
+    //     to {
+    //         transform: translate3d(100%, 0, 0) rotate3d(0,0,1, 120deg);
+    //         opacity:0;
+    //     }
+    // }
 
 
     }

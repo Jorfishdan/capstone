@@ -1,0 +1,15 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        font-family: 'WorkSans';
+        font-weight:600;
+
+    }
+}
