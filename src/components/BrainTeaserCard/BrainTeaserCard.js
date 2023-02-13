@@ -52,7 +52,6 @@ function BrainTeaserCard() {
         <div>
             {showQuestion && (
         <section className="brainteaser">
-          {/* <h3 className="brainteaser__instructions">Vote for the correct answer! Either raise your hand or vote by standing on designated sides of the room. Psssst...explain <i>why</i> you picked your answer before the grand reveal</h3> */}
             <div className="brainteaser__wrapper">
                 <h1 className="brainteaser__question">{showQuestion.question}</h1>
                 <div className="brainteaser__cards-wrapper">

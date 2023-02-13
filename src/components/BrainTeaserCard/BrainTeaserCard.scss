@@ -20,8 +20,9 @@
     }
 
     &__cardtrue{
-    height: 36rem;
-    width: 38rem;
+
+       height: 26rem;
+    width: 26rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
     border-radius: 1.2rem;
     box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
@@ -49,11 +50,28 @@
         
       
     }
+
+    @include desktop {
+        height: 36rem;
+        width: 38rem;
+        border: 1px solid rgba(128, 128, 128, 0.3);
+        border-radius: 1.2rem;
+        box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+        margin: 1rem;
+        transition: 0.5s;
+        background-color: white;
+       
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 &__cardfalse{
-    height: 36rem;
-    width: 38rem;
+    height: 26rem;
+    width: 26rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
     border-radius: 1.2rem;
     box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
@@ -73,6 +91,23 @@
     background-size: 5rem 5rem;
     font-size: 3rem;
     background-position: 70px 40px;
+    }
+
+    @include desktop {
+        height: 36rem;
+        width: 38rem;
+        border: 1px solid rgba(128, 128, 128, 0.3);
+        border-radius: 1.2rem;
+        box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+        margin: 1rem;
+        transition: 0.5s;
+        background-color: white;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
 }
 
