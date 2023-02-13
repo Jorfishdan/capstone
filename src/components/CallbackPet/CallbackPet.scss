@@ -4,80 +4,73 @@
 @use "../../styles/partials/variables" as *;
 
 .callbackPets {
-    &__cheering{
-        width:16rem;
-        height:16rem;
-        z-index: -1;
-        border-radius: 50%;
-        border:2px solid #23F3DA; 
-    }
+  &__cheering {
+    width: 16rem;
+    height: 16rem;
+    z-index: -1;
+    border-radius: 50%;
+    border: 2px solid #23f3da;
+  }
 
-    &__chat {
-        width:10rem;
-        height:10rem;
-        z-index: 1;
-    }
+  &__chat {
+    width: 10rem;
+    height: 10rem;
+    z-index: 1;
+  }
 
-    &__wrapper {
-        position: absolute;
-        left: 50px;
-       top: 55px;
-        z-index: 2;
-        display:flex;
+  &__wrapper {
+    position: absolute;
+    left: 50px;
+    top: 55px;
+    z-index: 2;
+    display: flex;
 
-        @include desktop {
-        position: absolute;
-        left: 120px;
-       top: 80px;
-        z-index: 2;
-        display:flex;
-        }
+    @include desktop {
+      position: absolute;
+      left: 120px;
+      top: 80px;
+      z-index: 2;
+      display: flex;
     }
+  }
 
-    &__bubble-text {
-        position: relative;
-        right: 75px;
-     top: 20px;
-        z-index: -1;
-        width:6rem;
-        display: flex;
-        font-family: 'WorkSans';
-        font-size: 1.1rem;
-        overflow: hidden;
-        animation: type 2s ease-in-out forwards;
-    }
-&__wrapper.rollout {
-    animation: rollOut 1s ease-in-out;
-}
-@keyframes rollIn {
+  &__bubble-text {
+    position: relative;
+    right: 75px;
+    top: 20px;
+    z-index: -1;
+    width: 6rem;
+    display: flex;
+    font-family: "WorkSans";
+    font-size: 1.1rem;
+    overflow: hidden;
+    animation: type 2s ease-in-out forwards;
+  }
+  @keyframes rollIn {
     from {
-        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-        opacity:0;
+      transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+      opacity: 0;
     }
     to {
-        transform: translate3d(0,0,0);
-        opacity:1;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
     }
+  }
+
+  &__bubble-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    animation: rollIn 1s ease-in-out;
+  }
+
+  @keyframes rollOut {
+    from {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+    to {
+      transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+      opacity: 0;
+    }
+  }
 }
-
-    &__bubble-wrap {
-        display: flex;
-        flex-wrap: wrap;
-        animation: rollIn 1s ease-in-out;
-    }
-
-    @keyframes rollOut {
-        from {
-            transform: translate3d(0,0,0);
-            opacity:1;
-        }
-        to {
-            transform: translate3d(100%, 0, 0) rotate3d(0,0,1, 120deg);
-            opacity:0;
-        }
-    }
-
-
-    }
-
-
