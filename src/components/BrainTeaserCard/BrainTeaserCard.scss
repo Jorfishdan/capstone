@@ -1,0 +1,188 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.brainteaser{
+
+    // background-color: #23F3DA;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__cards-wrapper {
+        display:flex;
+        flex-direction: row;
+        margin-top:2rem;
+    }
+
+    &__cardtrue{
+
+       height: 26rem;
+    width: 26rem;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 1.2rem;
+    box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+    margin: 1rem;
+    transition: 0.5s;
+    background-color: white;
+   
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+    //   margin-top: -0.2px;
+    //   box-shadow: 0px 0px 5px 5px rgba(11, 11, 11, 0.4);
+
+        border: 4px solid #23F3DA;
+        color:#23F3DA;
+       
+        background-size: 5rem 5rem;
+        background-repeat: no-repeat;
+        font-size: 3rem;
+        background-position: 70px 40px;
+        cursor:pointer;
+        
+      
+    }
+
+    @include desktop {
+        height: 36rem;
+        width: 38rem;
+        border: 1px solid rgba(128, 128, 128, 0.3);
+        border-radius: 1.2rem;
+        box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+        margin: 1rem;
+        transition: 0.5s;
+        background-color: white;
+       
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+&__cardfalse{
+    height: 26rem;
+    width: 26rem;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 1.2rem;
+    box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+    margin: 1rem;
+    transition: 0.5s;
+    background-color: white;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+    //   margin-top: -0.2px;
+    //   box-shadow: 0px 0px 5px 5px rgba(11, 11, 11, 0.4);
+    border: 4px solid #23F3DA;
+    cursor:pointer;
+    background-size: 5rem 5rem;
+    font-size: 3rem;
+    background-position: 70px 40px;
+    }
+
+    @include desktop {
+        height: 36rem;
+        width: 38rem;
+        border: 1px solid rgba(128, 128, 128, 0.3);
+        border-radius: 1.2rem;
+        box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+        margin: 1rem;
+        transition: 0.5s;
+        background-color: white;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+&__true--text, &__false--text{
+    color:#23F3DA;
+    font-size:4rem;
+    font-family: 'WorkSans';
+
+    &:hover {
+        font-size: 5rem;
+       
+    }
+}
+
+&__question {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: #313131;
+    border: 4px solid #23F3DA;
+    border-radius: 0.8rem;
+    padding:1rem;
+}
+
+&__answer {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: #313131;
+    border: 2px solid #23F3DA;
+    border-radius: 1rem;
+    padding:1rem;
+    
+}
+&__explain {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    margin:1.6rem;
+    background-color: #23F3DA;
+    padding:1rem;
+    border-radius: 1rem;
+    width:40rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+&__next {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: white;
+    background-color: #23F3DA;
+    border-radius: 1rem;
+    padding:1rem;
+    border:#23F3DA;
+
+    &:hover {
+        cursor:pointer;
+    }
+    
+}
+&__score {
+    font-family:'WorkSans';
+    font-size: 2rem;
+    color: #23F3DA;
+    border-radius: 1rem;
+    font-weight:600;
+    border: 1px solid #23F3DA;
+    margin-top:1rem;
+    padding:1rem;
+    
+}
+// &__mini-wrapper {
+//     border: 1px solid #23F3DA;
+//     display:flex;
+//     justify-content: center;
+// }
+}

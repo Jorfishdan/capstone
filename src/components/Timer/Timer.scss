@@ -1,0 +1,177 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.timer {
+  &__start,
+  &__pause,
+  &__reset,
+  &__scan {
+    font-family: "WorkSans";
+    background-color: #23f3da;
+    border: #23f3da;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    margin: 1.6rem;
+    font-size:2rem;
+
+    &:hover {
+      box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+      margin: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  &__tagline {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+  }
+
+  &__minutes {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+
+  }
+
+  &__clock-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+
+  }
+
+  &__value {
+    font-family: 'WorkSans';
+    font-size:3rem;
+    font-weight: 600;
+    // background-color: #23f3da;
+    // color:white;
+    // padding:1rem;
+    // border-radius: 1rem;
+    // align-self: center;
+
+  }
+
+  &__remaining {
+    font-family: 'WorkSans';
+    font-size:1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color:white;
+    padding:1rem;
+    border-radius: 1rem;
+
+  }
+  &__minutes {
+    font-family: "WorkSans";
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+
+  &__input {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #23f3da;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  &__circleA {
+    background-color: #23f3da;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 65px;
+    right: 112px;
+    z-index: 1;
+  }
+  &__circleB {
+    background-color: transparent;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -58px;
+    border: 3px solid #23f3da;
+    z-index: 1;
+}
+&__circleC {
+    background-color: #23f3da;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -58px;
+    // border: 3px solid #23f3da;
+    z-index: 1;
+}
+
+&__circleD{
+    background-color: #23f3da;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 72px;
+    right: 1px;
+    z-index: 1;
+}
+
+&__circleE{
+    background-color: transparent;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 78px;
+    right: 69px;
+    z-index: 1;
+    border: 2px solid white;
+}
+
+// &__title {
+//   font-family: 'Vazirmatn';
+//   font-size: 2rem;
+//   z-index: 1;
+//   font-weight: 500;
+//   background-color: #23F3DA;
+//   padding:1rem;
+//   border-radius: 1rem;
+//   color:white;
+//   // margin-right:10rem;
+
+//   &:hover {
+//     box-shadow: inset 300px 0 0 0 white;
+//     color: #23F3DA;
+//   }
+// }
+}
