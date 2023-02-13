@@ -8,6 +8,12 @@ function HomePageCards() {
     <section className="homepagecard">
     
       <div className="homepagecard__mega-wrapper">
+      <div className="homepagecard__1"></div>
+            <div className="homepagecard__2"></div>
+            <div className="homepagecard__3"></div>
+            <div className="homepagecard__4"></div>
+            <div className="homepagecard__5"></div>
+            <div className="homepagecard__6"></div>
       {/* <h1 className="homepagecard__title">Teacher's Pet</h1>
       <img className="homepagecard__dog" src={dog} alt="dog" /> */}
      

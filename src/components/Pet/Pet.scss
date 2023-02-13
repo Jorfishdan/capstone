@@ -31,7 +31,6 @@
     }
 
     &__wrapper {
-        // at 767
         position: absolute;
         left: 30px;
         bottom: 50px;
@@ -58,7 +57,7 @@
         font-family: 'WorkSans';
         font-size: 1rem;
         overflow: hidden;
-        animation: type 2s ease-in-out forwards;
+        
 
         @include desktop {
         position: relative;
@@ -70,12 +69,9 @@
         font-family: 'WorkSans';
         font-size: 1.5rem;
         overflow: hidden;
-        animation: type 2s ease-in-out forwards;
         }
     }
-&__wrapper.rollout {
-    animation: rollOut 1s ease-in-out;
-}
+
 @keyframes rollIn {
     from {
         transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
@@ -83,6 +79,17 @@
     }
     to {
         transform: translate3d(0,0,0);
+        opacity:1;
+    }
+}
+
+@keyframes rollOut {
+    from {
+        transform: translate3d(0,0,0);
+        opacity:1
+    }
+    to {
+        transform: translate3d(100%, 0,0) rotate3d(0,0,1, 120deg);
         opacity:1;
     }
 }
