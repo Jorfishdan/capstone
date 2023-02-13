@@ -5,13 +5,13 @@
 
 .maincircle {
 &__block {
+
+  @include desktop {
     width:100vw;
     height:100vh;
     background-color: #23F3DA;
     border-top-right-radius: 30%;
     border-bottom-right-radius: 30%;
-    // border-bottom-left-radius: 30%;
-    // border-radius: 50%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -21,30 +21,41 @@
     z-index:1;  
     justify-content: center;
   }
+}
   
   &__profile {
-    background-color: white;
-    border: 4px solid #23F3DA;
-    width: 75rem;
-    height: 50rem;
-    z-index: 2;
-    position: relative;
-    right: 330px;
-    top: 100px;
-    border-radius: 50%;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display:flex;
+    // display:none;
+
+
+    @include desktop {
+      display: block;
+      background-color: white;
+      border: 4px solid #23F3DA;
+      width: 75rem;
+      height: 50rem;
+      position: relative;
+      right: 280px;
+      bottom: 169px;
+      border-radius: 50%;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
     &:hover {
       border: 8px solid #23F3DA;
     }
-  
+    }
   }
 
   &__mojo {
+    display:none;
+
+
+    @include desktop {
+      display:block;
     width: 30rem;
     height: 30rem;
     z-index: -1;
@@ -52,6 +63,7 @@
     position: relative;
     top: -108px;
   }
+}
 
   &__dog-intro {
     border-radius: 50%;
@@ -59,26 +71,37 @@
     color:#23F3DA;
     font-weight:600;
     font-size:2rem;
-    // width:100%;
-    // height:100%;
+   
   }
 
   &__dog-wrapper {
     display: flex;
   }
 
-//   &__static-dog {
-//     width:35rem;
-//     height: 35rem;
-//     visibility: hidden;
-//     z-index: 1;
-//   }
+  // &__mojo-wrapper {
+  //   display:flex;
+
+  //   @include desktop {
+  //     display:none;
+  //   }
+  // }
 
   &__wrapper {
     display:flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @include desktop {
+      flex-direction: row;
+    }
   }
 
   &__gif-dog {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+
+    @include desktop {
     // visibility: hidden;
     width: 35rem;
     height: 35rem;
@@ -87,6 +110,7 @@
     z-index: 1;
     top: 131px;
   }
+}
 
 //   &__gif-dog--visible {
 //     visibility: visible; 

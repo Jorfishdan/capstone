@@ -18,8 +18,11 @@ function MainCircle() {
         <div className="maincircle__profile">
         {/* // onMouseEnter={() => setIsAnimated(true)}
         // onMouseLeave={() => setIsAnimated(false)}> */}
+         <div className="maincircle__mojo-wrapper">
             <img className="maincircle__gif-dog" alt="turquoise and white dog logo" src={dogGif} />
+            </div>
             <img className="maincircle__mojo" alt="mojo the virtual do says hi" src={mojo} />
+           
             {/* <p className="maincircle__dog-intro">Hi there! I'm your class pet Mojo. </p> */}
             {/* <img className={`maincircle__static-dog ${isAnimated ? "" : "maincircle__static-dog--visible"}`} alt="turquoise and white dog logo" src={dogPic} /> */}
             {/* <img className={`maincircle__gif-dog ${isAnimated ? "maincircle__gif-dog--visible" : ""}`} src={dogGif} alt="turquoise and white dog logo that's animated"/> */}

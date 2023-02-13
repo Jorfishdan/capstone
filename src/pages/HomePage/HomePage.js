@@ -15,20 +15,12 @@ function HomePage() {
   return (
     <>
       <section className="homepage">
-        {/* <Header /> */}
         <div className="homepage__info-wrapper">
       <Link to="/mainInfo"><img src={info} alt="info icon to read game instructions" className="homepage__info" /></Link>
       </div>
         <MainCircle />
-        {/* <HomepageSlogan /> */}
-        {/* <div className="homepage__main-circle"></div> */}
-        {/* <div className="homepage__feature-circle"></div>
-
-        <div className="homepage__circle"></div> */}
-
-        {/* <div className="homepage__circle2"></div> */}
         <div className="homepage__main-wrapper">
-          {/* <HomePageCards /> */}
+         
         </div>
         <div className="homepage__circle3"></div>
         <div className="homepage__circle4"></div>
@@ -37,7 +29,6 @@ function HomePage() {
         <div className="homepage__circle7"></div>
         <div className="homepage__circle8"></div>
         <div className="homepage__circle9"></div>
-        {/* <div className="homepage__circle10"></div> */}
         <HPBubbles />
         <Footer />
       </section>
