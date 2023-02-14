@@ -9,7 +9,7 @@ function Music() {
             Ramp up your cleaning speed and tidy up before the clock runs out
           </span>
           <span className="music__rule">
-            After the clock strikes zero, Mojo will award you points
+            After the clock strikes zero, click 'Scan' and Mojo will award you points
           </span>
           <span className="music__title">
             Get lightning speed with these handpicked tunes!

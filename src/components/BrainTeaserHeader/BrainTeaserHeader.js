@@ -3,6 +3,7 @@ import "./BrainTeaserHeader.scss";
 import house from "../../assets/images/house-static.png";
 import dogfood from "../../assets/images/dog-food.png";
 import paw from "../../assets/images/pawprint.png";
+import info from "../../assets/images/info-static.png";
 
 function BrainTeaserHeader() {
     return(<>
@@ -27,6 +28,13 @@ function BrainTeaserHeader() {
             <Link to="/callbacks">
               <img
                 src={paw}
+                alt="home icon to return to main menu"
+                className="brainteaserheader__callbacks-link"
+              />
+            </Link>
+            <Link to="/mainInfo">
+              <img
+                src={info}
                 alt="home icon to return to main menu"
                 className="brainteaserheader__callbacks-link"
               />
