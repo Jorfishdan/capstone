@@ -5,13 +5,15 @@ Teacher's Pet supports elementary educators in schools, camps, clubs and daycare
 
 
 ## Prerequisites
-Here's what you'll need installed to run this app: 
+Here's what you'll need installled to run this app: 
 `npm i axios`
 `npm i uuid`
 `npm i sass`
 `npm i react-countdown-circle-timer`
 
 ## Getting Started
+
+Git clone this app into your local repo.
 
 In the project directory, you can run:
 
