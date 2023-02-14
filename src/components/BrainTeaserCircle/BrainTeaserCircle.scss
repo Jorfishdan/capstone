@@ -1,0 +1,84 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.brainTeaserCircle {
+  &__cardA {
+    background-color: transparent;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    border: 2px solid #23f3da;
+    z-index: -1;
+
+    @include tablet {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+
+  &__cardB {
+    background-color: #23f3da;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 25px;
+    bottom: 5px;
+    z-index: -1;
+  }
+
+  &__cardC {
+    background-color: #23f3da;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    bottom: 60px;
+    z-index: -1;
+  }
+  &__cardE {
+    background-color: transparent;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    border: 2px solid #23f3da;
+    z-index: -1;
+  }
+  &__cardG {
+    background-color: #23f3da;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    z-index: -1;
+
+    @include tablet {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  &__cardF {
+    background-color: white;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+    border: 2px solid #23f3da;
+    z-index: -1;
+
+  }
+}
