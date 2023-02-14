@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.homePageHeader {
+    &__info {
+        width:8rem;
+        height:8rem;
+      
+      }
+      
+      &__info-wrapper {
+        display: flex;
+        justify-content: end;
+        margin:1.6rem;
+      }
+
+}
