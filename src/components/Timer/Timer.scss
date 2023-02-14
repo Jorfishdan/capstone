@@ -15,7 +15,7 @@
     color: white;
     padding: 1rem;
     margin: 1.6rem;
-    font-size:2rem;
+    font-size: 2rem;
 
     &:hover {
       box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
@@ -25,24 +25,23 @@
   }
 
   &__tagline {
-    font-family: 'WorkSans';
-    font-size:1.5rem;
+    font-family: "WorkSans";
+    font-size: 1.5rem;
     font-weight: 600;
     background-color: #23f3da;
-    color:white;
-    padding:1rem;
+    color: white;
+    padding: 1rem;
     border-radius: 1rem;
   }
 
   &__minutes {
-    font-family: 'WorkSans';
-    font-size:1.5rem;
+    font-family: "WorkSans";
+    font-size: 1.5rem;
     font-weight: 600;
     background-color: #23f3da;
-    color:white;
-    padding:1rem;
+    color: white;
+    padding: 1rem;
     border-radius: 1rem;
-
   }
 
   &__clock-wrapper {
@@ -52,37 +51,29 @@
   }
 
   &__text {
-    font-family: 'WorkSans';
-    font-size:1.5rem;
+    font-family: "WorkSans";
+    font-size: 1.5rem;
     font-weight: 600;
     background-color: #23f3da;
-    color:white;
-    padding:1rem;
+    color: white;
+    padding: 1rem;
     border-radius: 1rem;
-
   }
 
   &__value {
-    font-family: 'WorkSans';
-    font-size:3rem;
+    font-family: "WorkSans";
+    font-size: 3rem;
     font-weight: 600;
-    // background-color: #23f3da;
-    // color:white;
-    // padding:1rem;
-    // border-radius: 1rem;
-    // align-self: center;
-
   }
 
   &__remaining {
-    font-family: 'WorkSans';
-    font-size:1.5rem;
+    font-family: "WorkSans";
+    font-size: 1.5rem;
     font-weight: 600;
     background-color: #23f3da;
-    color:white;
-    padding:1rem;
+    color: white;
+    padding: 1rem;
     border-radius: 1rem;
-
   }
   &__minutes {
     font-family: "WorkSans";
@@ -100,7 +91,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
   }
   &__circleA {
     background-color: #23f3da;
@@ -122,8 +112,8 @@
     left: -58px;
     border: 3px solid #23f3da;
     z-index: 1;
-}
-&__circleC {
+  }
+  &__circleC {
     background-color: #23f3da;
     width: 10rem;
     height: 10rem;
@@ -131,11 +121,10 @@
     position: absolute;
     top: -20px;
     left: -58px;
-    // border: 3px solid #23f3da;
     z-index: 1;
-}
+  }
 
-&__circleD{
+  &__circleD {
     background-color: #23f3da;
     width: 12rem;
     height: 12rem;
@@ -144,9 +133,9 @@
     top: 72px;
     right: 1px;
     z-index: 1;
-}
+  }
 
-&__circleE{
+  &__circleE {
     background-color: transparent;
     width: 15rem;
     height: 15rem;
@@ -156,22 +145,5 @@
     right: 69px;
     z-index: 1;
     border: 2px solid white;
-}
-
-// &__title {
-//   font-family: 'Vazirmatn';
-//   font-size: 2rem;
-//   z-index: 1;
-//   font-weight: 500;
-//   background-color: #23F3DA;
-//   padding:1rem;
-//   border-radius: 1rem;
-//   color:white;
-//   // margin-right:10rem;
-
-//   &:hover {
-//     box-shadow: inset 300px 0 0 0 white;
-//     color: #23F3DA;
-//   }
-// }
+  }
 }
