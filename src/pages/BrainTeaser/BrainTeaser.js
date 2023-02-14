@@ -7,6 +7,7 @@ import { useState } from "react";
 import BrainTeaserHeader from "../../components/BrainTeaserHeader/BrainTeaserHeader";
 import BrainTeaserCircle from "../../components/BrainTeaserCircle/BrainTeaserCircle";
 import BrainTeaserInstructions from "../../components/BrainTeaserInstructions/BrainTeaserInstructions";
+import Footer from "../../components/Footer/Footer";
 
 function BrainTeaser() {
   const [isSubmitShown, setIsSubmitShown] = useState(false);
@@ -33,6 +34,8 @@ function BrainTeaser() {
           <Pet />
         </div>
         <HPBubbles />
+        <Footer />
+        
       </section>
     </>
   );

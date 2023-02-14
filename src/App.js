@@ -20,7 +20,7 @@ function App() {
 
           <Route path="mainInfo/brainTeaser" element={<BrainTeaser />} />
           <Route path="mainInfo/cleanup" element={<CleaningPage />} />
-          <Route path="mainInfo/callbacks" elements={<CallBacks />} />
+          <Route path="mainInfo/callbacks" element={<CallBacks />} />
 
           <Route path="cleanup" element={<CleaningPage />} />
 
