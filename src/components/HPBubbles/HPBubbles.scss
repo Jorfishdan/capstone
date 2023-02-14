@@ -4,17 +4,6 @@
 @use "../../styles/partials/variables" as *;
 
 .hpbubbles {
-  &__1 {
-    background-color: #23f3da;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    position: absolute;
-    right: 5px;
-    bottom: 150px;
-    z-index: -1;
-    animation: bubble 30s ease-in-out infinite;
-  }
 
   &__2 {
     background-color: transparent;

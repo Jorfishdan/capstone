@@ -4,34 +4,31 @@
 @use "../../styles/partials/variables" as *;
 
 .maincircle {
-&__block {
+  &__block {
+    @include desktop {
+      width: 100vw;
+      height: 100vh;
+      background-color: #23f3da;
+      border-top-right-radius: 30%;
+      border-bottom-right-radius: 30%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
 
-  @include desktop {
-    width:100vw;
-    height:100vh;
-    background-color: #23F3DA;
-    border-top-right-radius: 30%;
-    border-bottom-right-radius: 30%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-
-    margin-bottom:0;
-    background: linear-gradient(to right,  rgba(35, 243, 218, 0.8), #23F3DA );
-    z-index:1;  
-    justify-content: center;
+      margin-bottom: 0;
+      background: linear-gradient(to right, rgba(35, 243, 218, 0.8), #23f3da);
+      z-index: 1;
+      justify-content: center;
+    }
   }
-}
-  
-  &__profile {
-    display:flex;
-    // display:none;
 
+  &__profile {
+    display: flex;
 
     @include desktop {
       display: block;
       background-color: white;
-      border: 4px solid #23F3DA;
+      border: 4px solid #23f3da;
       width: 75rem;
       height: 50rem;
       position: relative;
@@ -44,50 +41,40 @@
       align-items: center;
       flex-direction: column;
 
-    &:hover {
-      border: 8px solid #23F3DA;
-    }
+      &:hover {
+        border: 8px solid #23f3da;
+      }
     }
   }
 
   &__mojo {
-    display:none;
-
+    display: none;
 
     @include desktop {
-      display:block;
-    width: 30rem;
-    height: 30rem;
-    z-index: -1;
-    border-radius: 9rem;
-    position: relative;
-    top: -108px;
+      display: block;
+      width: 30rem;
+      height: 30rem;
+      z-index: -1;
+      border-radius: 9rem;
+      position: relative;
+      top: -108px;
+    }
   }
-}
 
   &__dog-intro {
     border-radius: 50%;
-    font-family: 'WorkSans';
-    color:#23F3DA;
-    font-weight:600;
-    font-size:2rem;
-   
+    font-family: "WorkSans";
+    color: #23f3da;
+    font-weight: 600;
+    font-size: 2rem;
   }
 
   &__dog-wrapper {
     display: flex;
   }
 
-  // &__mojo-wrapper {
-  //   display:flex;
-
-  //   @include desktop {
-  //     display:none;
-  //   }
-  // }
-
   &__wrapper {
-    display:flex;
+    display: flex;
     flex-direction: column-reverse;
     align-items: center;
 
@@ -100,28 +87,16 @@
     width: 30rem;
     height: 30rem;
     border-radius: 50%;
-    border: 2px solid #23F3DA;
+    border: 2px solid #23f3da;
 
     @include desktop {
-    // visibility: hidden;
-    width: 35rem;
-    height: 35rem;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-    top: 131px;
-    border:none;
+      width: 35rem;
+      height: 35rem;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      top: 131px;
+      border: none;
+    }
   }
-}
-
-//   &__gif-dog--visible {
-//     visibility: visible; 
-//     width:35rem;
-//     height: 35rem;
-//     border-radius: 50%;
-//   }
-
-//   &__static-dog--visible{
-//     visibility: visible; 
-//   }
 }
