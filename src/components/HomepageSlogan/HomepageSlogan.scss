@@ -1,0 +1,60 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 67%;
+    margin-bottom: 10rem;
+  }
+
+  &__text,
+  &__pet {
+    margin-top: 1rem;
+    background-color: #23f3da;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+    @include desktop {
+      font-family: "WorkSans";
+      margin-top: 1rem;
+      background-color: #23f3da;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: white;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+  }
+
+  &__title {
+    margin-top: 1rem;
+    background-color: #23f3da;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+    @include desktop {
+      font-family: "WorkSans";
+      margin-top: 1rem;
+      background-color: #23f3da;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: white;
+      font-weight: 600;
+      font-size: 4.5rem;
+    }
+  }
+}

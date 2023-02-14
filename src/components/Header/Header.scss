@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  @include tablet {
+    margin: 1.6rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.6rem;
+  }
+
+  &__info {
+    width: 10rem;
+    height: 10rem;
+  }
+}

@@ -1,0 +1,47 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.brainteaserheader {
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 1.6rem;
+      }
+    
+      &__icon-wrapper {
+        display: flex;
+      }
+    
+      &__cleanup-link {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1rem;
+      }
+    
+      &__callbacks-link {
+        width: 5rem;
+        height: 5rem;
+      }
+      &__home {
+        width: 5rem;
+        height: 5rem;
+      }
+      &__title {
+        font-family: "Vazirmatn";
+        font-size: 2rem;
+        z-index: 1;
+        font-weight: 500;
+        background-color: #23f3da;
+        padding: 1rem;
+        border-radius: 1rem;
+        color: white;
+        margin-left: 10rem;
+        &:hover {
+          box-shadow: inset 300px 0 0 0 white;
+          color: #23f3da;
+        }
+      }
+}
