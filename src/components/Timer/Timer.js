@@ -2,6 +2,7 @@ import "./Timer.scss";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import CleaningModal from "../CleaningModal/CleaningModal";
 import { useState } from "react";
+import TimerCircle from "../TimerCircle/TimerCircle";
 
 function Timer({ setPage }) {
   const [openModal, setOpenModal] = useState(false);
@@ -49,12 +50,7 @@ function Timer({ setPage }) {
 
   return (
     <div className="timer">
-      <div className="timer__circleA"></div>
-      <div className="timer__circleB"></div>
-      <div className="timer__circleC"></div>
-      <div className="timer__circleD"></div>
-      <div className="timer__circleE"></div>
-
+      <TimerCircle />
       <div className="timer__wrapper">
         <CountdownCircleTimer
           isPlaying={start}
