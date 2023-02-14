@@ -30,25 +30,25 @@ This application was built with React, Sass, Node.js and Express.
 
 # How to play
 The homepage displays the key buttons to the three games (Head Scratchers, Lightning Clean and Sneaky Animals) as well as an info icon on the top right for educators to review.
-[(https://imgur.com/rDhhvsp);]
+![](https://imgur.com/rDhhvsp.jpg)
 
 The info icon goes to the info page that has a brief overview of each game for educators to explore. each button is linked to their respective game. 
-![my screenshot](../../BrainStation/capstone-teachers-pet/src/assets/images/Infopage.png);
+![Imgur Image](https://imgur.com/bdBlVef.jpg)
 
 Head Scratchers is a true or false game for students to vote on the answer. Encourage them to explain why they chose their answer before revealing the correct answer. This game is flexible for how to vote, it can have students raise their hands to vote or have them move around the room to vote. 
-![my screenshot](../../BrainStation/capstone-teachers-pet/src/assets/images/HeadScratcherspage.png);
+![Imgur Image](https://imgur.com/lI5zoYi.jpg)
 
 To add to the roster of question on Head Scratchers, click the 'Add a fact here' button on the top right of the screen.
-![my screenshot](../../BrainStation/capstone-teachers-pet/src/assets/images/HeadScratchersForm.png);
+![Imgur Image](https://imgur.com/NFHAo4e.jpg)
 
 The nav bar on each game page has an icon linked to another game page. Click on the dog food bowl for the Lightning Clean game. To play, simply pick a song, input the amount of minutes you want the students to clean up for.
-![my screenshot](../../BrainStation/capstone-teachers-pet/src/assets/images/cleanUp.png);
+![Imgur Image](https://imgur.com/yeS9XiO.jpg)
 
 Once the clock is up, click the 'Scan' button and tell the students that Mojo will be scanning the room for how clean it is and award points to the students for their hard work. As the educator, you can type out what Mojo will say and it will be hidden like a password until you choose to reveal the points and feedback to the class by clicking the checkbox to the right of the input bar. 
-![my screenshot](../../BrainStation/capstone-teachers-pet/src/assets/images/scan.png);
+![Imgur Image](https://imgur.com/XPKF8Uo.jpg)
 
 And lastly, is the ever popular Sneaky Animals game. This game is great for younger students (K- Gr.3) to practice their listening skills, identifying animals and working together. Simply play the audio on the card that plays an animal noise and have the students guess which animal it is. Reveal the animal by clicking the card. To make it more challenging, decrease the volume either on your device or on the card itself to have the kids quieten and listen closer. For each correct answer, add a point - which is a bone for Mojo!
-![my screenshot](../../BrainStation/capstone-teachers-pet/src/assets/images/sneakAnimals.png);
+![Imgur Image](https://imgur.com/BG3RDMx.jpg)
 
 
 ## Author
