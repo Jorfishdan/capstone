@@ -7,17 +7,18 @@ import axios from "axios";
 
 function CleaningModal({ openModal, onClose }) {
   const [isShown, setIsShown] = useState(false);
-  // const [scanSays, setScanSays] = useState({});
+  const [scanSays, setScanSays] = useState({});
   if (!openModal) return null;
 
+
   // useEffect(() => {
-  //   if (!openModal) return;
+  //   if(openModal) {
   //   const scanResults = async () => {
   //     try {
   //       const response = await axios.get(
   //         ` http://localhost:8080/scan`
   //       );
-  //       console.log(response.data)
+  //       console.log(response)
   //       setScanSays(response.data)
 
   //     } catch (error) {
@@ -25,10 +26,16 @@ function CleaningModal({ openModal, onClose }) {
   //     }
   //   };
   //   scanResults();
+  // }
   // }, [openModal]);
 
+console.log(scanSays)
   function revealPassword() {
     setIsShown((isShown) => !isShown);
+  }
+
+  if(!openModal) {
+    return null;
   }
 
   return (
@@ -41,8 +48,9 @@ function CleaningModal({ openModal, onClose }) {
           <div className="modal__dog-wrapper">
             <img className="modal__gif" src={sniffing} />
             <img src={chat} alt="speech bubble" className="modal__chatBubble" />
-            <span className="modal__bubble-text">
-              Let me scan the room to evaluate points
+            <span className="modal__bubble-text"> 
+            Hmm...let's see how you did...
+              {/* {openModal && {scanSays}} */}
             </span>
           </div>
           <div className="modal__buttons">
