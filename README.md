@@ -30,7 +30,7 @@ This application was built with React, Sass, Node.js and Express.
 
 # How to play
 The homepage displays the key buttons to the three games (Head Scratchers, Lightning Clean and Sneaky Animals) as well as an info icon on the top right for educators to review.
-![](https://imgur.com/rDhhvsp);
+[](https://imgur.com/rDhhvsp);
 
 The info icon goes to the info page that has a brief overview of each game for educators to explore. each button is linked to their respective game. 
 ![my screenshot](../../BrainStation/capstone-teachers-pet/src/assets/images/Infopage.png);
