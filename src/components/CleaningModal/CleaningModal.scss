@@ -4,91 +4,85 @@
 @use "../../styles/partials/variables" as *;
 
 .overlay {
- 
-    background-color: rgba($color:#23f3da, $alpha: 0.5);
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top:0;
-      left:0;
-      z-index:3;
+  background-color: rgba($color: #23f3da, $alpha: 0.5);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
 
-    @include tablet{
-    background-color: rgba($color:#23f3da, $alpha: 0.5);
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top:0;
-      left:0;
-      z-index:3;
-    }
-    }
-    .modal {
-      display: flex;
-      background-color: white;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      border-radius: 1rem;
-      max-width: 633px;
-      max-height: 334px;
-      position: fixed;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 0 18px 0 rgb(0 0 0 / 75%);
-      justify-content: center;
-      flex-direction: row-reverse;
-      align-items: flex-start;
-  
+  @include tablet {
+    background-color: rgba($color: #23f3da, $alpha: 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+}
+.modal {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 1rem;
+  max-width: 633px;
+  max-height: 334px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 18px 0 rgb(0 0 0 / 75%);
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: flex-start;
 
+  &:hover {
+    border: 3px solid #23f3da;
+  }
 
-      &:hover {
-        border: 3px solid #23f3da;
-      }
-  
-  
+  &__gif {
+    height: 20rem;
+    width: 20rem;
+  }
 
-     &__gif {
-      height:20rem;
-      width: 20rem;
-     }
-
-     &__closeX {
-      width: 5rem;
+  &__closeX {
+    width: 5rem;
     height: 5rem;
-     }
-     &__closeButton {
-      display: flex;
+  }
+  &__closeButton {
+    display: flex;
     justify-content: flex-end;
-     }
+  }
 
-     &__chatBubble {
-      width:13rem;
-      height:13rem;
-     }
+  &__chatBubble {
+    width: 13rem;
+    height: 13rem;
+  }
 
-     &__dog-wrapper {
-      display:flex;
-      justify-content: center;
-      margin-top:2rem;
-     }
+  &__dog-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
 
-     &__buttons {
-      display: flex;
-      justify-content: center;
-     }
+  &__input-text {
+    width: 40rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1.5rem;
+  }
 
-     &__input-text {
-      width:40rem;
-      padding:1rem;
-      border-radius: 1rem;
-      margin-right:1.5rem;
-     }
-
-     &__bubble-text {
-      position: relative;
+  &__bubble-text {
+    position: relative;
     left: -91px;
     bottom: -25px;
     z-index: -1;
@@ -98,8 +92,8 @@
     font-size: 1.5rem;
     overflow: hidden;
     animation: type 2s ease-in-out forwards;
-    
-      @include desktop {
+
+    @include desktop {
       position: relative;
       left: -108px;
       bottom: -25px;
@@ -110,11 +104,11 @@
       font-size: 1.5rem;
       overflow: hidden;
       animation: type 2s ease-in-out forwards;
-      }
-     }
     }
+  }
+}
 
-    #checkbox {
-      width:2rem;
-      height:2rem;
-    }
+#checkbox {
+  width: 2rem;
+  height: 2rem;
+}

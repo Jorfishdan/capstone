@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import chat from "../../assets/images/chat.png";
 import axios from "axios";
 
-function CleaningModal({ openModal, onClose}) {
-
+function CleaningModal({ openModal, onClose }) {
   const [isShown, setIsShown] = useState(false);
   // const [scanSays, setScanSays] = useState({});
   if (!openModal) return null;
@@ -20,7 +19,7 @@ function CleaningModal({ openModal, onClose}) {
   //       );
   //       console.log(response.data)
   //       setScanSays(response.data)
-    
+
   //     } catch (error) {
   //       console.log(error);
   //     }
@@ -28,10 +27,9 @@ function CleaningModal({ openModal, onClose}) {
   //   scanResults();
   // }, [openModal]);
 
-function revealPassword() {
-  setIsShown((isShown) => !isShown);
-
-} 
+  function revealPassword() {
+    setIsShown((isShown) => !isShown);
+  }
 
   return (
     <div className="overlay">
@@ -41,14 +39,25 @@ function revealPassword() {
         </div>
         <div className="modal__content">
           <div className="modal__dog-wrapper">
-          <img className="modal__gif" src={sniffing} />
-          <img src={chat} alt="speech bubble" className="modal__chatBubble" />
-          <span className="modal__bubble-text">Let me scan the room to evaluate points</span>
+            <img className="modal__gif" src={sniffing} />
+            <img src={chat} alt="speech bubble" className="modal__chatBubble" />
+            <span className="modal__bubble-text">
+              Let me scan the room to evaluate points
+            </span>
           </div>
           <div className="modal__buttons">
             <form className="modal__form" onSubmit={(e) => e.preventDefault()}>
-              <input type={isShown ? "text" : "password"} placeholder="Your points total is..." className="modal__input-text"></input>
-              <input id="checkbox" type="checkbox" checked={isShown} onChange={revealPassword} />
+              <input
+                type={isShown ? "text" : "password"}
+                placeholder="Your points total is..."
+                className="modal__input-text"
+              ></input>
+              <input
+                id="checkbox"
+                type="checkbox"
+                checked={isShown}
+                onChange={revealPassword}
+              />
             </form>
           </div>
         </div>
@@ -57,5 +66,3 @@ function revealPassword() {
   );
 }
 export default CleaningModal;
-
-
