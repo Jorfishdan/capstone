@@ -3,37 +3,19 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.header{
-    @include tablet {
-    margin:1.6rem;
-    }
+.header {
+  @include tablet {
+    margin: 1.6rem;
+  }
 
-    &__wrapper {
-        display: flex;
+  &__wrapper {
+    display: flex;
     justify-content: flex-end;
     margin: 1.6rem;
-    }
+  }
 
-    // &__logout {
-    //     width:5rem;
-    //     height:5rem;
-    //     @include tablet {
-    //         height: 5rem;
-    //     }
-    //     @include desktop {
-    //         width: 5rem;
-    //         height:7rem;
-    //     }
-
-    //     &:hover {
-    //         fill: #23F3DA;
-    //     }
-    // }
-
-    &__info {
-        width:10rem;
-        height:10rem;
-    
-    }
-
+  &__info {
+    width: 10rem;
+    height: 10rem;
+  }
 }
