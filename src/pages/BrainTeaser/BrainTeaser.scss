@@ -41,6 +41,7 @@
     font-weight: 600;
     font-size: 1rem;
     width: 5rem;
+  
     &:hover {
       color: #23f3da;
     }
@@ -49,6 +50,16 @@
       font-family: "WorkSans";
       font-weight: 600;
       font-size: 1.3rem;
+    }
+  }
+
+  &__comp-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+    display:flex;
+    flex-direction:row;
     }
   }
 }

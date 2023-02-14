@@ -14,7 +14,7 @@ function BrainTeaserHeader() {
               className="brainteaserheader__home"
             />
           </Link>
-          <p className="brainteaserheader__title">Teacher's Pet</p>
+          <Link to= "/"><p className="brainteaserheader__title">Teacher's Pet</p></Link>
 
           <div className="brainteaserheader__icon-wrapper">
             <Link to="/cleanup">

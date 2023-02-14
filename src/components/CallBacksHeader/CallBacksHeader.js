@@ -13,7 +13,7 @@ function CallBacksHeader() {
           className="callBacksHeader__home"
         />
       </Link>
-      <span className="callBacksHeader__title">Teacher's Pet</span>
+      <Link to="/"><span className="callBacksHeader__title">Teacher's Pet</span></Link>
       <div className="callBacksHeader__icon-wrapper">
       <Link to="/brainteaser">
         <img
