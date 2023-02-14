@@ -32,7 +32,7 @@ function CountDown() {
             where
           </p>
           <span className="countdown__bone">
-            With each correct answer, you get another bone for your class pet
+            With each correct answer, you get another bone for Mojo
           </span>
           <p className="countdown__rule">
             Listen carefully as the animals grow quieter and quieter
