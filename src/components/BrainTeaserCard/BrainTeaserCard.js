@@ -13,7 +13,7 @@ function BrainTeaserCard() {
   useEffect(() => {
     const triviaAnswer = async () => {
       try {
-        const response = await axios.get(` http://localhost:8080/scan`);
+        const response = await axios.get(` http://localhost:8080/facts`);
         setQuestionList(response.data);
         setShowQuestion(response.data[0]);
       } catch (error) {
