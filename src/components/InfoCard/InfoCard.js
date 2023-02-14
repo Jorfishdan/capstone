@@ -20,8 +20,8 @@ function InfoCard() {
             <div className="infocard__card--1">
               Head Scratchers
               <p className="infocard__card--1-info">
-                This brain teaser will redirect high energy into a game of
-                learning, communication and critical thinking.
+                This true or false game will redirect high energy into a game of
+                learning, communication and critical thinking
               </p>
             </div>
           </Link>
@@ -30,8 +30,8 @@ function InfoCard() {
             <div className="infocard__card--2">
               Lightning Clean
               <p className="infocard__card--2-info">
-                This clean up game will have kids racing to clean up and eye
-                where the proper places are to put items away.
+                This timed game will have kids racing to clean up and eye
+                where the proper places are to put items away while dancing along to some hiphop
               </p>
             </div>
           </Link>
@@ -39,9 +39,7 @@ function InfoCard() {
             <div className="infocard__card--3">
               Sneaky Animals
               <p className="infocard__card--3-info">
-                This callback game will have students quieten to listen
-                carefully to the different animal noises to mimick them back and
-                to identify the animals.
+                Your students will shush each other to listen carefully in order to correctly match the noise to the animals!
               </p>
             </div>
           </Link>
