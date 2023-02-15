@@ -13,9 +13,10 @@ function SumbitFact() {
     const answer = form.answer.value;
     const incorrect = form.incorrect.value;
     const explain = form.explain.value;
-
+   
     if (!question || !answer || !incorrect || !explain) {
       alert("Please fill out all the fields");
+  
       return;
     }
 
@@ -25,8 +26,12 @@ function SumbitFact() {
       correct_answer: answer,
       incorrect_answer: incorrect,
       explanation: explain,
+      
     });
+   
     alert("It's been added to the game!");
+    form.reset();
+
   }
 
   return (
