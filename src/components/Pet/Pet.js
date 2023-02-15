@@ -7,12 +7,10 @@ function Pet() {
   const [isPetShown, setIsPetShown] = useState(false);
   const [dogBubble, setDogBubble] = useState([]);
   const [sayIndex, setSayIndex] = useState(0);
-  const [isRolledOut, SetIsRolledOut] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setIsPetShown(true);
-      SetIsRolledOut(true);
     }, 3000);
   }, [isPetShown]);
 
@@ -28,7 +26,6 @@ function Pet() {
     const dogSays = async () => {
       try {
         const response = await axios.get(` http://localhost:8080/dog`);
-        console.log(response.data);
         setDogBubble(response.data);
       } catch (error) {
         console.log(error);
