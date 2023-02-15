@@ -13,7 +13,7 @@ Here's what you'll need installled to run this app:
 
 ## Getting Started
 
-Git clone this app into your local repo.
+Git clone this app git@github.com:Jorfishdan/capstone.git into your local repo.
 
 In the project directory, you can run:
 
