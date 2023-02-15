@@ -7,29 +7,9 @@ import axios from "axios";
 
 function CleaningModal({ openModal, onClose }) {
   const [isShown, setIsShown] = useState(false);
-  const [scanSays, setScanSays] = useState({});
   if (!openModal) return null;
 
 
-  // useEffect(() => {
-  //   if(openModal) {
-  //   const scanResults = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         ` http://localhost:8080/scan`
-  //       );
-  //       console.log(response)
-  //       setScanSays(response.data)
-
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   scanResults();
-  // }
-  // }, [openModal]);
-
-console.log(scanSays)
   function revealPassword() {
     setIsShown((isShown) => !isShown);
   }
@@ -50,7 +30,6 @@ console.log(scanSays)
             <img src={chat} alt="speech bubble" className="modal__chatBubble" />
             <span className="modal__bubble-text"> 
             Hmm...let's see how you did...
-              {/* {openModal && {scanSays}} */}
             </span>
           </div>
           <div className="modal__buttons">
