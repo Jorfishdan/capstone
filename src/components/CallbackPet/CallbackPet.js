@@ -7,12 +7,10 @@ function CallbackPet() {
     const [isPetShown, setIsPetShown] = useState(false);
     const [dogBubble, setDogBubble] = useState([]);
     const [sayIndex, setSayIndex] = useState(0);
-    const [isRolledOut, SetIsRolledOut] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
             setIsPetShown(true)
-            SetIsRolledOut(true)
             
         }, 3000)
     }, [isPetShown])
@@ -32,7 +30,6 @@ function CallbackPet() {
             const response = await axios.get(
               ` http://localhost:8080/callbacks`
             );
-            console.log(response.data)
             setDogBubble(response.data)
         
           } catch (error) {
