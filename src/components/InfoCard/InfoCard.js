@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./InfoCard.scss";
-import backArrow from "../../assets/images/left-arrow.png";
 import dog4 from "../../assets/images/bark.gif";
 import house from "../../assets/images/house-static.png";
 

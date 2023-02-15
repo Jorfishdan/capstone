@@ -1,9 +1,8 @@
 import "./CleaningModal.scss";
 import closeBtn from "../../assets/images/close.png";
 import sniffing from "../../assets/images/sniffing.gif";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import chat from "../../assets/images/chat.png";
-import axios from "axios";
 
 function CleaningModal({ openModal, onClose }) {
   const [isShown, setIsShown] = useState(false);
