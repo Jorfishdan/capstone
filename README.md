@@ -6,7 +6,11 @@ Teacher's Pet supports elementary educators in schools, camps, clubs and daycare
 
 ## Getting Started
 
+<<<<<<< HEAD
 Git clone this app into your local repo: `` git@github.com:Jorfishdan/capstone``
+=======
+Git clone this app git@github.com:Jorfishdan/capstone.git into your local repo.
+>>>>>>> 782822669270dda9d5666eaf34829fc8dd7fa270
 
 In your project directory, you can run:
 
