@@ -15,12 +15,14 @@ function Timer({ setPage }) {
   const [remainingMinutes, setRemainingMinutes] = useState(0);
 
   useEffect(()=> {
-    const intervalId = setInterval(() => {
+    let intervalId = null;
+    if(start && time > 0){
+    intervalId = setInterval(() => {
       setTime((prevTime) => prevTime -1);
     }, 1000);
-
+  }
     return () => clearInterval(intervalId)
-  }, [time])
+  }, [start, time])
 
   const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
@@ -43,17 +45,15 @@ function Timer({ setPage }) {
   };
 
   function handleReset() {
-    setTime(input)
-    setStart(false)
+    
 }
 
-  function handleStart() {
-    setKey(prevKey => prevKey + 1)
-    setStart(true);
-  }
-
   function handlePause() {
-    setStart(false);
+   setStart(false)
+  }
+  function handleStart() {
+    setStart((prevStart) => !prevStart);
+    console.log("click")
   }
 
   function handleChange(event) {
@@ -77,10 +77,10 @@ function Timer({ setPage }) {
       <TimerCircle/>
       <div className="timer__wrapper">
         <CountdownCircleTimer
+        setStart={true}
           key={key}
-          isPlaying={time > 0}
+          isPlaying={time > 0 && start}
           duration={input}
-          // colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
           colors={[
             "#FA7035",
             "#23F3DA",
@@ -91,7 +91,6 @@ function Timer({ setPage }) {
           ]}
           colorTime={[5, 10, 9, 8, 5, 2]}
           onComplete={() => [true, 1000]}
-          // onComplete={() => ({ shouldRepeat: true, delay: 1 })}
         >
           {renderTime}
         </CountdownCircleTimer>
@@ -106,7 +105,7 @@ function Timer({ setPage }) {
           <span className="timer__minutes">minutes</span>
         </form>
         <div className="timer__btn-wrapper">
-          <button className="timer__start" onClick={handleStart}>
+        <button className="timer__pause" onClick={handleStart}>
             Start
           </button>
           <button className="timer__pause" onClick={handlePause}>
