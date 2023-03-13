@@ -1,15 +1,27 @@
 import "./Timer.scss";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import CleaningModal from "../CleaningModal/CleaningModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TimerCircle from "../TimerCircle/TimerCircle";
 import TimerModal from "../TimerModal/TimerModal";
 
 function Timer({ setPage }) {
   const [openModal, setOpenModal] = useState(false);
   const [openModalClock, setOpenModalClock] = useState(false);
+  const [key, setKey] = useState(0);
   const [input, setInput] = useState(0);
+  const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
+  const [remainingMinutes, setRemainingMinutes] = useState(0);
+
+  useEffect(()=> {
+    const intervalId = setInterval(() => {
+      setTime((prevTime) => prevTime -1);
+    }, 1000);
+
+    return () => clearInterval(intervalId)
+  }, [time])
+
   const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
       handleReset();
@@ -31,12 +43,12 @@ function Timer({ setPage }) {
   };
 
   function handleReset() {
-    
-    setInput(0);
-  
+    setTime(input)
+    setStart(false)
 }
 
   function handleStart() {
+    setKey(prevKey => prevKey + 1)
     setStart(true);
   }
 
@@ -46,8 +58,13 @@ function Timer({ setPage }) {
 
   function handleChange(event) {
     event.preventDefault();
-    if (!start) setInput(event.target.value * 60);
+    const newInput = event.target.value * 60;
+    setInput(newInput)
+    setTime(newInput)
+    setRemainingMinutes(Math.ceil(newInput/60))
+    setKey(prevKey => prevKey +1)
   }
+
   function startScan() {
     setOpenModal(true);
   }
@@ -60,8 +77,10 @@ function Timer({ setPage }) {
       <TimerCircle/>
       <div className="timer__wrapper">
         <CountdownCircleTimer
-          isPlaying={start}
+          key={key}
+          isPlaying={time > 0}
           duration={input}
+          // colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
           colors={[
             "#FA7035",
             "#23F3DA",
@@ -70,8 +89,9 @@ function Timer({ setPage }) {
             "#35FA78",
             "#FA7035",
           ]}
-          colorsTime={[5, 10, 9, 8, 5, 2]}
-          onComplete={() => ({ shouldRepeat: true, delay: 1 })}
+          colorTime={[5, 10, 9, 8, 5, 2]}
+          onComplete={() => [true, 1000]}
+          // onComplete={() => ({ shouldRepeat: true, delay: 1 })}
         >
           {renderTime}
         </CountdownCircleTimer>
