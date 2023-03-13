@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.clock {
+    &__overlay {
+        background-color: rgba($color: #23f3da, $alpha: 0.5);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    &__closeX {
+        width:8rem;
+        height:8rem;
+    }
+}
