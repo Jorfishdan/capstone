@@ -25,7 +25,6 @@ function Timer({ setPage }) {
   }
   if (time === 0) {
     setStart(false)
-    // inputRef.current.value = '';
   }
   setRemainingTime(time)
     return () => clearInterval(intervalId)
@@ -55,7 +54,10 @@ function Timer({ setPage }) {
     setInput(0)
     setTime(0)
     setStart(false)  
-    inputRef.current.value = ''; 
+    if (inputRef.current) {
+      inputRef.current.value = '';
+    }
+
 }
 
 
@@ -95,9 +97,9 @@ function Timer({ setPage }) {
             "#36F460",
             "#A335FA",
             "#35FA78",
-            "#FA7035",
+            // "#FA7035",
           ]}
-          colorTime={[5, 10, 9, 8, 5, 2]}
+          colorsTime={[10,7, 5, 2, 0]}
           onComplete={() => {
             handleReset();
           return [true, 1000]}}
@@ -112,6 +114,7 @@ function Timer({ setPage }) {
             step="1"
             onChange={handleChange}
             ref={inputRef}
+            value={inputRef.current ? inputRef.current.value : ''}
             
           />
           <span className="timer__minutes">minutes</span>
