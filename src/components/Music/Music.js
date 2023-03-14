@@ -1,6 +1,12 @@
 import "./Music.scss";
 import MusicCircle from "../MusicCircle/MusicCircle";
-function Music() {
+import { useState } from "react";
+function Music({setShowMusic}) {
+
+  // function handleClick () {
+  //   setShowMusic(false)
+    
+  // }
   return (
     <>
       <div className="music">
@@ -14,6 +20,7 @@ function Music() {
           <span className="music__title">
             Get lightning speed with these handpicked tunes!
           </span>
+          {/* <button className="music__hide" onClick={handleClick}>Hide</button> */}
           <MusicCircle />
        
           <div className="music__wrapper">

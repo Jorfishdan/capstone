@@ -5,6 +5,7 @@ import ("./TimerModal.scss");
 
 function TimerModal({openModalClock, onClose }) {
     const [isShown, setIsShown] = useState(false);
+    
     if (!openModalClock) return null;
 
     return (<>

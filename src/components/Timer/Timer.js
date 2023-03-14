@@ -3,11 +3,9 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import CleaningModal from "../CleaningModal/CleaningModal";
 import { useEffect, useRef, useState } from "react";
 import TimerCircle from "../TimerCircle/TimerCircle";
-import TimerModal from "../TimerModal/TimerModal";
 
-function Timer({ setPage }) {
+function Timer({ setPage, setShowMusic }) {
   const [openModal, setOpenModal] = useState(false);
-  const [openModalClock, setOpenModalClock] = useState(false);
   const [key, setKey] = useState(0);
   const [input, setInput] = useState(0);
   const [time, setTime] = useState(0);
@@ -78,10 +76,11 @@ function Timer({ setPage }) {
   function startScan() {
     setOpenModal(true);
   }
-
-  function openClock() {
-    setOpenModalClock(true);
+  function handleClick () {
+    setShowMusic((prevStart) => !prevStart);
+    
   }
+
   return (
     <div className="timer">
       <TimerCircle/>
@@ -97,9 +96,9 @@ function Timer({ setPage }) {
             "#36F460",
             "#A335FA",
             "#35FA78",
-            // "#FA7035",
+            "#FA7035",
           ]}
-          colorsTime={[10,7, 5, 2, 0]}
+          colorsTime={[10,8, 7, 5, 2, 0]}
           onComplete={() => {
             handleReset();
           return [true, 1000]}}
@@ -126,12 +125,7 @@ function Timer({ setPage }) {
           <button onClick={() => startScan()} className="timer__scan">
             Scan
           </button>
-          <button onClick={() => openClock()} className="timer__scan">
-            Clock
-          </button>
-          <TimerModal   openModalClock={openModalClock}
-           onClose={() => setOpenModalClock(false)}
-            setPage={setPage} />
+          <button className="timer__hide" onClick={handleClick}>Hide</button>
           <CleaningModal
             openModal={openModal}
             onClose={() => setOpenModal(false)}
@@ -144,5 +138,3 @@ function Timer({ setPage }) {
 }
 
 export default Timer;
-
-// const remainingMinutes = Math.ceil(remainingTime / 60);

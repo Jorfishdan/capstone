@@ -6,7 +6,7 @@
 .timer {
   &__start,
   &__pause,
-  &__reset,
+  &__hide,
   &__scan {
     font-family: "WorkSans";
     background-color: #23f3da;
@@ -21,6 +21,7 @@
       box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
       margin: 1rem;
       font-weight: 600;
+      cursor: pointer;
     }
   }
 
