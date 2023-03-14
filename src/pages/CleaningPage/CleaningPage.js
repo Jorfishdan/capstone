@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 function CleaningPage() {
     const [page, setPage] = useState(null)
     const [inputTime, setInputTime] = useState(0)
+    const [showMusic, setShowMusic] = useState(true)
 
     const time = new Date ();
 
@@ -15,8 +16,8 @@ return (
     <>
     <CleaningPageHeader />
     <HPBubbles />
-    <Timer setPage={setPage} expiryTimestamp={time} setInputTime={setInputTime}/>
-    <Music />
+    <Timer setPage={setPage} setShowMusic={setShowMusic} expiryTimestamp={time} setInputTime={setInputTime}/>
+    {showMusic && <Music setShowMusic={setShowMusic}/>}
     <Footer />
 
     </>
