@@ -1,0 +1,72 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:10rem;
+
+    &__start,
+    &__pause {
+    font-family: "WorkSans";
+    background-color: #23f3da;
+    border: #23f3da;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    margin: 1.6rem;
+    font-size: 2rem;
+}
+
+&__background {
+    background-color: purple;
+    width:50%;
+    height:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14rem;
+    padding:2rem;
+}
+
+// &__head {
+//     display:flex;
+// }
+
+// &__wrapper {
+//     display:flex;
+// }
+}
+
+// svg {
+
+//     @include tablet {
+//         display: flex;
+//         width: 40vw;
+//         height: 40vh;
+//         position: absolute;
+//         left: -11rem;
+//     }
+
+//     @include desktop {
+//         width: 70vw;
+//         height: 70vh;
+//         left: -18rem; 
+//     }
+// }
+
+// div {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     left: 5px;
+//     top: 32px;
+//     width: 100%;
+//     height: 100%;
+//     flex-direction: column;
+// }
+

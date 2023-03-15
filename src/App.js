@@ -7,6 +7,7 @@ import BrainTeaser from "../src/pages/BrainTeaser/BrainTeaser";
 import CleaningPage from "../src/pages/CleaningPage/CleaningPage";
 import CallBacks from "../src/pages/CallBacks/CallBacks";
 import NotFound from "../src/pages/NotFound/NotFound";
+import NewClock from "./components/NewClock/NewClock";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/mainInfo" element={<InfoPage />} />
+          <Route path="/clock" element={<NewClock />} />
 
           <Route path="brainTeaser" element={<BrainTeaser />} />
 
