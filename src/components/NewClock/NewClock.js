@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import './NewClock.scss'
 import TimerCircle from "../TimerCircle/TimerCircle";
-import HomepageCardCircle from "../HomepageCardCircle/HomepageCardCircle"
+import AnimalNoiseCircle from '../AnimalNoiseCircle/AnimalNoiseCircle';
 function NewClock() {
     // const [openModal, setOpenModal] = useState(false);
     const [key, setKey] = useState(0);
@@ -36,7 +36,6 @@ function NewClock() {
       return (
         <>
           <div className="clock__head">
-          <HomepageCardCircle />
             <div className="clock__clock-wrapper">
               <div className="clock__remaining">Remaining</div>
               <div className="clock__value">{remainingMinutes > 0 ? remainingMinutes : 0}</div>
@@ -76,7 +75,18 @@ function NewClock() {
         
       <div className="clock">
         <div className="clock__background">
-        <TimerCircle/>
+        
+        <div className="clock__circle1"></div>
+        <div className="clock__circle2"></div>
+        <div className="clock__circle3"></div>
+        <div className="clock__circle4"></div>
+        <div className="clock__circle5"></div>
+        <div className="clock__circle6"></div>
+        <div className="clock__circle7"></div>
+        <div className="clock__circle8"></div>
+        <div className="clock__circle9"></div>
+        <div className="clock__circle10"></div>
+        <div className="clock__circle11"></div>
         <div className="clock__wrapper">
           <CountdownCircleTimer
           setStart={true}
