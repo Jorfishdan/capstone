@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import Header from '../Header/Header';
+import HomePageHeader from '../HomePageHeader/HomePageHeader';
+import house from "../../assets/images/house-static.png";
 import './NewClock.scss'
-import TimerCircle from "../TimerCircle/TimerCircle";
-import AnimalNoiseCircle from '../AnimalNoiseCircle/AnimalNoiseCircle';
+import { Link } from 'react-router-dom';
+
 function NewClock() {
-    // const [openModal, setOpenModal] = useState(false);
     const [key, setKey] = useState(0);
     const [input, setInput] = useState(0);
     const [time, setTime] = useState(0);
@@ -72,7 +74,11 @@ function NewClock() {
     }
   
     return (
-        
+        <>
+        <div className="clock__header">
+        <Link to="/"><img src={house} alt="return to home page icon" className="clock__house" /></Link>
+        <HomePageHeader />
+        </div>
       <div className="clock">
         <div className="clock__background">
         
@@ -130,6 +136,7 @@ function NewClock() {
         </div>
        
       </div>
+      </>
     );
   }
   

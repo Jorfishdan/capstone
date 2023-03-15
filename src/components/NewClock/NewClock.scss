@@ -4,13 +4,13 @@
 @use "../../styles/partials/variables" as *;
 
 .clock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top:10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
 
-    &__start,
-    &__pause {
+  &__start,
+  &__pause {
     font-family: "WorkSans";
     background-color: #23f3da;
     border: #23f3da;
@@ -20,65 +20,79 @@
     margin: 1.6rem;
     font-size: 2rem;
     &:hover {
-        cursor: pointer;
+      cursor: pointer;
     }
-}
+  }
 
-&__btn-wrapper {
+  &__btn-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-&__minutes {
-    font-family: "WorkSans"; 
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:2.6rem;
+  }
+
+  &__house {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__minutes {
+    font-family: "WorkSans";
     font-size: 1rem;
-    margin-left:1rem;
-    color:white;
-    font-weight:500;
-}
+    margin-left: 1rem;
+    color: white;
+    font-weight: 500;
+  }
 
-&__input {
+  &__input {
     border-radius: 1rem;
-    border:2px solid #23f3da;
-    margin-top:1rem;
-}
-&__tagline {
-    font-family: "WorkSans"; 
+    border: 2px solid #23f3da;
+    margin-top: 1rem;
+  }
+  &__tagline {
+    font-family: "WorkSans";
     font-weight: 600;
     border-radius: 0.5rem;
     color: white;
     padding: 1rem;
     margin: 1.6rem;
     font-size: 1.5rem;
-}
-&__remaining, &__value, &__text {
-    font-family: "WorkSans"; 
+  }
+  &__remaining,
+  &__value,
+  &__text {
+    font-family: "WorkSans";
     font-weight: 600;
     color: white;
     font-size: 1.5rem;
-}
-&__background {
+  }
+  &__background {
     background-color: #23f3da;
     border: 5px solid #23f3da;
-    width:50%;
-    height:50%;
+    width: 50%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 14rem;
-    padding:2rem;
-}
+    padding: 2rem;
+  }
 
-// &__head {
-//     display:flex;
-// }
+  // &__head {
+  //     display:flex;
+  // }
 
-// &__wrapper {
-//     display:flex;
-// }
+  // &__wrapper {
+  //     display:flex;
+  // }
 
-&__circle1 {
+  &__circle1 {
     display: none;
 
     @include desktop {
@@ -207,7 +221,7 @@
     position: absolute;
     border: 3px solid white;
     top: 20px;
-    right:10px;
+    right: 10px;
     z-index: 1;
     animation: bubble2 30s ease-in-out infinite;
   }
@@ -380,9 +394,4 @@
       opacity: 0;
     }
   }
-
 }
-
-
-
-
