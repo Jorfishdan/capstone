@@ -4,6 +4,7 @@ import house from "../../assets/images/house-static.png";
 import dogfood from "../../assets/images/dog-food.png";
 import paw from "../../assets/images/pawprint.png";
 import info from "../../assets/images/info-static.png";
+import clock from "../../assets/images/pocket-watch.png";
 
 function BrainTeaserHeader() {
     return(<>
@@ -18,6 +19,7 @@ function BrainTeaserHeader() {
           <Link to= "/"><p className="brainteaserheader__title">Teacher's Pet</p></Link>
 
           <div className="brainteaserheader__icon-wrapper">
+          <Link to ="/clock"><img src={clock} alt="clock icon to go to timer page" className="brainteaserheader__clock"></img></Link>
             <Link to="/cleanup">
               <img
                 src={dogfood}

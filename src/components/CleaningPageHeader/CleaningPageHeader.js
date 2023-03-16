@@ -3,6 +3,7 @@ import house from "../../assets/images/house-static.png";
 import vet from "../../assets/images/veterinary.png";
 import paw from "../../assets/images/pawprint.png";
 import info from "../../assets/images/info-static.png";
+import clock from "../../assets/images/pocket-watch.png";
 import { Link } from "react-router-dom";
 function CleaningPageHeader() {
   return (
@@ -19,6 +20,7 @@ function CleaningPageHeader() {
           <p className="cleaningPageHeader__title">Teacher's Pet</p>
         </Link>
         <div className="cleaningPageHeader__icon-wrapper">
+          <Link to="/clock"><img src={clock} alt="clock icon to timer page" className="cleaningPageHeader__clock"></img></Link>
           <Link to="/brainteaser">
             <img
               src={vet}
