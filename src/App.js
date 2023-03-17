@@ -8,6 +8,7 @@ import CleaningPage from "../src/pages/CleaningPage/CleaningPage";
 import CallBacks from "../src/pages/CallBacks/CallBacks";
 import NotFound from "../src/pages/NotFound/NotFound";
 import NewClock from "./components/NewClock/NewClock";
+import MathMatch from "./pages/MathMatch/MathMatch";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="mainInfo/brainTeaser" element={<BrainTeaser />} />
           <Route path="mainInfo/cleanup" element={<CleaningPage />} />
           <Route path="mainInfo/callbacks" element={<CallBacks />} />
+          <Route path="mainInfo/mathmatch" element={<MathMatch />} />
+          
 
           <Route path="cleanup" element={<CleaningPage />} />
 
