@@ -25,10 +25,9 @@ function MathCards() {
   }, []);
 
   const handleFlipCard = (index) => {
-    // const newGenerateNumber = [...generateNumber];
-    // newGenerateNumber[index].flipCard = !newGenerateNumber[index].flipCard;
-    // setGenerateNumber(newGenerateNumber);
-    setFlipCard(true);
+    const newGenerateNumber = [...generateNumber];
+    newGenerateNumber[index].flipCard = !newGenerateNumber[index].flipCard;
+    setGenerateNumber(newGenerateNumber);
     console.log("clicked");
   };
   return (
@@ -36,19 +35,13 @@ function MathCards() {
       {generateNumber.map((digit, index) => {
         return (
           <section className="math__wrapper" key={digit.id}>
-            <div onClick={handleFlipCard}>
+            <div onClick={() => handleFlipCard(index)}>
+             
             <div
-              className={`math__card display ${
-                flipCard ? "math__card-front" : ""
-              }`}
-            ></div>
-            <div onClick={handleFlipCard}>
-              <div
-                className={`math__card display ${flipCard ? "" : "math__card-back"}`}
-              >
-                <h3 className="math__text-horse">Horse</h3>
-              </div>
+              className={`math__card display ${digit.flipCard ? "" : "math__card-front"}`}>
+                {digit.flipCard ? <h3 className="math__text-horse">Horse</h3> : "" } 
             </div>
+          
             </div>
           </section>
         );
