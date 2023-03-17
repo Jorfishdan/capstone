@@ -5,6 +5,7 @@ import axios from "axios";
 
 function MathCards() {
   const [generateNumber, setGenerateNumber] = useState([]);
+  const [score, setScore] = useState(0)
 
   useEffect(() => {
     const fetchNumbers = async () => {
@@ -32,20 +33,14 @@ function MathCards() {
     console.log("clicked");
   };
 
-  // const handleAnswerCardFlip = (index) => {
-  //   const newGenerateNumber = [...generateNumber];
-  //   newGenerateNumber[index].isFlipped = !newGenerateNumber[index].isFlipped;
-  //   setGenerateNumber(newGenerateNumber);
-
-  //   console.log("clicked");
-  // };
-
   return (
     <>
+    
       {generateNumber.map((digit, index) => {
         return (
           <section className="math__wrapper" key={digit.id}>
-            <div onClick={() => handleCardFlip(index, "equation")}>
+            <div onClick={() => handleCardFlip(index, "equation")} >
+              
              
             <div
               className={`math__card display ${digit.isFlipped && digit.cardType === "equation" ? "" : "math__card-front"}`}>
