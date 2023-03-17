@@ -5,7 +5,6 @@ import axios from "axios";
 
 function MathCards() {
   const [generateNumber, setGenerateNumber] = useState([]);
-  const [flipCard, setFlipCard] = useState(false);
 
   useEffect(() => {
     const fetchNumbers = async () => {
@@ -13,7 +12,8 @@ function MathCards() {
         const response = await axios.get(`http://localhost:8080/numbers`);
         const numbers = response.data.map((number) => ({
           ...number,
-          flipCard: false,
+          isFlipped:false,
+          cardType: "",
         }));
         console.log(response.data);
         setGenerateNumber(numbers);
@@ -24,25 +24,43 @@ function MathCards() {
     fetchNumbers();
   }, []);
 
-  const handleFlipCard = (index) => {
+  const handleCardFlip = (index,cardType) => {
     const newGenerateNumber = [...generateNumber];
-    newGenerateNumber[index].flipCard = !newGenerateNumber[index].flipCard;
+    newGenerateNumber[index].isFlipped = !newGenerateNumber[index].isFlipped;
+    newGenerateNumber[index].cardType = cardType;
     setGenerateNumber(newGenerateNumber);
     console.log("clicked");
   };
+
+  // const handleAnswerCardFlip = (index) => {
+  //   const newGenerateNumber = [...generateNumber];
+  //   newGenerateNumber[index].isFlipped = !newGenerateNumber[index].isFlipped;
+  //   setGenerateNumber(newGenerateNumber);
+
+  //   console.log("clicked");
+  // };
+
   return (
     <>
       {generateNumber.map((digit, index) => {
         return (
           <section className="math__wrapper" key={digit.id}>
-            <div onClick={() => handleFlipCard(index)}>
+            <div onClick={() => handleCardFlip(index, "equation")}>
              
             <div
-              className={`math__card display ${digit.flipCard ? "" : "math__card-front"}`}>
-                {digit.flipCard ? <h3 className="math__text-horse">Horse</h3> : "" } 
+              className={`math__card display ${digit.isFlipped && digit.cardType === "equation" ? "" : "math__card-front"}`}>
+                {digit.isFlipped && digit.cardType === "equation" ? (<h3 className="math__text-equation">{digit.equation}</h3>) : ("" )} 
             </div>
           
             </div>
+            <div onClick={() => handleCardFlip(index, "answer")}>
+             
+             <div
+               className={`math__card display ${digit.isFlipped && digit.cardType === "answer" ? "" : "math__card-front"}`}>
+                 {digit.isFlipped && digit.cardType === "answer" ? (<h3 className="math__text-answer">{digit.answer}</h3>) : ("") } 
+             </div>
+           
+             </div>
           </section>
         );
       })}

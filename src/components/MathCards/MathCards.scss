@@ -40,4 +40,30 @@
     background-color: blue;
     width:10rem;
   }
+
+  &__wrapper {
+    display:flex;
+    flex-direction: row;
+  }
+
+  &__text-equation {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+  }
+  &__text-answer {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+  }
 }
