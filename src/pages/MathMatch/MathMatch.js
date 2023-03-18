@@ -1,8 +1,8 @@
-import MathCards from "../../components/MathCards/MathCards";
 import './MathMatch.scss';
+import MatchingGame from '../../components/MatchingGame/MatchingGame';
 function MathMatch() {
     return (<>
-    <MathCards />
+    <MatchingGame />
     </>)
 
 }
