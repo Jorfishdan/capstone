@@ -125,7 +125,7 @@ function Timer({ setPage, setShowMusic }) {
           <button onClick={() => startScan()} className="timer__scan">
             Scan
           </button>
-          <button className="timer__hide" onClick={handleClick}>Hide</button>
+          {/* <button className="timer__hide" onClick={handleClick}>Hide</button> */}
           <CleaningModal
             openModal={openModal}
             onClose={() => setOpenModal(false)}

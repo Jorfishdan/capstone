@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Timer from "../Timer/Timer";
 import "./MathSelect.scss";
 function MathSelect() {
   const [showEquation, setShowEquation] = useState([]);
@@ -36,15 +37,20 @@ function MathSelect() {
 
     if (clickedAnswer === currentQuestion.correct_answer) {
       setScore(score + 1);
+    } else if (currentQuestion.incorrect_answer.includes(clickedAnswer)) {
+      setScore(score -2);
     }
 
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-  };
+}
+
   return (
     <>
       <section className="mathselect">
         <div className="mathselect__items-wrapper">
-          <article className="mathselect__timer"></article>
+          <article className="mathselect__timer">
+            <Timer />
+          </article>
           <article className="mathselect__pts">{score}</article>
         </div>
         <div className="mathselect__response-wrapper">

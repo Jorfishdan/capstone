@@ -16,6 +16,7 @@
     &__pts {
         border: 2px solid red;
         padding: 10rem; 
+        font-size:2rem;
     }
 
     &__question {
@@ -31,6 +32,7 @@
         padding: 10rem; 
        margin: 2rem 1.5rem; 
        width:100%;
+       font-size:2rem;
     }
     &__response-wrapper {
         display: flex;
@@ -41,6 +43,7 @@
         display: flex;
        
     }
+
 
 
 }
