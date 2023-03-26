@@ -19,6 +19,16 @@
         font-size:2rem;
     }
 
+    &__pts--add {
+        width:6rem;
+        height:6rem;
+    }
+    
+    &__pts--minus {
+        width:6rem;
+        height:6rem;
+    }
+
     &__question {
         border: 2px solid purple;
         padding: 10rem; 
