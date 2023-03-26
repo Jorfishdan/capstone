@@ -8,14 +8,36 @@ function randomSort(a,b) {
   return 0.5 - Math.random();
 }
 
-const val = ["noto:bird", "noto:blossom", "noto:cactus", "noto:avocado", "noto:cookie", "noto:crystal-ball", "noto:peach", "noto:gorilla"];
-const values = [...val.concat(val)].sort(randomSort);
+const mathProblems = [
+  { equation: '2 + 2', answer: '4' },
+  { equation: '5 * 6', answer: '30' },
+  { equation: '10 - 3', answer: '7' },
+];
+const [values, setValues] = useState([...mathProblems, ...mathProblems].sort(randomSort));
 
 const [cards, setCards] = useState([...Array(16).keys()].map(n => false));
 const [selected, setSelected] = useState([]);
 const [hits, setHits] = useState(0);
 
-const clickHandler = (key) => {
+useEffect(() => {
+const updatedValues = values.map((item) => {
+  const answer = eval(item.equation);
+  return {
+    ...item,
+    answer:answer.toString(),
+  }
+})
+setValues(updatedValues);
+}, [])
+
+const resetSelectedCards = (cards, selected, setCards, setSelected) => {
+  const newCards = [...cards];
+  const newSelected = [];
+  setCards(newCards);
+  setSelected(newSelected);
+}
+
+const clickHandler = (index) => {
   let newCards = [...cards];
   let newSelected = [...selected];
   let newHits = hits;
@@ -23,22 +45,47 @@ const clickHandler = (key) => {
     newHits++;
     newCards[newSelected[0]] = false;
     newCards[newSelected[1]] = false;
-    newSelected = [];
+    resetSelectedCards(newCards, newSelected, setCards, setSelected);
   }
-  newCards[key] = true;
-  newSelected.push(key);
-  if(newSelected.length > 1 && values[newSelected[0]] === values[newSelected[1]]) {
-    newSelected = [];
+
+  if (newSelected.length > 1 && newSelected[0] !== newSelected[1]) {
+    if (values[newSelected[0]].answer === values[newSelected[1]].answer) {
+      resetSelectedCards(newCards, newSelected, setCards, setSelected);
+    } else {
+      setTimeout(() => {
+        newCards[newSelected[0]] = false;
+        newCards[newSelected[1]] = false;
+        resetSelectedCards(newCards, newSelected, setCards, setSelected);
+      }, 1000);
+    } 
+  }
+
+  newCards[index] = true;
+  newSelected.push(index);
+  if (newSelected.length >= 2) {
+    const [idx1, idx2] = newSelected;
+    if (values[idx1]?.answer === values[idx2]?.answer) {
+      resetSelectedCards(newCards, newSelected, setCards, setSelected);
+    }
+  }
+  if(newSelected.length >=2 && values[newSelected[0]].answer === values[newSelected[1]].answer) {
+    resetSelectedCards(newCards, newSelected, setCards, setSelected);
+    console.log('newSelected:', newSelected);
+console.log('values:', values);
+console.log('values[newSelected[0]]:', values[newSelected[0]]);
+console.log('values[newSelected[1]]:', values[newSelected[1]]);
   }
   setCards(newCards);
   setSelected(newSelected);
   setHits(newHits);
+
+  
 }
 
 const cardElements = cards.map((_, cardIndex) => (
   <DataCard
     key={cardIndex} 
-    value={values[cardIndex]}
+    mathProblems={values[cardIndex]}
     active={cards[cardIndex]}
     clicked={() => clickHandler(cardIndex)}
   />
@@ -56,52 +103,3 @@ return (
 export default MatchingGame;
 
 
-  /* <div
-onClick={() => setFlipHorse(!flipHorse)}
-className="animalnoises__card horse"
->
-<div
-  className={`animalnoises__front ${
-    flipHorse ? "animalnoises__animal-front" : ""
-  }`}
->
-  <audio controls>
-    <source
-      className="animalnoises__audio"
-      src={horse}
-      type="audio/mp3"
-    />
-    <p>Your browser does not support this audio</p>
-  </audio>
-</div>
-<div onClick={() => setFlipHorse(!flipHorse)}>
-  <div
-    className={`animalnoises__back ${
-      flipHorse ? "" : "animalnoises__animal-back"
-    }`}
-  >
-    <h3 className="animalnoises__text-horse">Horse</h3>
-    <img
-      className="animalnoises__horse-gif"
-      src="https://bestanimations.com/media/horse-art/570970473animated-horse-gif-105.gif#.Y-JymKMBO5k.link"
-      alt="horse gif"
-    />
-  </div>
-</div>
-</div> */
-
-
-// const [selectedCards, setSelectedCards] = useState([]);
-// const [matchedCards, setMatchedCards] = useState([]);
-
-//   function shuffleArray(array) {
-// for (let i = array.length -1; i > 0; i--) {
-//   const j = Math.floor(Math.random() * (i +1));
-//   [array[i], array[j]] = [array[j], array[i]];
-// }
-// return array
-//   }
-
-//   useEffect(() => {
-//     setCards(shuffleArray(cards))
-//   }, [])
