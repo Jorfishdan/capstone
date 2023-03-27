@@ -6,12 +6,13 @@ import minus from "../../assets/images/speech-bubble.gif";
 import add from "../../assets/images/winner.gif";
 import quiz from "../../assets/images/quiz.gif";
 import HPBubbles from "../HPBubbles/HPBubbles";
-import home from "../../assets/images/house-static.png";
-import clock from "../../assets/images/pocket-watch.png";
-import vet from "../../assets/images/veterinary.png";
-import food from "../../assets/images/dog-food.png";
-import paw from "../../assets/images/pawprint.png";
-import info from "../../assets/images/info-static.png";
+// import home from "../../assets/images/house-static.png";
+// import clock from "../../assets/images/pocket-watch.png";
+// import vet from "../../assets/images/veterinary.png";
+// import food from "../../assets/images/dog-food.png";
+// import paw from "../../assets/images/pawprint.png";
+// import info from "../../assets/images/info-static.png";
+import MathSelectPet from "../MathSelectPet/MathSelectPet";
 
 
 
@@ -75,14 +76,9 @@ function MathSelect() {
 
   return (
     <>
-    <header className="mathselect__header">
-        
-
-
-
-    </header>
       <section className="mathselect">
         <HPBubbles />
+        <MathSelectPet />
         <div className="mathselect__items-wrapper">
           <article className="mathselect__timer">
             <Timer />
