@@ -18,18 +18,20 @@ function MathSelectTimer({
   const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
   const [remainingMinutes, setRemainingMinutes] = useState(0);
-  const [remainingTime, setRemainingTime] = useState(input);
+  const [remainingTime, setRemainingTime] = useState(selectedTime);
   const inputRef = useRef(null);
 
-  useEffect(() => {
-    if (start) {
-      const intervalId = setInterval(() => {
-        setRemainingTime((prev) => prev - 1);
-      }, 1000);
 
-      return () => clearInterval(intervalId);
-    }
-  }, [start, remainingTime, setScore]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (remainingTime > 0) {
+        setRemainingTime((prevTime) => prevTime -1);
+      }
+      onRemainingTimeChange(remainingTime - 1);
+    }, 1000)
+    return () => clearInterval(interval);
+  }, [remainingTime])
 
   useEffect(() => {
     if (remainingTime === 0) {
@@ -137,3 +139,32 @@ function MathSelectTimer({
 }
 
 export default MathSelectTimer;
+
+
+////////////////option 2//////////////////
+  // useEffect(() => {
+  //   if (remainingTime === 0) {
+  //     onRemainingTimeChange(remainingTime)
+  //   }
+  // }, [remainingTime]);
+
+  // useEffect(() => {
+  //  const intervalId = setInterval(() => {
+  //   setRemainingTime((prevTime) => prevTime -1)
+  //  }, 1000);
+  //  return () => {
+  //   clearInterval(intervalId)
+  //  }
+  // }, [])
+
+  ///////////option 1 /////////
+
+  // useEffect(() => {
+  //   if (start) {
+  //     const intervalId = setInterval(() => {
+  //       setRemainingTime((prev) => prev - 1);
+  //     }, 1000);
+
+  //     return () => clearInterval(intervalId);
+  //   }
+  // }, [start, remainingTime, setScore]);

@@ -18,13 +18,20 @@ function MathSelect({ selectedTime }) {
   const [minusPoints, setMinusPoints] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [clickedAnswer, setClickedAnswer] = useState(null);
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+  const [finalScore, setFinalScore] = useState(0);
+
+
 
   function handleRemainingTimeChange(remainingTime) {
-    if (remainingTime === 0) {
-      setScore(0);
-      setShowModal(true)
-    }
+    if (remainingTime === 1 && currentQuestionIndex !== null) {
+      setTimeout(() => {
+      setFinalScore(score);
+      setShowModal(true);
+     
+    }, 1000);
+    console.log("works")
+  }
   }
 
   useEffect(() => {
@@ -41,6 +48,7 @@ function MathSelect({ selectedTime }) {
     };
     mathAnswer();
   }, []);
+ 
 
   if (currentQuestionIndex === null) {
     return <p>Loading...</p>;
@@ -89,11 +97,15 @@ function MathSelect({ selectedTime }) {
 
   return (
     <>
-    {showModal && (
-      <div className="modal-overlay">
-        <MathSelectModal score={score} onClose={() => setShowModal(false)} />
-      </div>
-    )}
+      {showModal && (
+        <div className="modal-overlay">
+          <MathSelectModal
+            finalScore={finalScore}
+            setFinalScore={setFinalScore}
+            onClose={() => setShowModal(false)}
+          />
+        </div>
+      )}
       <section className="mathselect">
         <HPBubbles />
         <MathSelectPet />

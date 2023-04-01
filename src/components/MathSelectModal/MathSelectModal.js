@@ -4,40 +4,28 @@ import dog from "../../assets/images/golden-retriever.gif";
 import { useState } from "react";
 import chat from "../../assets/images/chat.png";
 
-function MathSelectModal({ onClose, score }) {
-  const [isShown, setIsShown] = useState(false);
-  // if (!openModal) return null;
+function MathSelectModal({ onClose, finalScore, setFinalScore, setShowModal }) {
 
-  function revealPassword() {
-    setIsShown((isShown) => !isShown);
-  }
-
-
+function handleClose() {
+  setFinalScore(0)
+  onClose()
+}
 
   return (
     <div className="overlay">
       <div className="modal">
         <div onClick={onClose} className="modal__closeButton">
-          <img className="modal__closeX" src={closeBtn} alt="exit button" />
+          <img className="modal__closeX" src={closeBtn} alt="exit button" onClick={handleClose}/>
         </div>
         <div className="modal__content">
           <div className="modal__dog-wrapper">
             <img className="modal__gif" src={dog} />
             <img src={chat} alt="speech bubble" className="modal__chatBubble" />
             <span className="modal__bubble-text"> 
-           Nicely done! Your score:
+           Nicely done! Your score: {finalScore}
             </span>
-            <p className="modal__score">{score}</p>
           </div>
           <div className="modal__buttons">
-            <form className="modal__form" onSubmit={(e) => e.preventDefault()}>
-              <input
-                id="checkbox"
-                type="checkbox"
-                checked={isShown}
-                onChange={revealPassword}
-              />
-            </form>
           </div>
         </div>
       </div>
