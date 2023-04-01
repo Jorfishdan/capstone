@@ -1,18 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import Timer from "../Timer/Timer";
 import MathSelectTimer from "../MathSelectTimer/MathSelectTimer";
 import "./MathSelect.scss";
 import minus from "../../assets/images/speech-bubble.gif";
 import add from "../../assets/images/winner.gif";
 import quiz from "../../assets/images/quiz.gif";
 import HPBubbles from "../HPBubbles/HPBubbles";
-// import home from "../../assets/images/house-static.png";
-// import clock from "../../assets/images/pocket-watch.png";
-// import vet from "../../assets/images/veterinary.png";
-// import food from "../../assets/images/dog-food.png";
-// import paw from "../../assets/images/pawprint.png";
-// import info from "../../assets/images/info-static.png";
+import MathSelectModal from "../MathSelectModal/MathSelectModal";
 import MathSelectPet from "../MathSelectPet/MathSelectPet";
 
 function MathSelect({ selectedTime }) {
@@ -24,10 +18,12 @@ function MathSelect({ selectedTime }) {
   const [minusPoints, setMinusPoints] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [clickedAnswer, setClickedAnswer] = useState(null);
+  const [showModal, setShowModal] = useState(false)
 
   function handleRemainingTimeChange(remainingTime) {
     if (remainingTime === 0) {
       setScore(0);
+      setShowModal(true)
     }
   }
 
@@ -71,12 +67,10 @@ function MathSelect({ selectedTime }) {
       setAddPoints(true);
       setMinusPoints(false);
       setScore(score + 1);
-      document.body.classList.add = "green-background";
     } else if (currentQuestion.incorrect_answer.includes(clickedAnswer)) {
       setMinusPoints(true);
       setAddPoints(false);
       setScore(score - 2);
-      document.body.classList.add = "orange-background";
     }
 
     setTimeout(() => {
@@ -95,6 +89,11 @@ function MathSelect({ selectedTime }) {
 
   return (
     <>
+    {showModal && (
+      <div className="modal-overlay">
+        <MathSelectModal score={score} onClose={() => setShowModal(false)} />
+      </div>
+    )}
       <section className="mathselect">
         <HPBubbles />
         <MathSelectPet />
