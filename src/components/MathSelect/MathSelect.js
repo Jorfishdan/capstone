@@ -76,17 +76,18 @@ function MathSelect({ selectedTime }) {
       setAddPoints(false);
       setScore(score - 2);
     }
-
+   setTimeout(() => {
       setAddPoints(false);
       setMinusPoints(false);
-      // setClickedAnswer(null);
-      // setSelectedAnswer(null);
+      setClickedAnswer(null);
+      setSelectedAnswer(null);
       setSelectedAnswerIndex(null);
       if (currentQuestionIndex === showEquation.length - 1) {
         setCurrentQuestionIndex(0);
       } else {
         setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
       }
+    }, 1000)
   };
 
   return (

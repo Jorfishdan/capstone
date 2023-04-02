@@ -18,6 +18,9 @@ function HomePageCards() {
             <Link to="/callbacks">
               <h1 className="homepagecard__card--3">Sneaky Animals</h1>
             </Link>
+            <Link to="mainInfo/mathselect">
+              <h1 className="homepagecard__card--4">Numbers Race</h1>
+            </Link>
           </article>
         </div>
       </section>

@@ -23,7 +23,7 @@ function handleClose() {
             <img className="modal__gif" src={dog} />
             <img src={chat} alt="speech bubble" className="modal__chatBubble" />
             <span className="modal__bubble-text"> 
-           Nicely done! Your score: {finalScore}
+           Nicely done! Your score is: {finalScore}
             </span>
           </div>
           <div className="modal__buttons">
