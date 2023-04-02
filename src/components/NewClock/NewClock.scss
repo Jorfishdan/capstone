@@ -48,6 +48,13 @@
     margin-left: 1rem;
     color: white;
     font-weight: 500;
+
+    @include tablet {
+      font-size:1.5rem;
+    }
+    @include desktop {
+      font-size:2rem;
+    }
   }
 
   &__input {
@@ -118,7 +125,7 @@
     position: absolute;
     border: 3px solid white;
     top: 28px;
-    left: 60px;
+    left: 120px;
     z-index: 1;
     animation: bubble2 30s ease-in-out infinite;
   }
@@ -220,9 +227,9 @@
     border-radius: 50%;
     position: absolute;
     border: 3px solid white;
-    top: 20px;
+    top: 106px;
     right: 10px;
-    z-index: 1;
+    z-index: 0;
     animation: bubble2 30s ease-in-out infinite;
   }
 

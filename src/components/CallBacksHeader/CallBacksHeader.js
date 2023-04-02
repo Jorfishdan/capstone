@@ -4,6 +4,7 @@ import house from "../../assets/images/house-static.png";
 import vetPic from "../../assets/images/veterinary.png";
 import dogFood from "../../assets/images/dog-food.png";
 import info from "../../assets/images/info-static.png";
+import clock from "../../assets/images/pocket-watch.png";
 function CallBacksHeader() {
     return(<>
        <div className="callBacksHeader">
@@ -16,6 +17,7 @@ function CallBacksHeader() {
       </Link>
       <Link to="/"><span className="callBacksHeader__title">Teacher's Pet</span></Link>
       <div className="callBacksHeader__icon-wrapper">
+        <Link to="/clock"><img src={clock} alt="clock icon to timer page" className="callBacksHeader__clock"></img></Link>
       <Link to="/brainteaser">
         <img
           src={vetPic}

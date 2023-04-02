@@ -1,0 +1,108 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.mspet {
+    &__cheering {
+      width: 10rem;
+      height: 10rem;
+      z-index: -1;
+      border-radius: 50%;
+      border: 2px solid #23f3da;
+  
+      @include desktop {
+        width: 20rem;
+        height: 20rem;
+        z-index: -1;
+      }
+    }
+  
+    &__chat {
+      width: 10rem;
+      height: 10rem;
+      z-index: 1;
+  
+      @include desktop {
+        width: 15rem;
+        height: 15rem;
+        z-index: 1;
+      }
+    }
+  
+    &__wrapper {
+      position: absolute;
+      left: 30px;
+      bottom: 50px;
+      z-index: 1;
+      display: flex;
+      pointer-events: none;
+  
+      @include desktop {
+        position: absolute;
+        right: 100px;
+        bottom: 320px;
+        z-index: 1;
+        display: flex;
+      }
+    }
+  
+    &__bubble-text {
+      position: relative;
+      left: -80px;
+      bottom: -20px;
+      z-index: -1;
+      width: 7rem;
+      display: flex;
+      font-family: "WorkSans";
+      font-size: 1rem;
+      overflow: hidden;
+  
+      @include desktop {
+        position: relative;
+        left: -110px;
+        bottom: -26px;
+        z-index: -1;
+        width: 10rem;
+        display: flex;
+        font-family: "WorkSans";
+        font-size: 1.5rem;
+        overflow: hidden;
+      }
+    }
+  
+    @keyframes rollIn {
+      from {
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        opacity: 0;
+      }
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+  
+    @keyframes rollOut {
+      from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+      to {
+        transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+        opacity: 1;
+      }
+    }
+  
+    &__bubble-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      animation: rollIn 1s ease-in-out;
+  
+      @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        animation: rollIn 1s ease-in-out;
+      }
+    }
+  }
+  

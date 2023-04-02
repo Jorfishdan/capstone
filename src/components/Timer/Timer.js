@@ -3,8 +3,9 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import CleaningModal from "../CleaningModal/CleaningModal";
 import { useEffect, useRef, useState } from "react";
 import TimerCircle from "../TimerCircle/TimerCircle";
+import MathSelect from "../MathSelect/MathSelect";
 
-function Timer({ setPage, setShowMusic }) {
+function Timer({ setPage, setShowMusic, selectedTime, setScore }) {
   const [openModal, setOpenModal] = useState(false);
   const [key, setKey] = useState(0);
   const [input, setInput] = useState(0);
@@ -12,6 +13,7 @@ function Timer({ setPage, setShowMusic }) {
   const [start, setStart] = useState(false);
   const [remainingMinutes, setRemainingMinutes] = useState(0);
   const [remainingTime, setRemainingTime] = useState(input);
+  // const [selectedTime, setSelectedTime] = useState(0);
   const inputRef = useRef(null)
 
   useEffect(()=> {
@@ -68,6 +70,7 @@ function Timer({ setPage, setShowMusic }) {
     event.preventDefault();
     const newInput = event.target.value * 60;
     setInput(newInput)
+    // setSelectedTime(newInput)
     setTime(newInput)
     setRemainingMinutes(Math.ceil(newInput/60))
     setKey(prevKey => prevKey +1)
@@ -125,7 +128,7 @@ function Timer({ setPage, setShowMusic }) {
           <button onClick={() => startScan()} className="timer__scan">
             Scan
           </button>
-          <button className="timer__hide" onClick={handleClick}>Hide</button>
+          {/* <button className="timer__hide" onClick={handleClick}>Hide</button> */}
           <CleaningModal
             openModal={openModal}
             onClose={() => setOpenModal(false)}
@@ -133,6 +136,7 @@ function Timer({ setPage, setShowMusic }) {
           />
         </div>
       </div>
+      {/* <MathSelect selectedTime={selectedTime} /> */}
     </div>
   );
 }

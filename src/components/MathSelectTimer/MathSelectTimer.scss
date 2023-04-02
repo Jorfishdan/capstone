@@ -1,0 +1,100 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.timer {
+  &__start,
+  &__pause,
+  &__hide,
+  &__scan {
+    font-family: "WorkSans";
+    background-color: #23f3da;
+    border: #23f3da;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    margin: 1.6rem;
+    font-size: 2rem;
+
+    &:hover {
+      box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.3);
+      margin: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  &__tagline {
+    font-family: "WorkSans";
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  &__minutes {
+    font-family: "WorkSans";
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  &__clock-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-family: "WorkSans";
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  &__value {
+    font-family: "WorkSans";
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  &__remaining {
+    font-family: "WorkSans";
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #23f3da;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  &__minutes {
+    font-family: "WorkSans";
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+
+  &__input {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #23f3da;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+// svg {
+// width:50rem;
+// height:50rem;
+// }
