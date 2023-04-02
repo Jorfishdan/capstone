@@ -4,11 +4,12 @@ import dog from "../../assets/images/golden-retriever.gif";
 import { useState } from "react";
 import chat from "../../assets/images/chat.png";
 
-function MathSelectModal({ onClose, finalScore, setFinalScore, setShowModal }) {
+function MathSelectModal({ onClose, finalScore, setFinalScore, setScore}) {
 
 function handleClose() {
   setFinalScore(0)
   onClose()
+  setScore(0)
 }
 
   return (
@@ -26,10 +27,11 @@ function handleClose() {
             </span>
           </div>
           <div className="modal__buttons">
+            <button className="modal__play-again"  onClick={handleClose}> Try again</button>
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 export default MathSelectModal;

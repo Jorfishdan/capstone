@@ -50,7 +50,7 @@
     &__bubble-text {
       position: relative;
       left: -80px;
-      bottom: -25px;
+      bottom: -20px;
       z-index: -1;
       width: 7rem;
       display: flex;
@@ -61,7 +61,7 @@
       @include desktop {
         position: relative;
         left: -110px;
-        bottom: -35px;
+        bottom: -26px;
         z-index: -1;
         width: 10rem;
         display: flex;

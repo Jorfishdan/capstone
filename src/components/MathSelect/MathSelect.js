@@ -20,35 +20,31 @@ function MathSelect({ selectedTime }) {
   const [clickedAnswer, setClickedAnswer] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
-
-
-
-  function handleRemainingTimeChange(remainingTime) {
-    if (remainingTime === 1 && currentQuestionIndex !== null) {
-      setTimeout(() => {
-      setFinalScore(score);
-      setShowModal(true);
-     
-    }, 1000);
-    console.log("works")
-  }
+  
+  async function mathAnswer() {
+    try {
+      const response = await axios.get(`http://localhost:8080/numbers`);
+      setShowEquation([...response.data]);
+      const randomIndex = Math.floor(Math.random() * response.data.length);
+      setCurrentQuestionIndex(randomIndex);
+      console.log(response.data);
+    } catch (error) {
+      console.timeLog(error)
+    }
   }
 
   useEffect(() => {
-    const mathAnswer = async () => {
-      try {
-        const response = await axios.get(` http://localhost:8080/numbers`);
-        setShowEquation([...response.data]);
-        const randomIndex = Math.floor(Math.random() * response.data.length);
-        setCurrentQuestionIndex(randomIndex);
-        console.log(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
     mathAnswer();
-  }, []);
- 
+  }, [])
+
+  async function handleRemainingTimeChange(remainingTime) {
+    if (remainingTime === 0 && currentQuestionIndex !== null) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setFinalScore(score);
+      setShowModal(true);
+      console.log("works")
+    }
+  }
 
   if (currentQuestionIndex === null) {
     return <p>Loading...</p>;
@@ -81,18 +77,16 @@ function MathSelect({ selectedTime }) {
       setScore(score - 2);
     }
 
-    setTimeout(() => {
       setAddPoints(false);
       setMinusPoints(false);
-      setClickedAnswer(null);
-      setSelectedAnswer(null);
+      // setClickedAnswer(null);
+      // setSelectedAnswer(null);
       setSelectedAnswerIndex(null);
       if (currentQuestionIndex === showEquation.length - 1) {
         setCurrentQuestionIndex(0);
       } else {
         setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
       }
-    }, 1000);
   };
 
   return (
@@ -101,6 +95,7 @@ function MathSelect({ selectedTime }) {
         <div className="modal-overlay">
           <MathSelectModal
             finalScore={finalScore}
+            setScore={setScore}
             setFinalScore={setFinalScore}
             onClose={() => setShowModal(false)}
           />
@@ -118,11 +113,11 @@ function MathSelect({ selectedTime }) {
             />
           </article>
           <article className="mathselect__instructions">
-            <span className="mathselect__intro--1">
-              Select the correct answer
+          <span className="mathselect__intro--2">
+              Set the timer
             </span>
-            <span className="mathselect__intro--2">
-              Add in the timer for speed rounds
+            <span className="mathselect__intro--1">
+              Answer as many as you can!
             </span>
           </article>
           <article className="mathselect__pts">
@@ -177,3 +172,31 @@ function MathSelect({ selectedTime }) {
 }
 
 export default MathSelect;
+
+///////////////set up version 1///////////
+
+  // function handleRemainingTimeChange(remainingTime) {
+  //   if (remainingTime === 1 && currentQuestionIndex !== null) {
+  //     setTimeout(() => {
+  //     setFinalScore(score);
+  //     setShowModal(true);
+     
+  //   }, 1000);
+  //   console.log("works")
+  // }
+  // }
+
+  // useEffect(() => {
+  //   const mathAnswer = async () => {
+  //     try {
+  //       const response = await axios.get(` http://localhost:8080/numbers`);
+  //       setShowEquation([...response.data]);
+  //       const randomIndex = Math.floor(Math.random() * response.data.length);
+  //       setCurrentQuestionIndex(randomIndex);
+  //       console.log(response.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   mathAnswer();
+  // }, []);

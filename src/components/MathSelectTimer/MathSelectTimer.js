@@ -1,18 +1,14 @@
 import "./MathSelectTimer.scss";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import CleaningModal from "../CleaningModal/CleaningModal";
 import { useEffect, useRef, useState } from "react";
 import TimerCircle from "../TimerCircle/TimerCircle";
-import MathSelect from "../MathSelect/MathSelect";
 
 function MathSelectTimer({
-  setPage,
   setShowMusic,
   selectedTime,
   setScore,
   onRemainingTimeChange,
 }) {
-  const [openModal, setOpenModal] = useState(false);
   const [key, setKey] = useState(0);
   const [input, setInput] = useState(0);
   const [time, setTime] = useState(0);
@@ -33,12 +29,6 @@ function MathSelectTimer({
     return () => clearInterval(interval);
   }, [remainingTime])
 
-  useEffect(() => {
-    if (remainingTime === 0) {
-      setScore(0);
-    }
-    onRemainingTimeChange(remainingTime);
-  }, [remainingTime, setScore]);
 
   const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
@@ -70,7 +60,7 @@ function MathSelectTimer({
     if (inputRef.current) {
       inputRef.current.value = "";
     }
-    setScore(0);
+    // setScore(0);
   }
 
   function handleStart() {
@@ -87,9 +77,6 @@ function MathSelectTimer({
     setKey((prevKey) => prevKey + 1);
   }
 
-  function handleClick() {
-    setShowMusic((prevStart) => !prevStart);
-  }
 
   return (
     <div className="timer">
@@ -168,3 +155,11 @@ export default MathSelectTimer;
   //     return () => clearInterval(intervalId);
   //   }
   // }, [start, remainingTime, setScore]);
+
+  ////////////////////clear score to zero//////////
+  // useEffect(() => {
+  //   if (remainingTime === 0) {
+  //     setScore(0);
+  //   }
+  //   onRemainingTimeChange(remainingTime);
+  // }, [remainingTime, setScore]);
