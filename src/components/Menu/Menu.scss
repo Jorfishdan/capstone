@@ -1,0 +1,38 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.menu {
+    &__home {
+        width:5rem;
+        height: 5rem;
+        background-image: url("../../assets/images/house-static.png");
+        background-size: cover;
+
+        cursor: pointer;
+        &:hover {
+            background-image: url("../../assets/images/house.gif");
+            background-size: cover;
+        }
+    }
+
+    &__menu {
+        width:5rem;
+        height:5rem;
+        background-image: url("../../assets//images/menu.png");
+        background-size: cover;
+
+        cursor: pointer;
+        &:hover {
+            background-image: url("../../assets/images/menu.gif");
+            background-size: cover;
+        }
+    }
+
+    &__wrapper {
+        display: flex;  
+        justify-content: space-between; 
+        margin:1.6rem;
+    }
+}

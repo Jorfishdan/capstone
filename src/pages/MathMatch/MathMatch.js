@@ -1,8 +1,10 @@
 import './MathMatch.scss';
-import MatchingGame from '../../components/MatchingGame/MatchingGame';
+import Menu from '../../components/Menu/Menu';
+import MathSelect from '../../components/MathSelect/MathSelect';
 function MathMatch() {
     return (<>
-    <MatchingGame />
+   
+   <MathSelect />
     </>)
 
 }

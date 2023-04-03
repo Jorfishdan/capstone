@@ -4,10 +4,10 @@ import SubmitFact from "../../components/SubmitFact/SubmitFact";
 import Pet from "../../components/Pet/Pet";
 import HPBubbles from "../../components/HPBubbles/HPBubbles";
 import { useState } from "react";
-import BrainTeaserHeader from "../../components/BrainTeaserHeader/BrainTeaserHeader";
 import BrainTeaserCircle from "../../components/BrainTeaserCircle/BrainTeaserCircle";
 import BrainTeaserInstructions from "../../components/BrainTeaserInstructions/BrainTeaserInstructions";
 import Footer from "../../components/Footer/Footer";
+import Menu from "../../components/Menu/Menu";
 
 function BrainTeaser() {
   const [isSubmitShown, setIsSubmitShown] = useState(false);
@@ -18,8 +18,8 @@ function BrainTeaser() {
 
   return (
     <>
+    <Menu />
       <section className="brainteaser">
-        <BrainTeaserHeader />
         <BrainTeaserInstructions />
         <BrainTeaserCircle />
         <div className="brainteaser__cardD" onClick={handleAddFact}>

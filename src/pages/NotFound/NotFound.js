@@ -1,7 +1,9 @@
 import "./NotFound.scss"
 import dog from "../../assets/images/dog3.gif";
+import Menu from "../../components/Menu/Menu";
 function NotFound() {
     return(<>
+    <Menu />
     <div className="notfound">
     <h1 className="notfound__title">Hmmm...we can't find that page. That's ruff...</h1>
     <img src={dog} alt="dog gif" className="notfound__gif" />
