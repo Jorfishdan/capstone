@@ -8,11 +8,11 @@ function InfoCard() {
     <section className="infocard">
       <div className="infocard__main-wrapper">
         <Link to="/">
-          <img
+          {/* <img
             src={house}
             alt="go back to main menu"
             className="infocard__back-button"
-          ></img>
+          ></img> */}
         </Link>
         <h1 className="infocard__title">Game Instructions</h1>
         <div className="infocard__wrapper">

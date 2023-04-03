@@ -5,6 +5,8 @@ import { useState } from "react";
 import HPBubbles from "../../components/HPBubbles/HPBubbles";
 import CleaningPageHeader from "../../components/CleaningPageHeader/CleaningPageHeader";
 import Footer from "../../components/Footer/Footer";
+import Menu from "../../components/Menu/Menu";
+
 function CleaningPage() {
     const [page, setPage] = useState(null)
     const [inputTime, setInputTime] = useState(0)
@@ -14,7 +16,7 @@ function CleaningPage() {
 
 return (
     <>
-    <CleaningPageHeader />
+    <Menu />
     <HPBubbles />
     <Timer setPage={setPage} setShowMusic={setShowMusic} expiryTimestamp={time} setInputTime={setInputTime}/>
     {showMusic && <Music setShowMusic={setShowMusic}/>}

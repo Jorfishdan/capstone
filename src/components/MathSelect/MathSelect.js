@@ -8,6 +8,7 @@ import quiz from "../../assets/images/quiz.gif";
 import HPBubbles from "../HPBubbles/HPBubbles";
 import MathSelectModal from "../MathSelectModal/MathSelectModal";
 import MathSelectPet from "../MathSelectPet/MathSelectPet";
+import Menu from "../Menu/Menu";
 
 function MathSelect({ selectedTime }) {
   const [showEquation, setShowEquation] = useState([]);
@@ -92,6 +93,7 @@ function MathSelect({ selectedTime }) {
 
   return (
     <>
+     <Menu />
       {showModal && (
         <div className="modal-overlay">
           <MathSelectModal

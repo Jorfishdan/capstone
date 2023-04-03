@@ -1,0 +1,40 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.menumodal {
+   position: absolute;
+   right: 1px;
+
+    &__img {
+        width:2.5rem;
+        height:2.5rem;
+        font-size:1rem;
+
+        &--info {
+            border-radius: 2rem;
+            width:2.5rem;
+            height:2.5rem;
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        padding:1rem;
+        color:#23f3da;
+        font-weight: 600;
+        border: 2px solid #23f3da;
+        border-radius: 2rem;
+        margin-top:0.5rem;
+
+        &:hover {
+            background-color: #23f3da;
+            color: white;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+}
