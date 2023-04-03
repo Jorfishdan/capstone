@@ -8,11 +8,7 @@ function InfoCard() {
     <section className="infocard">
       <div className="infocard__main-wrapper">
         <Link to="/">
-          {/* <img
-            src={house}
-            alt="go back to main menu"
-            className="infocard__back-button"
-          ></img> */}
+         
         </Link>
         <h1 className="infocard__title">Game Instructions</h1>
         <div className="infocard__wrapper">
@@ -38,6 +34,14 @@ function InfoCard() {
               Sneaky Animals
               <p className="infocard__card--3-info">
                 Have students guys the animal based on its sound. After each card, you can either turn the sound down on your device or directly on the card to make the game increasingly challenging
+              </p>
+            </div>
+          </Link>
+          <Link to="mathselect">
+            <div className="infocard__card--4">
+               Numbers Race
+              <p className="infocard__card--4-info">
+                Race through addition and subtraction equation as fast as your class can with this timed math game!
               </p>
             </div>
           </Link>
